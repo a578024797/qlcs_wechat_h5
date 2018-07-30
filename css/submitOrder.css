@@ -1,0 +1,157 @@
+@charset "utf-8";
+.bgcolor {
+	background: #eeeded;
+}
+/*title*/
+.header {
+	background: #0081cc;
+	height: 1.9rem;
+	align-items: center;
+	display: flex;
+	display: -webkit-flex;
+}
+.header_title {
+	text-align: center;
+font-size:.75rem;
+	color: #fff;
+	height: 1.9rem;
+	line-height: 1.9rem;
+	top: 0;
+letter-spacing:.2rem;
+	z-index: 0;
+}
+.renturnBox {
+	position: absolute;
+	width: 8%;
+	height: 1.9rem;
+	align-items: center;
+	display: flex;
+	display: -webkit-flex;
+	justify-content: flex-end;
+}
+.return {
+	display: inline-block;
+ width:.45rem;
+ height:.9rem;
+	background: url(../images/cardDetial/sanjiao.png) no-repeat;
+	background-size: 100% 100%;
+	z-index: 1;
+}
+/*间距*/
+.mtlarge {
+margin:.55rem 0 0 0;
+}
+.mtlow {
+margin:.1rem 0 0 0;
+}
+.mtlargedou {
+	margin: 1.1rem 0 0 0;
+}
+/*产品*/
+.productBox {
+	height: 3.2rem;
+ padding:0 .7rem;
+	background: #fff;
+	align-items: center;
+	display: flex;
+	display: -webkit-flex;
+	justify-content: space-between;
+}
+.productConBox {
+	align-items: center;
+	display: flex;
+	display: -webkit-flex;
+}
+.productConBox img {
+	float: left;
+	width: 3rem;
+	height: 2.7rem;
+ margin-right:.7rem;
+}
+.textBox {
+font-size:.65rem;
+	color: #2f2725;
+}
+.product_price {
+font-size:.9rem;
+}
+/*产品详细*/
+.proDetial {
+	background: #fff;
+ font-size:.6rem;
+	align-items: center;
+	display: flex;
+	display: -webkit-flex;
+	justify-content: space-between;
+	height: 1.6rem;
+ padding: 0 .7rem;
+	color: #524c4a;
+}
+.proDetialIn {
+	background: #fff;
+ font-size:.6rem;
+	align-items: center;
+	display: flex;
+	display: -webkit-flex;
+	height: 1.6rem;
+ padding: 0 .7rem;
+	color: #524c4a;
+}
+.proDetialIn input {
+	margin-left: 1.2rem;
+}
+/*消息*/
+.message {
+	width: 94%;
+font-size:.55rem;
+	color: #817f7f;
+	margin-left: auto;
+	margin-right: auto;
+padding-left:.1rem;
+}
+/*底部支付*/
+.bottomBox {
+	height: 1.6rem;
+	position: fixed;
+	bottom: 0;
+	align-items: center;
+	display: flex;
+	display: -webkit-flex;
+	justify-content: space-between;
+	line-height: 1.6rem;
+}
+.botprice {
+	width: 60%;
+	background: #303030;
+	color: #fff;
+	text-align: right;
+font-size:.6rem;
+letter-spacing:.05rem;
+	padding-right: 1rem
+}
+.botsub {
+	width: 40%;
+	background: #fff100;
+	color: #262625;
+	text-align: center;
+letter-spacing:.2rem;
+font-size:.8rem;
+}
+/*验证支付*/
+.buy {
+	margin: 4rem auto 2rem auto;
+	display: flex;
+	align-items: center;
+	display: -webkit-flex;
+	justify-content: center;
+}
+.buyContent {
+	background: #0081cc;
+font-size:.8rem;
+	color: #fff;
+	height: 2rem;
+	padding: 0 1.5rem;
+	line-height: 2rem;
+letter-spacing:.4rem;
+border-radius:.2rem;
+}

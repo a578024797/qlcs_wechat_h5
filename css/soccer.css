@@ -1,0 +1,303 @@
+/* color&&size */
+.soccer_normal_font{
+    color:#fff100;
+    font-size: .75rem;
+}
+
+/* bgImg */
+
+.soccer_bgImg {
+    background: url("../images//soccer/bgImg.jpg") no-repeat center;
+    background-size: 100% 100%;
+}
+
+/* head */
+
+.soccer_headImgBox {
+    width: 100%;
+}
+
+.soccer_headImg {
+    width: 100%;
+}
+
+/* end  head */
+
+/* nav */
+
+.soccer_nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.soccer_nav_content {
+    display: inline-block;
+}
+
+.soccer_nav_img {
+    display: inline-block;
+    vertical-align: middle;
+    width: 1.4rem;
+}
+
+.soccer_nav_word {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 .2rem 0 .2rem;
+    font-size: .8rem;
+    color: #fff;
+}
+
+.soccer_nav_integral {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 .22rem;
+    /* height: 1rem;
+    line-height: 1rem; */
+    text-align: center;
+    font-size: .8rem;
+    background: #fff100;
+    border-radius: .7rem;
+    color: #0a59c6;
+}
+
+/* :end nav */
+
+/* 内容 */
+
+.soccer_main_box {
+    width: 100%;
+   
+}
+
+.soccer_game_message {
+    display: flex;
+    justify-content: space-between;
+    margin: 1.5rem auto 0 auto;
+    width: 90%;
+    border-bottom: .005rem solid #fff100;
+}
+
+.soccer_game_message span {
+    font-size: .75rem;
+    color: #fff100;
+}
+.soccer_game_country{
+    padding: .3rem 0;
+    width: 100%;
+    margin: 0 auto;
+    text-align:center;
+    color: #fff;
+    font-size: 1.5rem;
+    letter-spacing: .2rem;
+    font-weight: normal;
+}
+.soccer_span_country{
+    display: inline-block;
+    width: 42%;
+    text-align: center;
+}
+.soccer_span_country:first-child{
+    text-align: right;
+}
+.soccer_span_country:last-child{
+    text-align: left;
+}
+.soccer_span_VS{
+    display: inline-block;
+    width: 10%;
+    color: #fff100;
+    text-align: center;
+}
+
+.soccer_game_integral{
+    display: flex;
+    justify-content: space-between;
+    width: 66%;
+    margin: 0 auto .2rem;
+    
+}
+/* 足球倍率 */
+.soccer_integral_box{
+    position: relative;
+    padding: 0 0 0 1.15rem;
+    width: 40%;
+    height: 1.7rem;
+    font-size:.9rem;
+    line-height: 1.7rem;
+    border-radius: 1.7rem;
+    background: #fff100;
+    text-align: center;
+    color: #0958c5;
+}
+.soccer_integral_boxC{
+    padding: 0 1.15rem 0 0;
+    background: #0958c5;
+    color: #fff100;
+}
+/* 足球积分 */
+.soccer_integral_integral{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin: 0 0 0 .05rem;
+    transform: translate(0,-50%);
+    width: 1.6rem;
+    height: 1.6rem;
+    line-height: 1.6rem;
+    text-align: center;
+    border-radius: 1.6rem;
+    background: #0a59c6;
+    color: #fff;
+}
+.soccer_integral_integralC{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin: 0 .05rem 0 0;
+    transform: translate(0,-50%);
+    width: 1.6rem;
+    height: 1.6rem;
+    line-height: 1.6rem;
+    text-align: center;
+    border-radius: 1.6rem;
+    background: #fff100;
+    color: #0a59c6;
+}
+.soccer_integral_message{
+    margin: .3rem 0 .3rem 0;
+    width: 100%;
+    text-align:center ;
+}
+.soccer_country_flag{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    height: 8rem;
+    background: url("../images/soccer/footgarden.png") no-repeat;
+    background-size: 100% 100%;
+    padding: 0 0 .5rem 0;
+    
+}
+.soccer_flag_box{
+    position: relative;
+    /* transform: translate(0,-10%); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+.soccer_flag_left{
+    margin: 0 0 0 1.5rem;
+}
+.soccer_flag_right{
+    margin: 0 1.5rem 0 0;
+}
+.soccer_flag_img_box{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 40%;
+}
+.soccer_win{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(0,-1%);
+    width: 106%;
+    height: 106%;
+    background: url(../images/soccer/win.png) center no-repeat;
+    background-size: 100%;
+}
+.soccer_flag_img_box img{
+    width: 100%;
+}
+/* end 内容 */
+/* footer */
+.soccer_bottom{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding:  0 0 .4rem 0;
+    width: 100%;
+    height: 4rem;
+    background: #fff100;
+}
+.soccer_bottom_message{
+    padding: .3rem 0;
+    width: 100%;
+    text-align:center;
+    color: #000000;
+    font-size:.7rem;
+
+}
+.soccer_bottom_message span{
+    color: #0958c5;
+}
+.soccer_bottom_content_box{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+
+}
+.soccer_bottom_content{
+    width: 40%;
+    padding: .1rem 0;
+    border-radius: .5rem;
+    border: #0958c5 solid .05rem;
+    font-size: 1rem;
+    color: #0958c5;
+}
+.soccer_bottom_content:last-child{
+    width: 40%;
+    padding: .1rem 0;
+    border-radius: .5rem;
+    border: #0958c5 solid .05rem;
+    font-size: 1rem;
+    color: #fff100;
+    background: #0958c5;
+}
+.soccer_space{
+    height: 4.5rem;
+    width: 100%; 
+}
+/* end footer */
+/* 不可选中 */
+ .soccer_unclick{
+    opacity: 0.6;
+ }
+/* end 不可选中 */
+
+/* soccertime */
+.soccer_timer{
+    margin: 0 auto;
+    padding:  .1rem .3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+    background: #fff100;
+    border-radius: .8rem;
+    font-size: 0;
+    /* height: 1.2rem;
+    line-height: 1.2rem; */
+}
+.soccer_timer span{
+   
+    font-size: .6rem;
+    color: #0958c5;
+    line-height: 1;
+}
+.soccer_timer .soccer_timer_time{
+    font-size: 1rem;
+    line-height: 1;
+  
+}
+/* :end */

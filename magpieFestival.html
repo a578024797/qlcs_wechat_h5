@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" class="mf_html">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>七夕节</title>
+    <script src="./js/wordauto.js"></script>
+    <link rel="stylesheet" href="./css/new_common.css">
+    <link rel="stylesheet" href="./css/magpieFestival.css">
+    <script src="./js/jquery1.11.3.js"></script>
+</head>
+
+<body class="mf_body">
+    <div class="we_container mf_background">
+        <div class="mf_container">
+            <div class="mf_mainImg">
+                <img src="./images/magpieFestival/1.png" alt="1.png">
+            </div>
+            <div class="mf_productInfo">
+                <p>商品预订时间: 2018年8月01日-8月13日</p>
+                <p>商品预订时间: 2018年8月16日-8月17日</p>
+                <p>不可提前领取,超过领取期限视作放弃, 积分/现金不予返还</p>
+            </div>
+            <div class="mf_address">
+                <label for="address" id="addressWord" class="mf_label mf_btnBg"></label>
+                <div class="mf_triangle"></div>
+                <select name="shop" id="address" class="mf_select">
+                    <option value="1.2">都市邻里里里</option>
+                    <option value="1.3">都市邻里2</option>
+                    <option value="1.4">都市邻里3</option>
+                </select>
+            </div>
+            <div class="mf_bespeak">
+                <div class="mf_btnBg" onclick="bespeak(`0`)">500积分预约</div>
+                <div class="mf_btnBg" onclick="bespeak(`1`)">30元储值预约</div>
+            </div>
+            <div class="mf_order mf_btnBg">
+                <a href="###">我的订单</a>
+            </div>
+            <div class=" mf_statement">
+                <p>注意事项：储值预约需先进行会员储值，储值不可以</p>
+                <p> 兑现，最终解释权归全联超商所有.</p>
+            </div>
+        </div>
+    </div>
+    <div class="mf_alert">
+        <div class="mf_alert_inner">
+            <div class="mf_ai_imgBox">
+                <img src="./images/magpieFestival/4.png" alt="4">
+            </div>
+            <div class="mf_ai_word">
+                您的积分不足
+            </div>
+            <div class="mf_ai_word mf_ai_searchList mf_btnBg">
+                <a href="###">点击查看订单</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        function setLable() {
+            let select = document.getElementById("address");
+            let lableword = document.getElementById("addressWord");
+            lableword.innerText = select.options[select.selectedIndex].innerText;
+            select.onchange = function () {
+                lableword.innerText = select.options[select.selectedIndex].innerText;
+            }
+        }
+        setLable();
+
+        function bespeak(_type) {
+            let main = "http://vip.quanlianchaoshang.com/qlcs/wap.php?&g=Wap&c=Activemodle&a=loveday_get" //"{pigcms{:U('Activemodle/loveday_get')}"
+            let select = document.getElementById("address");
+            let _shop = select.options[select.selectedIndex].value;
+            $.ajax({
+                type: "Post",
+                url: `${main}`,
+                data: {
+                    paytype: _type,
+                    shopid: _shop,
+                },
+                dataType: "json",
+                success: function (data) {
+                    if (data.error === 0) {
+                        resultDo(data.error, data.msg);
+                    } else {
+                        resultDo(data.error, data.msg);
+                    }
+                },
+                error:function(e){
+                    resultDo(1,e.statusText);
+                }
+            });
+        }
+
+        function resultDo(_error, _msg) {
+            let mainDiv = document.getElementsByClassName("mf_alert")[0];
+            let mainBox = document.getElementsByClassName("mf_alert_inner")[0];
+            //成功
+            if (_error == 0) {
+                document.getElementsByClassName("mf_ai_imgBox")[0].children[0].src = "./images/magpieFestival/5.png";
+                mainBox.getElementsByTagName("div")[1].innerText = _msg;
+                mainBox.getElementsByTagName("div")[2].innerHTML = "";
+                mainBox.getElementsByTagName("div")[2].className += " " + `mf_ai_searchList`;
+                mainBox.getElementsByTagName("div")[2].className += " " + `mf_btnBg`;
+                let suceA = document.createElement("a");
+                suceA.href = "###"; //A路径
+                suceA.innerText = "点击查看订单";
+                mainBox.getElementsByTagName("div")[2].appendChild(suceA);
+                mainBox.onclick = function (e) {
+                    e.stopPropagation();
+                }
+            } else {
+                //失败
+                document.getElementsByClassName("mf_ai_imgBox")[0].children[0].src = "./images/magpieFestival/4.png";
+                mainBox.getElementsByTagName("div")[1].innerText = _msg.substring(0, 6);
+                mainBox.getElementsByTagName("div")[2].innerHTML = "";
+                let classM = mainBox.getElementsByTagName("div")[2].getAttribute("class");
+                if (classM.indexOf("mf_ai_searchList") !== -1) {
+                    console.log(22)
+                    mainBox.getElementsByTagName("div")[2].classList.remove("mf_ai_searchList");
+                    mainBox.getElementsByTagName("div")[2].classList.remove("mf_btnBg");
+                };
+                mainBox.getElementsByTagName("div")[2].innerText = _msg.substring(6);
+            }
+            mainDiv.onclick = function () {
+                this.style.display = "none";
+            }
+            mainDiv.style.display = "block";
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,205 @@
+@charset "utf-8";
+.header {
+padding:.8rem 0 0 0;
+	overflow: hidden;
+}
+.tfun {
+	overflow: hidden;
+}
+.fun {
+	width: 1.1rem;
+	height: 1.1rem;
+	display: inline-block;
+}
+.setImg1 {
+	background: url(../images/zeroMoney/sanjiao.png) no-repeat;
+	background-size: 100% 100%;
+}
+.setImg2 {
+	background: url(../images/zeroMoney/set.png) no-repeat;
+	background-size: 100%;
+}
+.tfun a {
+font-size:.65rem;
+	line-height: 1.1rem
+}
+.teamText {
+margin-top:-.25rem;
+}
+.shopA {
+	margin: 0 0 0 10px
+}
+.setA {
+	margin: 0 10px 0 0;
+}
+.main_content {
+	margin-top: 1rem;
+	height: 23rem;
+border-radius:.5rem;
+	border: #f7e80e 2px solid;
+}
+.productImg {
+ border-radius:.5rem .5rem 0 0;
+	height: 61%;
+}
+.productImg img {
+	width: 100%;
+	height: 100%;
+border-radius:.5rem .5rem 0 0;
+}
+div {
+	text-align: center;
+}
+.title {
+	font-size: 1rem;
+	line-height: 1.9rem;
+	height: 1.5rem;
+}
+.endTime {
+	line-height: 1.5rem;
+	height: 1.5rem;
+}
+.fdian7 {
+font-size:.6rem;
+	color: #3f3f3f;
+}
+.mfu {
+margin:-.1rem 0 0 0;
+}
+.c0081cc {
+	color: #0081cc
+}
+.shopPrice {
+font-size:.6rem;
+	line-height: 1.3rem;
+	height: 1.3rem;
+}
+.zeroPrice {
+	font-size: 1.3rem;
+margin:-.2rem 0 0 0;
+	font-family: "微软雅黑"
+}
+.countdown {
+	height: 1.5rem;
+}
+.csp {
+	display: flex;
+	display: -webkit-flex;
+	justify-content: center;
+	width: 20%;
+	float: left;
+	height: 1.5rem;
+	align-items: center
+}
+.countdown div {
+	border-radius: 1rem;
+ height:.8rem;
+	background: #0081cc;
+	color: #fff;
+	display: flex;
+	display: -webkit-flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0 0.05rem;
+}
+.seperator {
+width:.22rem;
+}
+/*立即抢购 跟立即拼团*/
+.rightNow {
+	position: relative;
+	top: -1rem;
+}
+.rightNow a {
+	background: url(../images/zeroMoney/225915995662654725.png) no-repeat;
+	background-size: 100%;
+	width: 8rem;
+	height: 2rem;
+	display: inline-block;
+}
+.rightNowTeam {
+	position: relative;
+	top: -1rem;
+}
+.rightNowTeam a {
+	background: url(../images/zeroMoney/team.png) no-repeat;
+	background-size: 100%;
+	width: 8rem;
+	height: 2rem;
+	display: inline-block;
+}
+.textse {
+	overflow: hidden;
+margin:0 0 .4rem 0
+}
+.detialContent {
+font-size:.6rem;
+	color: #333;
+	border: 1px solid #666;
+border-radius:.2rem;
+padding:.5rem 0
+}
+.detialContent .dettit {
+	text-indent: 0;
+}
+.detialContent div {
+	text-align: left;
+text-indent:.5rem;
+margin:0 0 .1rem 0;
+}
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, form, img, dl, dt, dd, table, th, td, blockquote, fieldset, div, strong, label, em {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+ul, ol, li {
+	list-style: none;
+}
+/*进度条*/
+/* votebox */
+.votebox {
+	text-align: left;
+	position: relative;
+	z-index: 66;
+	margin:.4rem auto;
+}
+/* barbox */
+.barbox {
+	height: .7rem;
+	line-height: 1rem;
+	overflow: hidden;
+}
+.barbox dt a {
+	color: #0048CC;
+}
+.barbox dd {
+	float: left;
+}
+.barbox dd.last {
+	color: #999;
+}
+.barbox dd.barline {
+	background: url(../images/zeroMoney/886705691530740775.png) left center no-repeat;
+	height: .7rem;
+	overflow: hidden;
+	
+	background-size:100% 100%;
+}
+.barbox dd.barline div.charts {
+	height: .7rem;
+	overflow: hidden;
+	background: url(../images/zeroMoney/854125585490140947.png) right center repeat-x;
+	border-radius: 8px;
+background-size:100% 100%;
+}
+.bartextbox {
+	position: relative;
+}
+.bartext {
+	position: absolute;
+	top: -.7rem;
+    
+	font-size:.55rem;
+	color:#fff;
+	letter-spacing:.1rem;
+}

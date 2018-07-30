@@ -1,0 +1,232 @@
+
+/* new_index 代号 gay*/
+
+.gay_background {
+    background: url("../images/newIndex/background.jpg") no-repeat center;
+    background-size: 100% 100%;
+}
+
+.gay_main {
+    margin: 0 auto;
+    width: 84%;
+}
+
+/* 条形码 */
+
+.gay_barcode {
+    margin: .2rem 0 0 0;
+    padding: 0 0 .5rem 0;
+    width: 100%;
+    background: url("../images/newIndex/loopAd.png") no-repeat;
+    background-size: 100% 100%;
+    /* border-radius: .2rem; */
+}
+
+.gay_barTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: .3rem 0;
+    width: 100%;
+}
+
+.gay_barImgBox {
+    margin-left: 1.4rem;
+    width: 5rem;
+    font-size: 0;
+}
+
+.gay_barImgBox>img {
+    width: 100%;
+    font-size: 0;
+}
+
+.gay_barImgBox>span {
+    margin: 0 0 0 .4rem;
+    width: 3.8rem;
+    display: flex;
+    align-items: center;
+    background: #38b6fc;
+    border-radius: .5rem;
+}
+
+.gay_barImgBox>span>img {
+    margin: .15rem 0 .15rem .3rem;
+    width: .78rem;
+}
+
+.gay_barImgBox:last-child {
+    /* width: 5rem; */
+    text-align: right;
+    font-size: .5rem;
+    text-indent: .15rem;
+    letter-spacing: .05rem;
+    ;
+    /* font-weight: bold; */
+    color: #fff
+}
+
+.gay_bar_content {
+    position: relative;
+    width: 100%;
+}
+
+.gay_bar_showBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: 0 auto;
+    width: 97%;
+    background: #ffffff;
+    padding: 0 0 .5rem;
+    border-radius: .2rem;
+}
+
+.gay_bar_payCode {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: none;
+    width: 100%;
+    background: #ffffff;
+    padding: 0 0 .5rem;
+    border-radius: .2rem;
+    z-index: 3;
+}
+
+.gay_bar_show {
+    margin: 0 auto;
+}
+
+/* 轮播 */
+
+.gay_ad_box {
+    position: relative;
+    margin: .1rem 0 0 0;
+    padding: 0 0 .05rem 0;
+    width: 100%;
+    height: 6.6rem;
+    border-radius: .2rem;
+    background: url("../images/newIndex/loopAd.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.gay_ad_loopImg {
+    width: 100%;
+    border-radius: .2rem;
+}
+
+.gay_ad_box .gay_swiper_pagination {
+    /* position: absolute;
+    top: 100%; */
+}
+
+.swiper-pagination .gay_swiper_pagination_activeBullet {
+    opacity: 1;
+    background: #fff;
+}
+
+/* 4个方法 */
+
+.gay_fourFunction {
+    position: relative;
+    margin: .45rem 0 0 0;
+    width: 100%;
+}
+
+.gay_fourFunction_line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.gay_fourFunction_line:first-child {
+    margin: 0 0 .4rem 0;
+}
+
+a[class^="gay_fourFunction_box"] {
+    padding: .5rem .5rem;
+    width: 48.5%;
+    height: 4.95rem;
+    font-size: 0;
+    background: rgba(255, 255, 255, .2);
+}
+
+.gay_function_img{
+    height: 1.2rem;
+}
+
+a[class^="gay_fourFunction_box"]>div {
+    margin-top: .1rem;
+    font-size: .68rem;
+    letter-spacing: .07rem;
+    color: #fff;
+}
+
+.gay_fourFunction_box1 {
+    border-radius: 0 .9rem .9rem .9rem;
+}
+
+.gay_fourFunction_box2 {
+    display: flex;
+    flex-direction: row-reverse;
+    align-content: flex-start;
+    /* justify-content:flex-end; */
+    flex-wrap: wrap;
+    /* align-items: flex-top; */
+    border-radius: .9rem 0 .9rem .9rem;
+}
+
+.gay_fourFunction_box3 {
+    display: flex;
+    /* flex-direction:row-reverse; */
+    align-content: flex-end;
+    /* justify-content:flex-end; */
+    flex-wrap: wrap;
+    border-radius: .9rem .9rem .9rem 0;
+}
+
+.gay_fourFunction_box4 {
+    display: flex;
+    flex-direction: row-reverse;
+    align-content: flex-end;
+    /* justify-content:flex-end; */
+    flex-wrap: wrap;
+    border-radius: .9rem .9rem 0 .9rem;
+}
+.gay_fourFunction_box4 .gay_function_img{
+    height: 1.1rem;
+}
+
+.gay_fourFunction_centerImg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 7.2rem;
+}
+
+.gay_fourFunction_centerImg>img {
+    width: 100%;
+}
+.gay_onlyAd{
+    width: 100%;
+    font-size: 0;
+}
+.gay_onlyAd img{
+    width: 100%;
+}
+/* gay_footer */
+.gay_footer_english{
+    display: block;
+    margin: 0 auto;
+    padding: 0 0 .7rem 0;
+    width: 50%;
+}
+.gay_footer_english img{
+    width: 100%;
+}

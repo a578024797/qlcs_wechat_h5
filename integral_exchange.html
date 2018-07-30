@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>积分兑换人民币币币</title>
+    <script src="./js/wordauto.js"></script>
+    <link rel="stylesheet" href="./css/new_common.css">
+    <link rel="stylesheet" href="./css/integral_exchange.css">
+    <script src="JS/jquery1.11.3.js"></script>
+
+</head>
+
+<body>
+    <div class="we_container">
+        <div class="we_container">
+            <p class="ilee_main_title">是否将1000积分转换为</p>
+            <p class="ilee_main_imgBox">
+                <img src="./images/integral_exchange/in1.png" alt="in1">
+            </p>
+            <p class="ilee_main_message">积分转换储值后 将不可转回每月可以转换一次</p>
+            <p class="m_button_confrim ilee_main_confrim" id="confrim">立即转换</p>
+            <p class="m_button_cancel ilee_main_cancel">以后再说</p>
+        </div>
+    </div>
+    <div class="ilee_alertMsg_box" id="alertBox">
+        <div class="ilee_alert_Msg">
+            <div class="ilee_alertMsg_header">
+                <img src="./images//integral_exchange/in4.png" alt="in4">
+            </div>
+            <div class="ilee_alertMsg_word">
+                1
+            </div>
+            <div class="ilee_alertMsg_word">
+                1
+            </div>
+            <a href="###" class="m_button_confrim ilee_alertMsg_button">
+                返回
+            </a>
+        </div>
+    </div>
+    <script>
+        $("#confrim").click(function () {
+            $.ajax({
+                type: "POST",
+                url: "{pigcms{:U('ScoreExchange/ajax_ScoreExchange')}",
+                data: {},
+                dataType: "json",
+                success: function (data) {
+                    if (data.error === 0) {
+                        let option = {
+                            id: "alertBox",
+                            msg: "已将您的1000积分转换为10元储值金额",
+                            sub: 10,
+                            src: "./images/integral_exchange/in5.png",
+                            color: "#01adff",
+                            title: "每月可转换一次"
+                        }
+                        alertMessage(option);
+                    } else if (data.error === 1) {
+                        let option = {
+                            id: "alertBox",
+                            msg: "积分不足1000无法转换储值",
+                            sub: 8,
+                            src: "./images/integral_exchange/in4.png",
+                        }
+                        alertMessage(option);
+                    } else {
+                        let option = {
+                            id: "alertBox",
+                            msg: "每月仅可转换一次您本月可用转换次数已用完",
+                            sub: 8,
+                            src: "./images/integral_exchange/in4.png",
+
+                        }
+                        alertMessage(option);
+                    }
+
+                },
+                error: function () {
+                    //请求错误
+                    serverErrorDo(_finallyOption, "服务器错误,请再次尝试");
+                }
+            });
+        });
+
+        function alertMessage(_option) {
+            //初始化
+            $obj = $(`#${_option.id}`)
+            var msg1 = _option.msg.substring(0, _option.sub);
+            var msg2 = _option.msg.substring(_option.sub);
+            $obj.find("img").eq(0).attr("src", _option.src)
+            $obj.find(".ilee_alertMsg_word").eq(0).text(msg1);
+            $obj.find(".ilee_alertMsg_word").eq(1).text(msg2);
+            $obj.find(".ilee_alertMsg_word").css("color", `${_option.color?_option.color:"#3d4667"}`);
+            $obj.find(".ilee_alert_Msg").click(function (event) {
+                event.stopPropagation();
+            })
+            //
+            if (_option.title) {
+                $obj.find(".ilee_alertMsg_word").eq(1).after(`<div class="ilee_alertMsg_sTitle">${_option.title}</div>`)
+            }
+            $obj.click(function () {
+                $obj.fadeOut(300);
+            })
+            $obj.fadeIn(300);
+        }
+    </script>
+</body>
+
+</html>

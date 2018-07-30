@@ -1,0 +1,94 @@
+@charset "utf-8";
+html {
+	height: 100%;
+}
+.bg_img {
+	background: url(../images/register/bgimg.jpg) no-repeat;
+	background-size:cover;
+	
+	height:100%;
+	
+    
+}
+.bg_black{
+	position:absolute;
+	width:100%;
+	height:100%;
+	 background-color: rgba(0,0,0,0.6);
+	z-index:-1;
+	top:0;
+}
+.header{
+	padding:4.3rem 0 2.8rem 0;
+
+	
+	}
+.header div{	background:url(../images/register/quanlianchaoshang.png) no-repeat;background-size:100% 100% ;
+	height:1.8rem;
+	width:8.8rem;margin:auto;}
+.tabs{
+	height:10rem;
+	
+	}
+.nav #current{ color:#fff;border-bottom:2px solid #fff100}
+.menu{}
+.nav{overflow:hidden;padding:0 0 2.4rem 0;}
+.nav li{	display: flex;
+	align-content: center;
+	display: -webkit-flex;
+	justify-content:center;
+	 align-items: center;
+}
+.nav a{font-size:.8rem;color:#aaaaaa;}
+.tab_img1{
+	background:url(../images/register/shouji.png) no-repeat ;
+	background-size:100% 100%;
+	min-width:21px;
+	width:.9rem;
+	height:1.3rem;
+	min-height:30px;
+	margin:0 1rem 0 1rem;
+	overflow:hidden;
+	}
+.tab_img2{
+	background:url(../images/register/xinfeng.png) no-repeat ;
+	background-size:100% 100%;
+	width:1.2rem;
+	min-width:28px;
+	height:1rem;
+	min-height:23px;
+	margin:0 .76rem 0 1rem;
+		overflow:hidden;
+	}
+.formBg{
+	 background-color: rgba(0,0,0,0.6);
+	 display: flex;
+	align-content: center;
+	display: -webkit-flex;
+	
+	 align-items: center;
+	 height:2rem;
+	 line-height:2rem;
+	 margin-bottom:1.1rem;
+	 
+	}
+.formBg input{font-size:.8rem;color:#FFF;}
+#tab2{margin:0 0 1.2rem 0 ;}
+.sub{padding:2.5rem 0 0 0;display: flex;
+	align-content: center;
+	display: -webkit-flex;
+	justify-content:center;
+	 align-items: center;}
+.sub a{
+	display:inline-block;
+	border-radius:.9rem;
+	background:#fff100;
+	width:10rem;
+	height:2rem;
+	line-height:2rem;
+	font-size:.8rem;
+	text-align:center;
+	color:#2d2825;
+	
+	
+	}

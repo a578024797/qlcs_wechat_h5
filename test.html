@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="test" style="width: 100px;height: 100px;position: absolute;background: pink;transform: rotate(60deg)"></div>
+    <script src="./js/jquery1.11.3.js"></script>
+    <script>
+        var test = document.getElementById("test");
+        test.style.transform = "rotate(10deg)";
+        var aa = $("#test").css("transform");
+        console.log(aa);
+    </script>
+</body>
+
+</html>

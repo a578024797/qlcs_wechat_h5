@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" class="mf_html">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>七夕抽奖列表页</title>
+    <script src="./js/wordauto.js"></script>
+    <link rel="stylesheet" href="./css/new_common.css">
+    <link rel="stylesheet" href="./css/magpieFestival.css">
+    <script src="js/jquery1.11.3.js"></script>
+</head>
+
+<body class="mf_body mfe_background">
+    <div class="we_container mfe_background">
+        <header class="we_container">
+            <div class="m_detial_header_imgBox mfed_headerImg">
+                <img src="./images/magpieFestival/heder2.png" alt="hader">
+            </div>
+        </header>
+        <div class="we_container">
+            <ul class="m_list_ul">
+                <li class="m_list_li">
+                    <div class="m_list_imgBox">
+                        <img src="./images/magpieFestival/products.png" alt="products">
+                    </div>
+                    <div class="m_list_info">
+                        <div class="m_list_info_title mfel_info_title">康师傅涵养泉550ml</div>
+                        <div class="m_list_info_time mfel_info_time">领取时间 : 8月1日-8月31日</div>
+                        <div class="m_list_info_click mfel_info_click">
+                            <a href="###" class="u_orange_unConfrim">已使用</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="m_list_li">
+                    <div class="m_list_imgBox">
+                        <img src="./images/magpieFestival/products.png" alt="products">
+                    </div>
+                    <div class="m_list_info">
+                        <div class="m_list_info_title mfel_info_title">康师傅涵养泉550ml</div>
+                        <div class="m_list_info_time mfel_info_time">领取时间 : 8月1日-8月31日</div>
+                        <div class="m_list_info_click mfel_info_click">
+                            <a href="###" class="u_orange_confrim">立即使用</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        var unc = document.getElementsByClassName("u_orange_unConfrim");
+        if (unc.length >= 0) {
+            for (let uuu of unc) {
+                uuu.onclick = function () {
+                   return false;
+                  }
+            }
+        }
+        // unc.forEach(function (value,key) {
+        //     console.log(key);
+        //     console.log(value);
+        //   });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,162 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<title>register</title>
+<link href="css/commmon.css" rel="stylesheet" type="text/css">
+<link href="css/register.css" rel="stylesheet" type="text/css">
+<script src="js/jquery1.11.3.js"></script>
+</head>
+
+<body class="bg_img">
+<div class="bg_black"> </div>
+<header class="header w100"> <div ></div></header>
+<div class="tabs w75 mauto">
+  <div id="menu" class="menu w100"> 
+    <!--tag标题-->
+    <ul id="tabs" class="nav w100">
+      <li class="w50 fleft"><a href="#" class="selected" name="#tab1">实体卡激活</a></li>
+      <li class="w50 fleft"><a href="#" class="" name="#tab2">无卡激活</a></li>
+    </ul>
+    <!--二级菜单-->
+     <div id="content">
+      <div id="tab1">
+        <form>
+          <div class="fleft formBg w100">
+          <div class="tab_img1 fleft ">
+            
+          </div>
+          <input type="text" placeholder="输入手机号" class="fleft"/>
+          </div>
+          <div class="fleft formBg w100">
+          <div class="tab_img2 fleft">
+            
+          </div>
+          <input type="text" placeholder="输入会员卡号" class="fleft"/>
+          </div>
+        </form>
+             
+      </div>
+      <div id="tab2">
+          
+                   <form>
+          <div class="fleft formBg w100">
+          <div class="tab_img1 fleft ">
+            
+          </div>
+          <input type="text" placeholder="输入手机号" class="fleft"/>
+          </div>
+        </form> 
+      </div>
+  </div>
+
+  </div>
+</div>
+<div class="sub">
+  <a href="###">立即激活</a>
+</div>
+ <script>
+    function resetTabs(){
+        $("#content > div").hide(); //Hide all content
+        $("#tabs a").attr("id",""); //Reset id's      
+    }
+
+    var myUrl = window.location.href; //get URL
+    var myUrlTab = myUrl.substring(myUrl.indexOf("#")); // For localhost/tabs.html#tab2, myUrlTab = #tab2     
+    var myUrlTabName = myUrlTab.substring(0,4); // For the above example, myUrlTabName = #tab
+
+    (function(){
+        $("#content > div").hide(); // Initially hide all content
+        $("#tabs li:first a").attr("id","current"); // Activate first tab
+        $("#content > div:first").fadeIn(); // Show first tab content
+        
+        $("#tabs a").on("click",function(e) {
+            e.preventDefault();
+            if ($(this).attr("id") == "current"){ //detection for current tab
+             return       
+            }
+            else{             
+            resetTabs();
+            $(this).attr("id","current"); // Activate this
+            $($(this).attr('name')).fadeIn(); // Show content for current tab
+            }
+        });
+
+        for (i = 1; i <= $("#tabs li").length; i++) {
+          if (myUrlTab == myUrlTabName + i) {
+              resetTabs();
+              $("a[name='"+myUrlTab+"']").attr("id","current"); // Activate url tab
+              $(myUrlTab).fadeIn(); // Show url tab content        
+          }
+        }
+    })()
+  </script>
+<!--<script>
+var tabs=function(){
+    function tag(name,elem){
+        return (elem||document).getElementsByTagName(name);
+    }
+    //获得相应ID的元素
+    function id(name){
+        return document.getElementById(name);
+    }
+    function first(elem){
+        elem=elem.firstChild;
+        return elem&&elem.nodeType==1? elem:next(elem);
+    }
+    function next(elem){
+        do{
+            elem=elem.nextSibling;  
+        }while(
+            elem&&elem.nodeType!=1  
+        )
+        return elem;
+    }
+    return {
+        set:function(elemId,tabId){
+            var elem=tag("li",id(elemId));
+            var tabs=tag("div",id(tabId));
+            var listNum=elem.length;
+            var tabNum=tabs.length;
+            for(var i=0;i<listNum;i++){
+                    elem[i].onclick=(function(i){
+                        return function(){
+                            for(var j=0;j<tabNum;j++){
+                                if(i==j){
+                                    tabs[j].style.display="block";
+                                    //alert(elem[j].firstChild);
+                                    elem[j].firstChild.className="selected";
+                                }
+                                else{
+                                    tabs[j].style.display="none";
+                                    elem[j].firstChild.className="";
+                                }
+                            }
+                        }
+                    })(i)
+            }
+        }
+    }
+}();
+tabs.set("nav","menu_con");//执行
+</script>-->
+<script>       
+        (function (doc, win) {   
+            var docEl = doc.documentElement,   
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',   
+            recalc = function () {   
+            var clientWidth = docEl.clientWidth;   
+            if (!clientWidth) return;   
+            docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';   
+        };   
+        if (!doc.addEventListener) return;   
+        win.addEventListener(resizeEvt, recalc, false);   
+        doc.addEventListener('DOMContentLoaded', recalc, false);   
+        })(document, window);   
+</script> 
+</body>
+</html>

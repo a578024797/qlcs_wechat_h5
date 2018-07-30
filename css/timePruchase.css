@@ -1,0 +1,572 @@
+/* reset */
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: #302625;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    border: 0;
+}
+
+ul,
+li {
+    list-style-type: none;
+}
+
+input {
+    border: 0;
+    background: none;
+}
+
+select {
+    border: 0;
+}
+
+* {
+    box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -icab-box-sizing: border-box;
+    -khtml-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+/* end reset */
+
+/* layout */
+
+.zero_container {
+    width: 100%;
+}
+
+/* moudle */
+
+.zero_header_imgBox {
+    margin: 1.4rem auto .4rem;
+    width: 64%;
+    font-size: 0;
+}
+
+.zero_header_imgBox img {
+    width: 100%;
+}
+
+/* zero_cd */
+
+.zero_cd_header {
+    margin: 0 auto;
+    padding: 3.8rem 0 0 0;
+    width: 65%;
+}
+
+.zero_cd_header img {
+    width: 100%;
+}
+
+.zero_cd_main {
+    margin: 1.1rem auto 6.9rem;
+    width: 78%;
+    height: 7.2rem;
+    box-shadow: 0 0 .5rem #e0dfdf;
+    border-radius: .5rem;
+}
+
+.zero_cdMain_title {
+    width: 100%;
+    height: 2.7rem;
+    line-height: 2.7rem;
+    letter-spacing: .05rem;
+    text-align: center;
+    color: #3c4768;
+    font-size: .55rem;
+    font-weight: bold;
+}
+
+.zero_cdMain_content {
+    width: 100%;
+}
+
+.zero_cdMain_number {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    width: 80%;
+    font-size: 0;
+}
+
+.zero_cdMain_Cbox {
+    position: relative;
+    display: inline-block;
+    width: 2.05rem;
+    height: 2.05rem;
+    background: #00aeff;
+    line-height: 2.05rem;
+    color: #fff;
+    font-size: 1.15rem;
+    font-weight: bold;
+    border-radius: .2rem;
+    text-align: center;
+}
+
+.zero_cdMain_Cbox::after {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(150%, -55%);
+    content: ":";
+    color: #00aeff;
+    font-size: 1rem;
+}
+
+.zero_cdMain_word {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    width: 80%;
+    font-size: 0;
+}
+
+.zero_cdMain_Wbox {
+    position: relative;
+    display: inline-block;
+    margin: .05rem 0;
+    width: 2.05rem;
+    height: .7rem;
+    background: #898989;
+    line-height: .7rem;
+    color: #fff;
+    font-size: .5rem;
+    font-weight: bold;
+    border-radius: .1rem;
+    text-align: center;
+}
+
+.zero_cdMain_Cbox:last-child::after {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(150%, -55%);
+    content: "";
+    color: #00aeff;
+    font-size: 1rem;
+}
+
+.zero_cd_footer {
+    margin: 0 auto;
+    width: 60%;
+}
+
+.zero_cd_footer img {
+    width: 100%;
+}
+
+/* end */
+
+/* zero_list */
+
+.zero_list {
+    margin: 0 auto;
+    width: 90%;
+    /* background: #302625; */
+}
+
+.zero_list li {
+    margin: 0 0 .9rem 0;
+    padding: 0 .7rem 0 .7rem;
+    width: 100%;
+    box-shadow: 0 0 .5rem #e0dfdf;
+    border-radius: .5rem;
+}
+
+.zero_list_title {
+    position: relative;
+    margin: 0 0 .5rem 0;
+    padding: .2rem 0 0;
+    width: 100%;
+    line-height: 1.3rem;
+    text-align: center;
+    font-size: .65rem;
+    font-weight: bold;
+    color: #3d4868;
+}
+
+.zero_list_title::after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    /* transform: translate(-50%,0); */
+    content: "";
+    width: 100%;
+    height: .05rem;
+    background: #c3c6cf;
+}
+
+.zero_list_title span {
+    color: #00aeff;
+    margin: 0 0 0 .5rem;
+}
+
+.zero_list_main {
+    width: 100%;
+    font-size: 0;
+}
+
+.zero_listM_imgBox {
+    display: inline-block;
+    vertical-align: top;
+    width: 43%;
+    height: 5.25rem;
+    font-size: 0;
+}
+
+.zero_listM_imgBox img {
+    width: 100%;
+    height: 100%;
+    border-radius: .3rem;
+}
+
+.zero_listM_content {
+    display: inline-block;
+    vertical-align: top;
+    margin: .3rem 0 .4rem .5rem;
+    width: 52%;
+}
+
+.zero_listM_countDown {
+    margin-bottom: .7rem;
+    font-size: .7rem;
+    color: #00aeff;
+    text-indent: .4rem;
+    font-weight: bold;
+    height: 1.3rem;
+    text-align: center;
+    line-height: 1.3rem;
+    vertical-align: middle;
+}
+
+.zero_listM_countDown div {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 .05rem 0 0;
+    width: 1.2rem;
+    height: 1.2rem;
+    line-height: 1.3rem;
+    color: #fff;
+    text-indent: 0;
+    border-radius: 1.2rem;
+    background: #00aeff;
+    text-align: center;
+    font-weight: normal;
+    font-size: .74rem;
+}
+
+.zero_listM_countDown div::after {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(130%, -50%);
+    content: ":";
+    color: #00aeff;
+    font-size: .6rem;
+}
+
+.zero_listM_countDown div:last-child::after {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(145%, -60%);
+    content: "";
+    color: #00aeff;
+    font-size: .6rem;
+}
+
+.zero_listM_detial {
+    margin-bottom: .1rem;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: .55rem;
+}
+
+.zero_listM_validity {
+    margin: .3rem 0 0 0;
+    width: 100%;
+    font-size: .55rem;
+    white-space: nowrap;
+}
+
+.zero_listM_number {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: .2rem 0 0 0;
+    width: 100%;
+}
+
+.zero_listM_number>span:first-child {
+    position: relative;
+    margin: .1rem 0 0 0;
+    font-size: .5rem;
+}
+
+.zero_listM_number>span:first-child::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    content: "";
+    transform: translate(-50%, -43%);
+    width: 100%;
+    height: .05rem;
+    background: red;
+    font-size: .5rem;
+}
+
+.zero_listM_number>span:last-child {
+    letter-spacing: .03rem;
+    font-size: .95rem;
+    vertical-align: top;
+    font-weight: bold;
+    color: #00aeff;
+}
+
+.zero_listM_number>span:last-child span {
+    vertical-align: top;
+    font-size: .85rem;
+    color: #00aeff;
+}
+
+.zero_listM_confrim {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.zero_listM_confrim a {
+    padding: 0 0 0 .15rem;
+    margin: 0 0 0 .3rem;
+    width: 76%;
+    height: 1.85rem;
+    line-height: 1.85rem;
+    font-size: .62rem;
+    letter-spacing: .15rem;
+    text-align: center;
+    color: #fff;
+    background: url("../images/zeroPurchase/confirm.png") no-repeat center;
+    background-size: 100% 100%;
+}
+
+/* end*/
+
+/* 弹出层 */
+
+.zero_list_alert {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+}
+
+.zero_listA_box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* margin: 0 auto; */
+    width: 78%;
+    height: 11rem;
+    border-radius: .5rem;
+    background: #fff;
+}
+
+.zero_listA_title {
+    width: 100%;
+    margin: .15rem 0 0 0;
+    text-align: center;
+    padding: 0 0 0 .05rem;
+    font-size: .72rem;
+    letter-spacing: .05rem;
+    font-weight: bold;
+    color: #00aeff;
+}
+
+.zero_listA_title:first-child {
+    margin: 1.8rem 0 0 0;
+}
+
+.zero_listA_word {
+    margin: .12rem 0 0 0;
+    width: 100%;
+    font-size: .55rem;
+    text-align: center;
+    color: #3c4768;
+}
+
+.zero_listA_word:nth-of-type(3) {
+    margin: .45rem 0 0 0;
+}
+
+.zero_listA_confrim {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.zero_listA_confrim>a {
+    margin: 1.24rem 0 0 0;
+    padding: 0 0 0 .6rem;
+    width: 54%;
+    height: 2.4rem;
+    line-height: 2.4rem;
+    font-size: .75rem;
+    letter-spacing: .6rem;
+    text-align: center;
+    color: #fff;
+    background: url("../images/zeroPurchase/confirm.png") no-repeat center;
+    background-size: 100% 100%;
+}
+
+/* error */
+
+.zero_listA_errorImg {
+    margin: 1.8rem auto 0;
+    width: 66%;
+}
+
+.zero_listA_errorImg img {
+    width: 100%;
+}
+
+.zero_listA_errorWord {
+    width: 100%;
+    margin: .1rem 0 0 0;
+    text-align: center;
+    font-size: .7rem;
+    color: #3c4768;
+    font-weight: bold;
+    letter-spacing: .03rem;
+    padding: 0 0 0 .03rem;
+}
+
+.zero_listA_errorWord:last-child {
+    margin: .15rem 0 0 0;
+}
+
+/* detial */
+
+.zero_detial_imgBox {
+    margin: 0 auto;
+    width: 77%;
+}
+
+.zero_detial_imgBox img {
+    width: 100%;
+    border-radius: .5rem;
+}
+
+.zero_detialM {
+    margin: .1rem auto 0;
+    width: 77%;
+    border-radius: .5rem;
+    box-shadow: 0 0 .5rem #e0dfdf;
+}
+
+.zero_detialM_name {
+    padding: .7rem 0 0 0;
+    width: 100%;
+    text-align: center;
+    color: #3c4768;
+    font-size: .85rem;
+    font-weight: bold;
+}
+
+.zero_detialM_word {
+    padding: .15rem 0 .25rem 0;
+    width: 100%;
+    text-align: center;
+    color: #3c4768;
+    font-size: .55rem;
+    /* font-weight: bold; */
+}
+
+.zero_detialM_code {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.zero_detialM_tips {
+    display: flex;
+    justify-content: space-between;
+    margin: .4rem auto 0;
+    width: 78%;
+    color: #00aeff;
+    font-size: .81rem;
+    font-weight: bold;
+    letter-spacing: .05rem;
+}
+
+.zero_detialM_time {
+    padding: .5rem 0 .7rem 0;
+    width: 100%;
+    text-align: center;
+    color: #3c4768;
+    font-size: .65rem;
+}
+
+/* 用户列表按钮 */
+
+.zero_userlist {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    width: 2rem;
+}
+
+.zero_userlist a{
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    background: url(../images/timeZeroPay/beng.png);
+    background-size: 100% 100%;
+}

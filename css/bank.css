@@ -1,0 +1,196 @@
+a{
+    color:#fff;
+}
+
+.layout{
+    width: 100%;
+    height: 100vh;
+    background:#fff100 ;
+}
+.bank_header{
+    display: flex;
+    justify-content: center;
+    padding: 3rem 0 0 0;
+    width: 100%;
+}
+.bank_header_container{
+    /* display: inline;
+    overflow: hidden;
+    margin: 0 auto; */
+}
+.bank_header_container>img:first-child{
+    height: 1.6rem;
+}
+.bank_header_container>img:last-child{
+    height: 1.1rem;
+}
+.bank_main{
+    margin: 1.5rem 0 0 0;
+    width: 100%;
+}
+.bank_main_title{
+    position: relative;
+    width: 100%;
+    font-size: .5rem;
+    color:#0081cc ;
+    text-align: center;
+}
+.bank_main_title::before{
+    position: absolute;
+    left: 29%;
+    bottom: -.1rem;
+    content: "";
+    width: 6.8rem;
+    background: #0081cc;
+    height: 2px;
+}
+.bank_main_content{
+    width: 12rem;
+    height: 6.2rem;
+    margin: .4rem auto 0;
+    background: rgba(0, 0,0,0.27);
+    border-radius: .2rem;
+}
+.bank_main_ul{
+    width: 100%;
+    height: 100%;
+}
+.bank_main_ul li{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 33.33%;
+}
+.bank_main_ul li::before{
+    position: absolute;
+    bottom: 0;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background: #fff;
+}
+.bank_main_ul li:last-child:before{
+    position: absolute;
+    bottom: 0;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background: none;
+}
+.bank_main_ul li>span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.8rem;
+}
+.bank_main_ul li>label{
+   font-size: .65rem;
+   color: #fff;
+}
+.bank_main_ul li>input[type=text]{
+    margin: 0 0 0 .2rem;
+    /* width: 7.4rem; */
+    /* background: #ff0000; */
+    font-size: .65rem;
+    color: #fff;
+ }
+ .bank_input1{
+    width: 7.3rem;
+}
+.bank_input2{
+    width: 4rem;
+}
+ .bank_input3{
+     width: 2.1rem;
+ }
+.bank_img1 img{
+    width: 1.3rem;
+}
+.bank_img2 img{
+    height: 1.5rem;
+}
+.bank_img3 img{
+    width: 1.5rem;
+}
+.bank_identCode{
+    position: absolute;
+    top: .2rem;
+    right: .5rem;
+    margin: .1rem 0;
+    width: 3rem;
+    height: 1.45rem;
+    line-height: 1.45rem;
+    font-size: .5rem;
+    color: #fff;
+    text-align: center;
+    background: #0081cc;
+    border-radius: .2rem;
+}
+.bank_identCode_c{
+    position: absolute;
+    top: .2rem;
+    right: .5rem;
+    margin: .1rem 0;
+    width: 3rem;
+    height: 1.45rem;
+    line-height: 1.45rem;
+    font-size: .5rem;
+    /* color: #5d5d5d; */
+    text-align: center;
+    background: #777777;
+    border-radius: .2rem;
+}
+.bank_identCode a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.bank_identCode div{
+    overflow:hidden;
+}
+.bank_identCode img{
+    width: 3rem;
+}
+.bank_footer{
+    margin: 4rem 0 0 0;
+    width: 100%;
+}
+.bank_sub{
+    margin: 0 auto;
+    width: 12rem;
+    height: 1.75rem;
+    background: #0081cc;
+    border-radius: .2rem;
+}
+.bank_sub a{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    line-height: 1.75rem;
+    font-size: .7rem;
+    text-align: center;
+}
+
+
+/* lock_bank */
+.bank_lock_box{
+   position: relative;
+   margin: 0 auto;
+    width: 80%;
+    
+  
+}
+.bank_lock_img1{
+    position: absolute;
+    width:100%;
+    top: 13rem;
+    
+}
+.bank_lock_img2{
+    position: absolute;
+    top: -1.8rem;
+    left: 15%;
+    width:75%;
+    
+}

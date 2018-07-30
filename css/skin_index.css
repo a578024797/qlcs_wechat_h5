@@ -1,0 +1,504 @@
+/*
+    2018/6/22
+ */
+
+/* reset */
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: #302625;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    border: 0;
+}
+
+ul,
+li {
+    list-style-type: none;
+}
+
+input {
+    border: 0;
+    background: none;
+}
+
+select {
+    border: 0;
+}
+
+* {
+    box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -icab-box-sizing: border-box;
+    -khtml-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+/* end reset */
+
+/* */
+
+/* 布局 layout */
+
+.skin_container {
+    width: 100%;
+}
+
+/* end layout */
+
+/* header */
+
+.header_nav {
+    display: flex;
+    justify-content: space-between;
+    margin: .5rem auto 0;
+    width: 90%;
+}
+
+/* .header_nav_box{
+    width: 50%;
+} */
+
+.header_nav_message {
+    vertical-align: middle;
+    font-size: .6rem;
+}
+
+.header_nav_imgBox {
+    display: inline-block;
+    vertical-align: middle;
+    width: 1rem;
+}
+
+.header_nav_imgBox img {
+    width: 100%;
+}
+
+.header_main {
+    position: relative;
+    height: 8.5rem;
+    background: url("../images/skin_footBall/3.png") center no-repeat;
+    background-size: 100% 100%;
+}
+
+.header_userImgBox {
+    position: relative;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 3.5rem;
+}
+
+.header_userImgBox img {
+    position: absolute;
+    top: .28rem;
+    left: 8.4rem;
+    width: 100%;
+    height: 100%;
+    border-radius: 3.5rem;
+}
+
+.header_userLevel {
+    position: absolute;
+    right: 2.1rem;
+    top: 7.4rem;
+    font-size: .55rem;
+    color: #fff;
+}
+
+/* 积分规则 */
+
+.skin_integralRule {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.skin_integral_content {
+    width: 75%;
+    margin: 6.5rem auto 0;
+    padding: 0 0 1rem 0;
+    background: url(../images/index/queren_0000_z.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.skin_integral_close {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 1rem auto 0;
+    background: url(../images/index/close.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.skin_integral_title {
+    position: relative;
+    margin: 0 auto;
+    padding: 1rem 0;
+    font-size: .8rem;
+    color: #0080cc;
+    text-align: center;
+}
+
+.skin_integral_title::before {
+    content: "";
+    position: absolute;
+    left: .8rem;
+    top: 1.5rem;
+    width: 3.2rem;
+    height: .1rem;
+    background: #0080cc;
+}
+
+.skin_integral_title::after {
+    content: "";
+    position: absolute;
+    right: .8rem;
+    top: 1.5rem;
+    width: 3.2rem;
+    height: .1rem;
+    background: #0080cc;
+}
+
+.skin_integral_content ul {
+    width: 90%;
+    margin: 0 auto;
+    padding: 0 0 0 .6rem;
+}
+
+.skin_integral_content ul li {
+    margin-bottom: .2rem;
+    font-size: .6rem;
+    color: #0080cc;
+    letter-spacing: .05rem;
+}
+
+/* end 积分规则 */
+
+/* 进度条 */
+
+.skin_progressLine {
+    margin: .13rem auto 0;
+    width: 78%;
+}
+
+.progress_news {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 .1rem 0;
+    width: 100%;
+    font-size: .5rem;
+}
+
+.progress_news span:first-child {
+    color: #2321ad;
+}
+
+.progress_news span {
+    color: #d10064;
+}
+
+.progress_imgBox {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: translate(-58%, 20%);
+    width: .7rem;
+}
+
+.progress_imgBox img {
+    width: 100%;
+}
+
+.progess_box {
+    width: 100%;
+    height: .15rem;
+}
+
+.progressMain {
+    width: 0;
+    height: 100%;
+}
+
+/* end 进度条 */
+
+/* end header */
+
+/* main */
+
+/* man mainNav */
+
+.skin_main_nav {
+    margin: 0.2rem auto;
+    display: flex;
+    justify-content: space-between;
+    width: 78%;
+    font-size: 0;
+}
+
+.skin_mv_imgBox {
+    font-size: 0;
+    display: inline-block;
+    vertical-align: middle;
+    width: .75rem;
+}
+
+.skin_mv_imgBox img {
+    width: 100%;
+}
+
+.skin_main_nav span {
+    font-size: .5rem;
+    vertical-align: middle;
+    margin: 0 .2rem;
+}
+
+.skin_main_nav span:last-child {
+    font-size: .6rem;
+    font-weight: bold;
+    vertical-align: middle;
+    margin: 0 0;
+}
+
+/* end mainNav */
+
+/* mainmain */
+
+.skin_main_main {
+    margin: 0 auto;
+    width: 90%;
+    background: #2321ad;
+    border-radius: .8rem;
+}
+
+.skin_barTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: .4rem 0;
+    width: 80%;
+}
+
+.skin_barImgBox {
+    width: 5rem;
+    font-size: 0;
+}
+
+.skin_barImgBox img {
+    width: 100%;
+}
+
+.skin_barImgBox:last-child {
+    /* width: 5rem; */
+    text-align: right;
+    font-size: .65rem;
+    font-weight: bold;
+    color: #fff
+}
+
+.skin_bar_content {
+    position: relative;
+    width: 100%;
+}
+
+.skin_bar_showBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: 0 auto;
+    width: 86%;
+    background: #fff;
+    padding: .5rem 0;
+    border-radius: .5rem;
+}
+
+.skin_bar_payCode {
+    position: absolute;
+    top: 0;
+    left: 7%;
+    /* transform: translate(10%,0); */
+    display: none;
+    width: 86%;
+    background: #fff;
+    padding: .5rem 0;
+    border-radius: .5rem;
+}
+
+.skin_bar_show {
+    margin: 0 auto;
+}
+
+.skin_mm_activity {
+    margin: .5rem auto 0;
+    width: 86%;
+}
+
+.skin_mm_activityImg {
+    display: inline-block;
+    width: 100%;
+}
+
+.skin_mm_activityImg img {
+    width: 100%;
+}
+
+/* 4个入口 */
+
+.skin_mm_func {
+    margin: .3rem auto .6rem;
+    width: 90%;
+    overflow: hidden;
+}
+
+.skin_func_box {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0 auto;
+    width: 75%;
+    /* text-align: center; */
+}
+
+.skin_func_box:last-child {
+    border-top: #6968c7 .005rem solid;
+    align-items: flex-end;
+}
+
+.skin_func_box:first-child .skin_func_content {
+    padding-bottom: .5rem
+}
+
+.skin_func_box:last-child .skin_func_content {
+    padding-top: .5rem;
+}
+
+.skin_func_box .skin_func_content:first-child {
+    border-right: #6968c7 .005rem solid;
+}
+
+.skin_func_box .skin_func_content:last-child {
+    text-align: right;
+}
+
+.skin_func_content {
+    width: 50%;
+    font-size: 0;
+}
+
+.skin_func_content img {
+    display: inline-block;
+    width: 60%;
+}
+
+.skin_func_box:first-child .skin_func_content span {
+    letter-spacing: .12rem;
+}
+
+.skin_func_content span {
+    display: inline-block;
+    color: #fff;
+    font-size: .6rem;
+    letter-spacing: .06rem;
+}
+
+.skin_func1 {
+    padding-left: .3rem;
+}
+
+.skin_func1 img {
+    margin-left: .15rem;
+    width: 57%;
+}
+
+.skin_func2 {
+    padding-right: .1rem;
+}
+
+.skin_func2 img {
+    width: 42.5%;
+    margin-right: .4rem;
+}
+
+.skin_func3 img {
+    margin-left: .15rem;
+    width: 59%;
+}
+
+.skin_func4 img {
+    margin-right: .15rem;
+    width: 59%;
+}
+
+/* end 4个入口 */
+
+.skin_mm_banner {
+    margin: 0 auto;
+    width: 86%;
+}
+
+.skin_mm_bannerImg {
+    width: 100%;
+}
+
+.skin_mm_bannerImg img {
+    width: 100%;
+}
+
+/* end mainmain */
+
+/* end main */
+
+/* footer */
+
+.skin_footImgBox {
+    margin: 0 auto;
+    width: 50%;
+}
+
+.skin_footImgBox img {
+    width: 100%;
+}
+
+/* end footer */

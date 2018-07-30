@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>首页</title>
+    <script src="./js/wordauto.js"></script>
+    <link rel="stylesheet" href="./css/new_common.css">
+    <link href="css/new_index.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="./css/swiper.css">
+    <script src="JS/jquery1.11.3.js"></script>
+</head>
+
+<body>
+    <div class="we_container gay_background">
+        <header class="we_container">
+            <div class="m_header_nav">
+                <a href="###" class="m_header_nav_box">
+                    <img src="./images//newIndex/nearShop.png" alt="nearShop"> 附近门店
+                    <!-- <div class="m_header_nav_box"></div> -->
+                </a>
+                <a href="###" class="m_header_nav_box">
+                    设置
+                    <img src="./images//newIndex/set.png" alt="set">
+                </a>
+            </div>
+            <!-- 结构 考虑 ul li 或者 p 或者 div 暂时放到moudle里 不知道别的页有没有重复-->
+            <!-- 如果没有 就放到就改成gay 以后首页都叫gay -->
+            <div class="m_header_userInfo">
+                <p>
+                    <div class="m_header_userInfo_imgBox">
+                        <img src="./images/newIndex/headImg.png" alt="headImg" id="member_ruleimg">
+                    </div>
+                </p>
+                <p>
+                    <div class="m_header_userInfo_userName">Robert Downey Jr</div>
+                </p>
+                <p>
+                    <div class="m_header_userInfo_level">VIP星耀</div>
+                </p>
+                <!--弹出层-->
+                <div class="m_rulebox" id="member_rulebox">
+                    <div class="m_rule">
+                        <div class="m_ruletitle">
+                            积分规则
+                        </div>
+                        <ul>
+                            <li>1. 青铜 到白银需要50000分阿斯达所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所</li>
+                            <li>2. 阿萨德哈时间快点哈时间肯定好看撒觉得好看教案上扣扣</li>
+                            <li>3. 阿萨德哈时间快点哈时间肯定好看撒觉得好看教案上扣扣</li>
+                            <li>4. 阿萨德哈时间快点哈时间肯定好看撒觉得好看教案上扣扣</li>
+                            <li>5. 阿萨德哈时间快点哈时间肯定好看撒觉得好看啥答案熬熬熬熬熬熬熬熬熬熬熬熬熬熬熬熬熬熬熬熬熬熬熬熬熬熬熬熬熬熬熬熬教案上扣扣</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- 结构 考虑 ul li 或者 p 或者 div -->
+            <div class="m_header_detialInfo">
+                <ul class="m_header_detialInfo_ul">
+                    <li class="m_header_detialInfo_li1">
+                        <a href="###">
+                            <div class="m_header_detialInfo_number">1250</div>
+                            <div class="m_header_detialInfo_word">会员积分</div>
+                        </a>
+                    </li>
+                    <li class="m_header_detialInfo_li2">
+                        <a href="###">
+                            <div class="m_header_detialInfo_number">10</div>
+                            <div class="m_header_detialInfo_word">优惠券</div>
+                        </a>
+                    </li>
+                    <li class="m_header_detialInfo_li3">
+                        <a href="###">
+                            <div class="m_header_detialInfo_number">150</div>
+                            <div class="m_header_detialInfo_word">储值金额</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <a href="###" class="m_header_redirect">
+                积分转储值 1000积分等于10元
+                <img src="./images/newIndex/integralExchange.png" alt="integralExchange">
+            </a>
+
+        </header>
+        <div class="gay_main">
+            <!-- 进度条 -->
+            <div class="m_progressLine">
+                <div class="m_progress_news">
+                    <span>青铜</span>
+                    <span>白银</span>
+                    <div class="m_progress_imgBox" id="progressImg">
+                        <!-- <img src="./images/skin_footBall/4.png" alt="4"> -->
+                    </div>
+                </div>
+                <div class="m_progess_box">
+                    <div class="m_progressMain" id="progressLine"></div>
+                </div>
+            </div>
+            <!-- 条形码 -->
+            <div class="gay_barcode">
+                <!-- 条形码 -->
+                <div class="gay_barTitle">
+                    <div class="gay_barImgBox">
+                        <img src="./images/newIndex/logo.png" alt="logo">
+                    </div>
+                    <div class="gay_barImgBox">
+                        <span id="showPay">
+                            <img src="./images/newIndex/payFlag.png" alt="payFlag">
+                            <span>付款密码</span>
+                        </span>
+                        <!-- <img src="./images/skin_footBall/6.png" alt="6"> -->
+                    </div>
+                </div>
+                <div class="gay_bar_content">
+                    <div class="gay_bar_showBox">
+                        <div class="gay_bar_show" id="bcTarget1"></div>
+                    </div>
+                    <div class="gay_bar_payCode" id="showPayBar" data-flag="0">
+                        <div class="gay_bar_show" id="bcTarget2"></div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- 轮播广告 -->
+            <div class="gay_ad_box">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="###">
+                                <img src="./images/newIndex/ad1.jpg" alt="ad1" class="gay_ad_loopImg">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="###">
+                                <img src="./images/newIndex/ad2.jpg" alt="ad2" class="gay_ad_loopImg">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="###">
+                                <img src="./images/newIndex/ad3.jpg" alt="ad3" class="gay_ad_loopImg">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- 如果需要分页器 -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+            <!-- 4个方法 -->
+            <div class="gay_fourFunction">
+                <div class="gay_fourFunction_line">
+                    <a class="gay_fourFunction_box1" href="###">
+                        <img src="./images/newIndex/integralGet.png" alt="integralGet" class="gay_function_img">
+                        <div>积分领取</div>
+                    </a>
+                    <a class="gay_fourFunction_box2" href="###">
+                        <img src="./images/newIndex/integral.png" alt="integral" class="gay_function_img">
+                        <div>积分兑换</div>
+                    </a>
+                </div>
+                <div class="gay_fourFunction_line">
+                    <a class="gay_fourFunction_box3" href="###">
+                        <img src="./images/newIndex/coupon.png" alt="coupon" class="gay_function_img">
+                        <div>优惠券大放送</div>
+                    </a>
+                    <a class="gay_fourFunction_box4" href="###">
+                        <img src="./images/newIndex/teamBuy.png" alt="teamBuy" class="gay_function_img">
+                        <div>惊爆价团购</div>
+                    </a>
+                </div>
+                <div class="gay_fourFunction_centerImg">
+                    <img src="./images/newIndex/supermarket.png" alt="supermarket">
+                </div>
+            </div>
+            <!-- 美团 -->
+            <div class="gay_onlyAd">
+                <a href="###">
+                    <img src="./images/newIndex/meituan.png" alt="meituan">
+                </a>
+            </div>
+        </div>
+        <footer class="we_container">
+            <a href="###" class="gay_footer_english">
+                <img src="./images/newIndex/footerEnglish.png" alt="footerEnglish">
+            </a>
+        </footer>
+    </div>
+    <script src="./js/progressLine.js"></script>
+    <!-- 封装以后在写 -->
+    <script src="JS/jquery_code.js"></script>
+    <script src="JS/jquery_code1.js"></script>
+    <script src="./js/swiper.min.js"></script>
+    <script>
+        progressLine({
+            progressId: "progressLine",
+            progressBgColor: "#fff",
+            progressFaBgColor: "",
+            progressImgId: "progressImg",
+            progressRate: "80"
+        });
+        //条形码
+        $("#bcTarget1").barcode("13756606900", "code128", {
+            barWidth: 2,
+            barHeight: 80,
+            moduleSize: 5,
+            showHRI: false,
+            addQuietZone: true,
+            marginHRI: 0,
+            bgColor: "",
+            color: "#000",
+            fontSize: 12,
+            output: "css",
+            posX: 0,
+            posY: 0
+        });
+        $("#bcTarget2").barcode("137566069100", "code128", {
+            barWidth: 2,
+            barHeight: 80,
+            moduleSize: 5,
+            showHRI: false,
+            addQuietZone: true,
+            marginHRI: 0,
+            bgColor: "",
+            color: "#000",
+            fontSize: 12,
+            output: "css",
+            posX: 0,
+            posY: 0
+        });
+        //付款密码 展示
+        $("#showPay").click(function () {
+            // $("#showPayBar").slideToggle(300);
+            let $bar = $("#showPayBar");
+            let $flag = $("#showPayBar").attr("data-flag");
+            if ($flag == 0) {
+                $(this).find("span").eq(0).text("点击关闭");
+                $bar.slideDown(300, function () {})
+                $("#showPayBar").attr("data-flag", "1");
+            } else {
+                $bar.slideUp(300);
+                $(this).find("span").eq(0).text("付款密码");
+                $("#showPayBar").attr("data-flag", "0");
+            }
+        });
+        //end
+        //积分规则
+        $("#member_ruleimg").click(function () {
+            $('#member_rulebox').fadeIn(300);
+        });
+        $("#member_rulebox").click(function () {
+            $('#member_rulebox').fadeOut(300);
+        })
+    </script>
+
+    <script>
+        var mySwiper = new Swiper('.swiper-container', {
+            loop: true,
+            autoplay: {
+                stopOnLastSlide: false,
+                disableOnInteraction: false,
+            },
+
+            // 如果需要分页器
+            pagination: {
+                el: '.swiper-pagination',
+                bulletActiveClass: 'gay_swiper_pagination_activeBullet',
+            },
+        })
+        mySwiper.pagination.$el.addClass('gay_swiper_pagination');
+    </script>
+</body>
+
+</html>

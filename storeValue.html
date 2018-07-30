@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<title>StoreValue</title>
+<link href="css/commmon.css" rel="stylesheet" type="text/css">
+<link href="css/storeValue.css" rel="stylesheet" type="text/css">
+<script src="js/jquery1.11.3.js"></script>
+</head>
+<body>
+<header class="header w100"> 
+  <!--设置按钮-->
+  <div class="tfun w90 mauto">
+    <div class="fleft"> <a href="###" class="fun setImg1 fleft"></a> </div>
+    <div class="fright"> <a href="###" class="fun setImg2 fleft "></a> </div>
+  </div>
+  <!--会员头像-->
+  <div class="memberHead w100 mauto">
+    <div class="borderBox2 mauto">
+      <div class="memberKong2"></div>
+      <img src="images/index/dog.jpg" alt="image">
+      <div class="memberKong">
+        <a href="###">
+        <div class="memberKong_img"> </div>
+        <div class="memberKong_text"> 线上储值 </div>
+        </a>
+      </div>
+    </div>
+    <div class="memberLevel">
+      <div class="memberLeverContent">一级会员</div>
+    </div>
+  </div>
+</header>
+<!--会员进度条-->
+<div class="barCode w90 mauto">
+  <div class="progressBar  " >
+    <div class="pogressLever mauto w100">
+      <div class="fleft pogressContent "> VIP1 </div>
+      <div class="fright pogressContent"> VIP2 </div>
+    </div>
+    <div class="mauto w100"id="progressBar"> </div>
+  </div>
+</div>
+<!--储值余额-->
+<div class="reserveBalance mauto w90">
+  <!--标题-->
+  <div class="reserveBalanceTitle w100 mauto">
+    <div>储值余额</div>
+     <div>408</div>
+  </div>
+  <!--时间-->
+  <div class="reserveBalanceTime w100 mauto">
+  <!--  <form id="form1" name="form1" method="post" action="" class="w100"><input type="hidden" name="SIDD" value="SIDD4000431724" />
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr bgcolor="#FFA54F">
+    <td height="30" align="center">
+<div class="demo">
+<div class="lie">
+        选择日期：
+        <input name="title_date" type="text" id="beginTime" class="kbtn" size="10" maxlength="10" style="text-align:center; background-color:#FFA54F" />
+        &nbsp;
+        <input type="submit" name="Submit" value="提交" class="fdian6" />
+</div>
+</div>
+<div id="datePlugin"></div>
+    </td>
+  </tr>
+</table>
+</form>-->
+    
+    <div>2018年01月</div>
+     <a href="#"><div class="reserveBalanceTime_img"></div></a>
+  </div>
+  <!--明细细节-->
+  <div class="reserveBalanceDetial w100">
+    <div class="reserveBalanceDetial_row w100 detial_b">
+      <div class="reserveBalanceDetial_content">
+        <div class="reserveBalanceDetial_img detial_kind1">
+        </div>
+        <div class="reserveBalanceDetial_text">
+          <div>线上储值</div>
+          <span>2018-01-06 12:30</span>
+        </div>
+      </div>
+      <div class="reserveBalanceDetial_money">
+        <div class="reserveBalanceDetial_moneyUp">+300</div>
+      </div>
+    </div>
+<div class="reserveBalanceDetial_row w100 detial_b">
+      <div class="reserveBalanceDetial_content">
+        <div class="reserveBalanceDetial_img detial_kind2">
+        </div>
+        <div class="reserveBalanceDetial_text">
+          <div>劲爆团购价</div>
+          <span>2018-01-06 12:30</span>
+        </div>
+      </div>
+      <div class="reserveBalanceDetial_money">
+        <div class="reserveBalanceDetial_moneyDown">-300</div>
+      </div>
+    </div>
+    <div class="reserveBalanceDetial_row w100 detial_b">
+      <div class="reserveBalanceDetial_content">
+        <div class="reserveBalanceDetial_img detial_kind3">
+        </div>
+        <div class="reserveBalanceDetial_text">
+          <div>展示店消费</div>
+          <span>2018-01-06 12:30</span>
+        </div>
+      </div>
+      <div class="reserveBalanceDetial_money">
+        <div class="reserveBalanceDetial_moneyDown">-300</div>
+      </div>
+    </div>
+    <div class="reserveBalanceDetial_row w100 ">
+      <div class="reserveBalanceDetial_content">
+        <div class="reserveBalanceDetial_img detial_kind4">
+        </div>
+        <div class="reserveBalanceDetial_text">
+          <div>展示店消费</div>
+          <span>2018-01-06 12:30</span>
+        </div>
+      </div>
+      <div class="reserveBalanceDetial_money">
+        <div class="reserveBalanceDetial_moneyDown">-300</div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="js/jquery.lineProgressbar.js"></script> 
+<script type="text/javascript"  src="js/date.js" ></script>
+<script type="text/javascript" src="js/iscroll.js" ></script>
+<script>       
+        (function (doc, win) {   
+            var docEl = doc.documentElement,   
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',   
+            recalc = function () {   
+            var clientWidth = docEl.clientWidth;   
+            if (!clientWidth) return;   
+            docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';   
+        };   
+        if (!doc.addEventListener) return;   
+        win.addEventListener(resizeEvt, recalc, false);   
+        doc.addEventListener('DOMContentLoaded', recalc, false);   
+        })(document, window);   
+</script> 
+<script type="text/javascript">
+$(function(){ 
+	$('#progressBar').LineProgressbar({
+		percentage: 50,
+		fillBackgroundColor: '#E67F12'
+	});
+	$('#beginTime').date();
+	$('#endTime').date({theme:"datetime"});
+})
+</script>
+
+</script>
+</body>
+</html>

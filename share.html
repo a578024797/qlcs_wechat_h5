@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<title>share</title>
+<link href="css/commmon.css" rel="stylesheet" type="text/css">
+<link href="css/qiandao.css" rel="stylesheet" type="text/css">
+<script src="js/jquery1.11.3.js"></script>
+</head>
+<body>
+<header class="header w100"> 
+  <!--设置按钮-->
+  <div class="tfun w90 mauto">
+    <div class="fleft"> <a href="###" class="fun setImg1 fleft"></a> </div>
+    <div class="fright"> <a href="###" class="fun setImg2 fleft "></a> </div>
+  </div>
+  <!--会员头像-->
+  <div class="memberHead w100 mauto">
+    <div class="borderBox2 mauto">
+      <div class="memberKong memberk_mr"> <a href="###">
+        <div class="memberKong_text tcener w100 tindent "> 积分余额 100 </div>
+        </a> </div>
+      <img src="images/index/dog.jpg" alt="image">
+      <div class="memberKong3 memberk_ml"> <a href="###">
+        <div class="memberKong_text memml"> 一级会员 </div>
+        <div class="memberKong_img"> </div>
+        </a> </div>
+    </div>
+  </div>
+</header>
+<!--会员进度条-->
+<div class="barCode w90 mauto">
+  <div class="progressBar  " >
+    <div class="pogressLever mauto w100">
+      <div class="fleft pogressContent "> VIP1 </div>
+      <div class="fright pogressContent"> VIP2 </div>
+    </div>
+    <div class="mauto w100"id="progressBar"> </div>
+  </div>
+</div>
+<!--储值余额-->
+<div class="reserveBalance mauto w90"> 
+  <!--标题-->
+  <div class="reserveBalanceTitle w100 mauto">
+    <div class="tContent w90"> <a href="###" >
+      <div>签到领积分</div>
+      </a> <a href="###" class="selected">
+      <div>分享得积分</div>
+      </a> <a href="###">
+      <div>问卷赚积分</div>
+      </a></div>
+  </div>
+</div>
+<!--share内容-->
+<div class="positionRel" style="height:5.2rem;">
+<div class="positionAbs show w100" style="top:0;">
+<div class="level_content w100">
+  <div class="main_content w100">
+    <div class="w50  fleft">
+      <div class="w92 content_pic"> <img src="images/qiandao/share.png"> </div>
+    </div>
+    <div class="w50 content_text fleft">
+      <div class="w100 title">新年来喝腊八粥</div>
+      <div class="w100 time">有效期2018.01.01-2018.02.26</div>
+      <div class="w100 price2 c0081cc">分享至朋友圈</div>
+      <div class="w100 lowPrice c0081cc">
+        <div class="fleft w45 mlowte">+5000积分</div>
+        <div class="lowDiv"><a href="###" class="fleft kindimg"></a></div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+<!--2-->
+<div class="positionRel" style="height:5.2rem;">
+<div class="positionAbs show w100" style="top:0;">
+<div class="level_content w100">
+  <div class="main_content w100">
+    <div class="w50  fleft">
+      <div class="w92 content_pic"> <img src="images/qiandao/share.png"> </div>
+    </div>
+    <div class="w50 content_text fleft">
+      <div class="w100 title">新年来喝腊八粥</div>
+      <div class="w100 time">有效期2018.01.01-2018.02.26</div>
+      <div class="w100 price2 c0081cc">分享至朋友圈</div>
+      <div class="w100 lowPrice c0081cc">
+        <div class="fleft w45 mlowte">+5000积分</div>
+        <div class="lowDiv"><a href="###" class="fleft kindimg"></a></div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+
+<script src="js/jquery.lineProgressbar.js"></script> 
+<script type="text/javascript"  src="js/date.js" ></script> 
+<script type="text/javascript" src="js/iscroll.js" ></script> 
+<script>       
+        (function (doc, win) {   
+            var docEl = doc.documentElement,   
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',   
+            recalc = function () {   
+            var clientWidth = docEl.clientWidth;   
+            if (!clientWidth) return;   
+            docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';   
+        };   
+        if (!doc.addEventListener) return;   
+        win.addEventListener(resizeEvt, recalc, false);   
+        doc.addEventListener('DOMContentLoaded', recalc, false);   
+        })(document, window);   
+</script> 
+<script type="text/javascript">
+$(function(){ 
+	$('#progressBar').LineProgressbar({
+		percentage: 50,
+		fillBackgroundColor: '#3b4666'
+	});
+	$('#beginTime').date();
+	$('#endTime').date({theme:"datetime"});
+})
+</script> 
+
+</body>
+</html>

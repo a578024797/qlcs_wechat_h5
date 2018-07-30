@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<title>teambuydetial</title>
+<link href="css/commmon.css" rel="stylesheet" type="text/css">
+<link href="css/submitOrder.css" rel="stylesheet" type="text/css">
+<script src="js/jquery1.11.3.js"></script>
+</head>
+
+<body class="bgcolor">
+<header class="header w100 ">
+  <div class="renturnBox"><a href="###" class="return"></a></div>
+  <div class="positionAbs w100 header_title">
+    <div class=""> 团购订单详情 </div>
+  </div>
+</header>
+<!--产品信息-->
+<div class="productBox w100 mtlarge">
+<div class="productConBox">
+ <img src="images/submitOrder/sadsa.png" alt="images"/>
+  <div class="textBox">
+    <div>美国乐事原味薯片</div>
+    <div>净含量60g</div>
+  </div>
+ </div>
+  <div class="product_price color0081cc">
+    ¥5555.00
+  </div>
+</div>
+<!--详情-->
+<div class="w100 proDetial mtlarge">
+  <div>提货门店</div>
+  <div class="color0081cc">全联商超展示店</div>
+</div>
+<div class="w100 proDetial mtlow">
+  <div>活动时间</div>
+  <div class="color0081cc">2018年2月3日-2018年2月15日</div>
+</div>
+<div class="w100 proDetial mtlow">
+  <div>商品状态</div>
+  <div class="color0081cc">未取货</div>
+</div>
+<div class="w100 proDetial mtlarge">
+  <div>商品原价</div>
+  <div class="color0081cc">¥15555.00</div>
+</div>
+<div class="w100 proDetial mtlow">
+  <div>优惠后价格</div>
+  <div class="color0081cc">¥55.00</div>
+</div>
+<div class="w100 proDetialIn mtlargedou">
+  <div>消费密码</div>
+  <input type="text" placeholder="请输入">
+</div>
+<!--验证消费-->
+<div class="buy w100">
+  <a href="###"><div class="buyContent">验证消费</div></a>
+</div>
+
+
+<script>       
+        (function (doc, win) {   
+            var docEl = doc.documentElement,   
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',   
+            recalc = function () {   
+            var clientWidth = docEl.clientWidth;   
+            if (!clientWidth) return;   
+            docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';   
+        };   
+        if (!doc.addEventListener) return;   
+        win.addEventListener(resizeEvt, recalc, false);   
+        doc.addEventListener('DOMContentLoaded', recalc, false);   
+        })(document, window);   
+</script> 
+
+
+</body>
+</html>

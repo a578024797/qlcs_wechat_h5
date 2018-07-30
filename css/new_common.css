@@ -1,0 +1,517 @@
+/*
+    start 2018/7/6 
+     made by redXx
+ */
+
+/* reset */
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: #302625;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    border: 0;
+}
+
+ul,
+li {
+    list-style-type: none;
+}
+
+input {
+    border: 0;
+    background: none;
+}
+
+select {
+    border: 0;
+}
+
+* {
+    box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -icab-box-sizing: border-box;
+    -khtml-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+/* end reset */
+
+/* layout */
+
+.we_container {
+    width: 100%;
+}
+
+/* moudle */
+
+.m_header_nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: .8rem 0 0;
+    width: 93%;
+}
+
+.m_header_nav_box {
+    display: flex;
+    align-items: center;
+    font-size: .5rem;
+    color: #fff;
+}
+
+.m_header_nav_box img {
+    margin: 0 .2rem;
+    width: .95rem;
+}
+
+.m_header_userInfo {
+    position: relative;
+}
+
+.m_header_userInfo_imgBox {
+    margin: .2rem auto 0;
+    width: 3.8rem;
+    height: 3.8rem;
+}
+
+.m_header_userInfo_imgBox img {
+    width: 100%;
+    height: 100%;
+    border-radius: 3.8rem;
+}
+
+.m_header_userInfo_userName {
+    color: #fff;
+    text-align: center;
+    line-height: 1.2rem;
+    font-size: .52rem;
+}
+
+.m_header_userInfo_level {
+    margin: 0 auto;
+    width: 3.4rem;
+    padding: .12rem .3rem .12rem .4rem;
+    text-align: center;
+    letter-spacing: .1rem;
+    font-size: .54rem;
+    color: #fff;
+    background: rgba(19, 116, 249, .8);
+    border-radius: .5rem;
+    opacity: .9;
+}
+
+.m_header_detialInfo {
+    margin: .37rem 0 0 0;
+    /* opacity: .9; */
+}
+
+.m_header_detialInfo_ul {
+    margin: 0 auto;
+    width: 58.8%;
+    font-size: 0;
+}
+
+.m_header_detialInfo_ul a {
+    color: #fff;
+}
+
+.m_header_detialInfo_ul li {
+    position: relative;
+    display: inline-block;
+    width: 33.3%;
+    color: #ffffff;
+}
+
+.m_header_detialInfo_ul li::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    content: "";
+    width: .05rem;
+    height: 100%;
+    background: #fff;
+}
+
+.m_header_detialInfo_ul li:last-child::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    content: "";
+    width: 0;
+    height: 100%;
+    background: #fff;
+}
+
+.m_header_detialInfo_li1 {
+    text-align: left;
+}
+
+.m_header_detialInfo_li2 {
+    text-align: center;
+}
+
+.m_header_detialInfo_li2 .m_header_detialInfo_word {
+    line-height: 1;
+    font-size: .5rem;
+    padding: 0 0 0 .2rem;
+    letter-spacing: .2rem;
+}
+
+.m_header_detialInfo_li3 {
+    text-align: right;
+}
+
+.m_header_detialInfo_number {
+    line-height: 1;
+    letter-spacing: .1rem;
+    font-size: .75rem;
+}
+
+.m_header_detialInfo_word {
+    margin: .15rem 0 0 0;
+    line-height: 1;
+    font-size: .5rem;
+    letter-spacing: .05rem;
+}
+
+.m_header_redirect {
+    margin: .5rem 0 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .5rem;
+    color: #ffffff;
+}
+
+.m_header_redirect img {
+    margin: 0 0 0 .15rem;
+    width: .8rem;
+}
+
+/*<!--积分规则规则-->*/
+
+.m_rulebox {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.m_rule {
+    width: 75%;
+    margin: 6.5rem auto 0;
+    padding: 0 0 1rem 0;
+    background: url(../images/index/queren_0000_z.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.m_ruletitle {
+    position: relative;
+    margin: 0 auto;
+    padding: 1rem 0;
+    font-size: .8rem;
+    color: #0080cc;
+    text-align: center;
+}
+
+.m_ruletitle::before {
+    content: "";
+    position: absolute;
+    left: .8rem;
+    top: 1.5rem;
+    width: 3.2rem;
+    height: .1rem;
+    background: #0080cc;
+}
+
+.m_ruletitle::after {
+    content: "";
+    position: absolute;
+    right: .8rem;
+    top: 1.5rem;
+    width: 3.2rem;
+    height: .1rem;
+    background: #0080cc;
+}
+
+.m_rule ul {
+    width: 90%;
+    margin: 0 auto;
+    padding: 0 0 0 .6rem;
+}
+
+.m_rule ul li {
+    margin-bottom: .2rem;
+    font-size: .6rem;
+    color: #0080cc;
+    letter-spacing: .05rem;
+}
+
+/* 进度条 */
+
+.m_progress_news {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 .1rem 0;
+    width: 100%;
+    font-size: .5rem;
+}
+
+.m_progress_news span:first-child {
+    color: #fff;
+}
+
+.m_progress_news span {
+    margin-right: -.3rem;
+    letter-spacing: .3rem;
+    color: #fff;
+}
+
+.m_progress_imgBox {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: translate(-58%, 20%);
+    width: .7rem;
+}
+
+.m_progress_imgBox img {
+    width: 100%;
+}
+
+.m_progess_box {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    /* height: .15rem; */
+    border: #fff solid .05rem;
+    border-radius: .4rem;
+}
+
+.m_progressMain {
+    margin: .05rem;
+    width: 0;
+    height: .15rem;
+    border-radius: .3rem;
+}
+
+/* end 进度条 */
+
+/* 按钮 样式 宽高字体行高 请根据页面需要自己设置 */
+
+.m_button_confrim {
+    background: url("../images/integral_exchange/in2.png") no-repeat;
+    background-size: 100% 100%;
+    text-align: justify;
+}
+
+.m_button_confrim::after {
+    display: inline-block;
+    width: 100%;
+    height: 0;
+    content: "";
+}
+
+.m_button_cancel {
+    background: url("../images/integral_exchange/in3.png") no-repeat;
+    background-size: 100% 100%;
+    text-align: justify;
+}
+
+.m_button_cancel::after {
+    display: inline-block;
+    width: 100%;
+    height: 0;
+    content: "";
+}
+
+/* 活动详细页固定模板 */
+
+/* detial */
+
+.m_detial_header_imgBox {
+    margin: 0 auto;
+    width: 70%;
+}
+
+.m_detial_header_imgBox img {
+    width: 100%;
+}
+
+.m_detial_imgBox {
+    margin: 0 auto;
+    width: 77%;
+}
+
+.m_detial_imgBox img {
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.m_detialM {
+    margin: .1rem auto 0;
+    width: 77%;
+    border-radius: 1rem;
+    box-shadow: 0 0 .5rem #e0dfdf;
+    background: #ffffff;
+}
+
+.m_detialM_name {
+    padding: .8rem 0 0 0;
+    width: 100%;
+    text-align: center;
+    color: #3c4768;
+    font-size: .85rem;
+    font-weight: bold;
+}
+
+.m_detialM_word {
+    padding: .15rem 0 .25rem 0;
+    width: 100%;
+    text-align: center;
+    color: #3c4768;
+    font-size: .55rem;
+    /* font-weight: bold; */
+}
+
+.m_detialM_code {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.m_detialM_tips {
+    display: flex;
+    justify-content: space-between;
+    margin: .4rem auto 0;
+    width: 78%;
+    font-size: .81rem;
+    font-weight: bold;
+    letter-spacing: .05rem;
+}
+
+.m_detialM_time {
+    padding: .5rem 0 .7rem 0;
+    width: 100%;
+    text-align: center;
+    color: #3c4768;
+    font-size: .65rem;
+}
+
+/* 抽奖列表页 */
+
+.m_list_ul {
+    width: 100%;
+}
+
+.m_list_li {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto .5rem;
+    width: 90%;
+    padding: .6rem .6rem;
+    background: #fff;
+    border-radius: .5rem;
+}
+
+.m_list_imgBox {
+    width: 47.7%;
+    font-size: 0;
+}
+
+.m_list_imgBox img {
+    width: 100%;
+    height: 5.85rem;
+    border-radius: .2rem;
+}
+
+.m_list_info {
+    width: 50%;
+}
+
+.m_list_info_title {
+    font-weight: bold;
+    font-size: .65rem;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.m_list_info_time {
+    font-size: .5rem;
+    text-align: center;
+}
+.m_list_info_click{
+    width: 100%;
+}
+.m_list_info_click a{
+    margin: 0 auto;
+    display: block;
+    width: 77%;
+    line-height: 1.4rem;
+    height: 1.6rem;
+    text-align: center;
+    font-size: .72rem;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: .05rem;
+    text-indent: .05rem;
+}
+/* end */
+
+/* 
+    各种按钮图片 unit
+*/
+
+.u_orange_confrim {
+    background: url("../images/magpieFestival/confrim.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.u_orange_unConfrim {
+    background: url("../images/magpieFestival/false.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+/* end */

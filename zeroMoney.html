@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<title>zeroMoney</title>
+<link href="css/commmon.css" rel="stylesheet" type="text/css">
+<link href="css/zeroMoney.css" rel="stylesheet" type="text/css">
+<script src="js/jquery1.11.3.js"></script>
+</head>
+
+<body>
+<header class="header w100"> 
+  <!--设置按钮-->
+  <div class="tfun w90 mauto">
+    <div class="fleft"> <a href="###" class="fun setImg1 fleft"></a> </div>
+    <div class="fright"> <a href="###" class="fun setImg2 fleft "></a> </div>
+  </div>
+</header>
+<!--内容-->
+<div class="main_content w90 mauto">
+  <div class="productImg w100"><img src="images/zeroMoney/chuzhi_0004.png" alt="image"> </div>
+  <div class="w100 title">美国乐事原味薯片 </div>
+  <div class="w50 endTime fdian7 mauto">
+    <div class="fleft w50">距结束仅剩</div>
+    <div class="time fleft w50">
+      <ul class="countdown w100">
+        <li class="csp"><div> <span class="days fleft">00</span> </div></li>
+        <li class="seperator fleft">:</li>
+        <li class="csp"><div> <span class="hours fleft">00</span> </div></li>
+        <li class="seperator fleft">:</li>
+        <li class="csp"> <div><span class="minutes fleft">00</span> </div></li>
+        <li class="seperator fleft">:</li>
+        <li class="csp"> <div><span class="seconds fleft">00</span> </div></li>
+      </ul>
+    </div>
+  </div>
+  <div class="w70 fdian7 mauto" style="overflow:hidden;" ><div class="fleft">选择门店</div><select name="select" id="sel" class="fright textse">
+    <option value="选择品牌">选择品牌</option>
+<option value="选择品牌1">选择品牌1</option>
+<option value="选择品牌2">选择品牌2</option>
+    </select></div>
+  <div class="w100 fdian7 mfu" id="textse">保质期至2018年12月12日 </div>
+  <div class="w100 c0081cc shopPrice" > <strike> 门店价:15.00</strike></div>
+  <div class="w100 c0081cc zeroPrice"> ¥0.00</div>
+</div>
+<div class="rightNow">
+  <a href="###"></a>
+</div>
+<div class="detialContent w90 mauto">
+  <div class="dettit">详细信息</div>
+  <div>内容一内容一内容一内容一内容一内容一内asdhjksadhkjsahdkjashjk容一内容一</div>
+  <div>内容一</div>
+  <div>内容一</div>
+  <div>内容一</div>
+</div>
+<script src="js/jquery.downCount.js"></script>
+<script>       
+        (function (doc, win) {   
+            var docEl = doc.documentElement,   
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',   
+            recalc = function () {   
+            var clientWidth = docEl.clientWidth;   
+            if (!clientWidth) return;   
+            docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';   
+        };   
+        if (!doc.addEventListener) return;   
+        win.addEventListener(resizeEvt, recalc, false);   
+        doc.addEventListener('DOMContentLoaded', recalc, false);   
+        })(document, window);   
+</script>
+<script class="source" type="text/javascript">
+	$('.countdown').downCount({
+		date: '1/30/2018 12:00:00',
+		offset: +10
+	}, function () {
+		alert('倒计时结束!');
+	});
+</script>
+<script>
+ $(function(){
+ var sel=document.getElementById("sel");
+    var input = document.getElementById("textse");
+　　sel.onchange=function(){
+　
+    var V = sel.value;
+    var input = document.getElementById("textse");
+    input.innerText=V;
+　　}　
+
+});
+</script>
+
+</body>
+</html>

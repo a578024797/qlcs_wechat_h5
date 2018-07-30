@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<title>infomation</title>
+<link href="css/commmon.css" rel="stylesheet" type="text/css">
+<link href="css/infomation.css" rel="stylesheet" type="text/css">
+<script src="js/jquery1.11.3.js"></script>
+</head>
+
+<body>
+<header class="header w100 ">
+  <div class="renturnBox"><a href="###" class="return"></a></div>
+  <div class="positionAbs w100 header_title">
+    <div class="">完善个人信息</div>
+  </div>
+</header>
+<form>
+  <ul class="form_ul w90 mauto">
+    <li class="w100">
+      <div class="form_icon"><div class="form_iconImg img1"></div></div>
+      <div class="form_words" >称呼:</div>
+      <input type="text" class="textcode"  placeholder="必填"/>
+    </li>
+    <li class="w100">
+      <div class="form_icon"><div class="form_iconImg img2"></div></div>
+      <div class="form_words">性别:</div>
+      <div class="opt">
+				<input class="magic-radio" type="radio" name="radio" id="r1" value="option1">
+				<label for="r1">男</label>
+			</div>
+			<div class="opt">
+				<input class="magic-radio" type="radio" name="radio" id="r2" value="option2" checked>
+				<label for="r2" class="labtest">女</label>
+			</div>
+    </li>
+        <li class="w100">
+      <div class="form_icon"><div class="form_iconImg img3"></div></div>
+      <div class="form_words">生日:</div>
+      <input type="text"/>
+    </li>
+        <li class="w100">
+      <div class="form_icon"><div class="form_iconImg img4"></div></div>
+      <div class="form_words">所在地:</div>
+      <input type="text"/>
+    </li>
+        <li class="w100">
+      <div class="form_icon"><div class="form_iconImg img5"></div></div>
+      <div class="form_words">详细地址:</div>
+      <input type="text"/>
+    </li>
+        <li class="w100 positionRel">
+      <div class="form_icon"><div class="form_iconImg img6"></div></div>
+      <div class="form_words" >手机:</div>
+      <input type="text"  placeholder="必填"/>
+      <div class="yanzheng positionAbs" id="yanzheng" w="1">
+        <a href="###" id="cha"  ></a>
+      </div>
+    </li>
+        <li class="w100">
+      <div class="form_icon"><div class="form_iconImg img7"></div></div>
+      <div class="form_words">验证码:</div>
+      <input type="text"/>
+    </li>
+  </ul>
+  <div class="">
+    <a href="###" class="tantantan" id="tantantan" w="1">弹弹弹</a>
+  </div>
+  <div class="ooo">
+     <div class="oooClose" id="oooClose">
+        <div class="closetext mauto"><div class="closeimg"></div><div class="">验证码不正确,请重新输入</div></div>
+     </div>
+  </div>
+  <div class="subInfo w100">
+   <a href="###"> <div class="subContent">
+      提       交
+    </div></a>
+  </div>
+</form>
+<!--文字适配--> 
+<script>       
+        (function (doc, win) {   
+            var docEl = doc.documentElement,   
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',   
+            recalc = function () {   
+            var clientWidth = docEl.clientWidth;   
+            if (!clientWidth) return;   
+            docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';   
+        };   
+        if (!doc.addEventListener) return;   
+        win.addEventListener(resizeEvt, recalc, false);   
+        doc.addEventListener('DOMContentLoaded', recalc, false);   
+        })(document, window);   
+</script>
+<script>
+  $(function(){
+              $("#yanzheng").click(function() {
+				  if($('#yanzheng').attr("w")==1)
+				  {
+					  $("#yanzheng").attr("class","yanzhengC")
+					  }
+				  })
+          })
+</script>
+
+
+<script type="text/javascript">
+ $(function(){
+          $("#tantantan").click(function(){
+              $(".ooo").slideToggle(600);
+         })
+		           $("#oooClose").click(function(){
+              $(".ooo").slideToggle(600);
+         })
+     })
+	 </script>
+</body>
+</html>

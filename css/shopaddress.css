@@ -1,0 +1,97 @@
+@charset "utf-8";
+.bgcolor {
+	background: #eeeded;
+}
+/*title*/
+.header {
+	background: #0081cc;
+	height: 1.9rem;
+	align-items: center;
+	display: flex;
+	display: -webkit-flex;
+}
+.header_title {
+	text-align: center;
+font-size:.75rem;
+	color: #fff;
+	height: 1.9rem;
+	line-height: 1.9rem;
+	top: 0;
+letter-spacing:.2rem;
+	z-index: 0;
+}
+.renturnBox {
+	position: absolute;
+	width: 8%;
+	height: 1.9rem;
+	align-items: center;
+	display: flex;
+	display: -webkit-flex;
+	justify-content: flex-end;
+}
+.return {
+	display: inline-block;
+ width:.45rem;
+ height:.9rem;
+	background: url(../images/cardDetial/sanjiao.png) no-repeat;
+	background-size: 100% 100%;
+	z-index: 1;
+}
+/*间距*/
+.mb1r {
+margin-bottom:.08rem;
+}
+.shopBox {
+	background: #fff;
+	align-items: center;
+	display: flex;
+	display: -webkit-flex;
+	justify-content: space-between;
+	height: 3rem;
+ padding:0 0 0 .6rem;
+}
+.shopDetial::after {
+	content: "";
+	position: absolute;
+	right: 0;
+	width: 0.05rem;
+	height: 1.7rem;
+	background: #9b9b9b;
+}
+.shopDetial {
+	width: 85%;
+	position: relative;
+	display: flex;
+	display: -webkit-flex;
+	justify-content: space-between;
+}
+.shopName {
+font-size:.7rem;
+	color: #2c2c2c;
+	padding-bottom:.1rem;
+}
+.shopaddress {
+font-size:.65rem;
+	color: #9b9b9b;
+}
+.howFar {
+font-size:.65rem;
+	color: #9b9b9b;
+padding:0 .7rem 0 0;
+}
+.tiao {
+	width: 15%;
+	height: 100%;
+	align-items: center;
+	display: flex;
+	display: -webkit-flex;
+	justify-content: center;
+}
+.tiao a {
+	background: url(../images/shopaddress/dingwei.png) no-repeat;
+	background-size: 100% 100%;
+	display: inline-block;
+	
+	width: 1.1rem;
+	height: 1rem;
+}

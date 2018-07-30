@@ -1,0 +1,283 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<title>choujiang</title>
+<link href="css/commmon.css" rel="stylesheet" type="text/css">
+<link href="css/choujiang.css" rel="stylesheet" type="text/css">
+<!--<link rel="stylesheet" type="text/css" href="./css/normalize.css">-->
+<!--<link rel="stylesheet" type="text/css" href="./css/animate.min.css">-->
+<script src="js/jquery1.11.3.js"></script>
+</head>
+<body class="bgImg">
+<header class="header">
+  <div class="w100"></div>
+</header>
+<div class="w92 chouBox mauto">
+  <div class="container">
+    <div id="lottery" class="lottery">
+      <div class="rollimg rollimg-0 pic" ticket_id="30"><img src="images/choujiang/2.png">
+        <div class="mask"></div>
+      </div>
+      <div class="rollimg rollimg-1 pic" ticket_id="28"><img src="images/choujiang/1.png" height="88.5" width="88.5">
+        <div class="mask"></div>
+      </div>
+      <div class="rollimg rollimg-2 pic" ticket_id="27"><img src="images/choujiang/0.png" height="88.5" width="88.5">
+        <div class="mask"></div>
+      </div>
+      <div class="rollimg rollimg-3 pic" ticket_id="29"><img src="images/choujiang/0.png" height="88.5" width="88.5">
+        <div class="mask"></div>
+      </div>
+      <div class="rollimg rollimg-4 pic" ticket_id="26"><img src="images/choujiang/1.png" height="88.5" width="88.5">
+        <div class="mask"></div>
+      </div>
+      <div class="rollimg rollimg-5 pic" ticket_id="25"><img src="images/choujiang/2.png" height="88.5" width="88.5">
+        <div class="mask"></div>
+      </div>
+      <div class="rollimg rollimg-6 pic" ticket_id="24"><img src="images/choujiang/0.png" height="88.5" width="88.5">
+        <div class="mask"></div>
+      </div>
+      <div class="rollimg rollimg-7 pic" ticket_id="23"><img src="images/choujiang/2.png" height="88.5" width="88.5">
+        <div class="mask"></div>
+      </div>
+      <div class="rollimg rollimg-8 pic" ticket_id="22"><img src="images/choujiang/1.png" height="88.5" width="88.5">
+        <div class="mask"></div>
+      </div>
+    </div>
+    <div class="clr"></div>
+  </div>
+</div>
+<div class="popup">
+  <div class="popupU w100">
+    <div  class="ppU_title">
+      <div>恭喜您获得</div>
+    </div>
+    <!--<div class="ppU_value">  </div>-->
+    <div class="ppu_ce"> <a href="###"></a> </div>
+  </div>
+  <div class="popupB">
+    <div  class="ppB_title">
+      <div>活动规则</div>
+    </div>
+    <p>1.活动日期2018年2月1日-2018年5月1日</p>
+    <p>2.不兑现,不找零,不许其他活动同时使用</p>
+    <p>3.全联超商拥有本活动最终解释权</p>
+  </div>
+</div>
+<div class="change w100"> <a href="###" class="begin mauto"></a> </div>
+
+<!-- 清浮动 --> 
+
+<script type="text/javascript" src="js/jquery.easing.min.js"></script> 
+<script type="text/javascript">
+var lottery={
+    index:-1,    //当前转动到哪个位置，起点位置
+    count:0,    //总共有多少个位置
+    timer:0,    //setTimeout的ID，用clearTimeout清除
+    speed:20,    //初始转动速度
+    times:0,    //转动次数
+    cycle:50,    //转动基本次数：即至少需要转动多少次再进入抽奖环节
+    prize:-1,    //中奖位置
+    init:function(id){
+        if ($("#"+id).find(".rollimg").length>0) {
+            $lottery = $("#"+id);
+            $units = $lottery.find(".rollimg");
+            this.obj = $lottery;
+            this.count = $units.length;
+            $lottery.find(".rollimg-"+this.index).addClass("active");
+        };
+    },
+    roll:function(){
+        var index = this.index;
+        var count = this.count;
+        var lottery = this.obj;
+        $(lottery).find(".rollimg-"+index).removeClass("active");
+        index += 1;
+        if (index>count-1) {
+            index = 0;
+        };
+        $(lottery).find(".rollimg-"+index).addClass("active");
+        this.index=index;
+        return false;
+    },
+    stop:function(index){
+        this.prize=index;
+		$(".popup").css("display","block");
+		//$(".popup").css("display","block")
+        return false;
+    }
+};
+
+function roll(){
+    lottery.times += 1;
+    lottery.roll();//转动过程调用的是lottery的roll方法，这里是第一次调用初始化
+	var prize_site = $("#lottery").attr("prize_site");
+    if (lottery.times > lottery.cycle+10 && lottery.prize==lottery.index) {
+		var prize_id = $("#lottery").attr("prize_id");
+		var prize_name = $("#lottery").attr("prize_name");
+		//中奖后执行
+		$('#maskLayer').css('display','block');
+		$('.popup').css('display','block');
+		//alert("前端中奖位置："+prize_site+"\n"+"中奖名称："+prize_name+"\n中奖id："+prize_id+lottery.index+lottery.prize)
+		//var get_index=;
+		//alert($('.rollimg-'+lottery.prize).attr('ticket_id'));
+		set_ticket();
+        clearTimeout(lottery.timer);
+        lottery.prize=-1;
+        lottery.times=0;
+        click=false;
+    }else{
+        if (lottery.times<lottery.cycle) {
+            lottery.speed -= 10;
+        }else if(lottery.times==lottery.cycle) {
+            var index = Math.random()*(lottery.count)|0;//中奖物品通过一个随机数生成
+            lottery.prize = index;        
+        }else{
+            if (lottery.times > lottery.cycle+10 && ((lottery.prize==0 && lottery.index==7) || lottery.prize==lottery.index+1)) {
+                lottery.speed += 110;
+            }else{
+                lottery.speed += 20;
+            }
+        }
+        if (lottery.speed<40) {
+            lottery.speed=40;
+        };
+        //console.log(lottery.times+'^^^^^^'+lottery.speed+'^^^^^^^'+lottery.prize);
+        lottery.timer = setTimeout(roll,lottery.speed);//循环调用
+    }
+    return false;
+}
+
+var click=false;
+
+window.onload=function(){
+    lottery.init('lottery');
+    $(".begin").click(function(){
+        if (click) {//click控制一次抽奖过程中不能重复点击抽奖按钮，后面的点击不响应
+            return false;
+        }else{
+            lottery.speed=200;
+			
+            roll();    //转圈过程不响应click事件，会将click置为false
+            click=true; //一次抽奖完成后，设置click为true，可继续抽奖
+			return false;
+			
+        }    
+		
+    });
+	
+};
+
+function set_ticket(){
+	$ticket_id = $('.rollimg-'+lottery.index).attr('ticket_id');
+	$.ajax({
+		type : "GET",
+		url : "/wap.php?g=Wap&c=Gratuity&a=ajax_gratuity_get_ticket",
+		dataType : "json",
+		data:{ticket_id:$ticket_id},
+		async:false,
+		success : function(result){
+			if(result.error==1){
+				alert(result.msg);
+			}else{
+				$('#t_title').html(result.data.ticket_title);
+				$('#t_content').html(result.data.ticket_content);
+				$('#t_pwd').html(result.t_pwd);
+				$('#t_exptime').html('使用截止日期：'+result.data.ticket_exptime);
+				//alert(result.msg);
+			}
+		}
+	})
+}
+
+function chan(){
+	 if(click==true){
+		 return;
+		 }
+		var html_div='<div class="rollimg rollimg-0 pic"><img src="images/gift0.jpg" /><div class="mask"></div></div>';
+		for(i=1;i<=15;i++){
+			html_div +='<div class="rollimg rollimg-'+i+' pic"><img src="images/gift4.jpg" /><div class="mask"></div></div>';
+			}
+		$('#lottery').html('').append(html_div);	
+		$('.popup').hide();
+	}
+
+function img_height_width(){
+	var screen_double_width = (25*2+5*2);
+	var k_width = window.screen.width - screen_double_width;
+	var pic_width = k_width / 4;
+	var pic_height = pic_width;
+	//$('#lottery img').attr('height',pic_height).attr('width',pic_width);
+}
+$(document).ready(function(){
+	img_height_width();
+	//alert(window.screen.width);
+});
+</script> 
+<script type="text/javascript">
+	function ajax_gratuity_success(){
+	if(click==true){
+		return;
+	}
+	//var $pay_type=$('#pay_type').val();
+	//var $insert_id=$('#insert_id').val();
+		//$.get("/wap.php?g=Wap&c=Merchant_obj_ticket&a=ajax_gratuity_success",{},function(data){
+		   //if(data==1){
+			//$('#gratuity_end').attr('src','/static/dashang/img/gratuity_success.jpg').show();
+			//$('#boss_pay').css('display','none');
+		   //}
+	   //});
+	   $page = 0;
+	 	$.ajax({
+			type : "GET",
+			url : "/wap.php?g=Wap&c=Gratuity&a=ajax_gratuity_success",
+			dataType : "json",
+			data:{page:$page},
+			async:false,
+			success : function(result){
+				if(result){
+						var html_div='';
+						for(i=0;i<result.length;i++){
+							img_str = result[i].mer_imgstr;
+							html_div +='<div class="rollimg rollimg-'+i+' pic" ticket_id="'+result[i].ticket_id+'"><img src="'+img_str+'" /><div class="mask"></div></div>';
+						}
+						$('#lottery').html('').append(html_div);
+						img_height_width();
+						$('.popup').attr('display','none')
+					}
+				}
+			})
+	}
+</script> 
+<script>       
+        (function (doc, win) {   
+            var docEl = doc.documentElement,   
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',   
+            recalc = function () {   
+            var clientWidth = docEl.clientWidth;   
+            if (!clientWidth) return;   
+            docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';   
+        };   
+        if (!doc.addEventListener) return;   
+        win.addEventListener(resizeEvt, recalc, false);   
+        doc.addEventListener('DOMContentLoaded', recalc, false);   
+        })(document, window);   
+</script> 
+<script>
+/*层关闭*/
+$(".ccclose").click(function(){
+
+	$(".popup").fadeOut();
+});
+</script> 
+<!--<div class="sogoutip" style="z-index: 2147483645; visibility: hidden; display: none;"></div>
+<div class="sogoubottom" id="sougou_bottom" style="display: none;"></div>
+
+<div id="ext_overlay" class="ext_overlayBG" style="display: none; z-index: 2147483646;"></div>
+<iframe class="sogou_sugg_feedbackquan" frameborder="0" scrolling="no" src="./抽奖_files/yun6.html" style="border: none; display: none; height: 84px; width: 100%; z-index: 2147483645; background: transparent;"></iframe>-->
+</body>
+</html>

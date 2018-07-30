@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>银行卡</title>
+    <link href="css/commmon.css" rel="stylesheet" type="text/css">
+    <link href="css/bank.css" rel="stylesheet" type="text/css">
+    <script src="JS/jquery1.11.3.js"></script>
+</head>
+
+<body>
+    <div class="layout">
+        <header class="bank_header">
+            <div class="bank_header_container">
+                <img src="images/bank/log.png" alt="logo">
+                <img src="images/bank/word.png" alt="word">
+            </div>
+        </header>
+        <div class="bank_main">
+            <div class="bank_main_title">
+                请先填写您的个人卡号及手机号
+            </div>
+            <div class="bank_main_content">
+                <ul class="bank_main_ul">
+                    <li>
+                        <span class="bank_img1">
+                            <img src="images/bank/01.png" alt="card">
+                        </span>
+                        <label>银行卡 :</label>
+                        <input type="text" maxlength="20" class="bank_input1">
+                    </li>
+                    <li>
+                        <span class="bank_img2">
+                            <img src="images/bank/02.png" alt="phone">
+                        </span>
+                        <label>电话号 :</label>
+                        <input type="text" maxlength="11" class="bank_input2">
+                    </li>
+                    <li>
+                        <span class="bank_img3">
+                            <img src="images/bank/03.png" alt="code">
+                        </span>
+                        <label>验证码 :</label>
+                        <input type="text" maxlength="6" class="bank_input3">
+                        <!-- bank_identCode_c 点击后 -->
+                        <div class="bank_identCode">
+                            <a href="###">
+                                点击获取
+                                <!-- <img src="images/bank/codebutton.png" alt="codeButton"> -->
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <footer class="bank_footer">
+            <div class="bank_sub">
+                <a href="###">
+                    提交信息
+                </a>
+            </div>
+        </footer>
+    </div>
+
+
+    <!-- 文字适配 -->
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+                };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+</body>
+
+</html>

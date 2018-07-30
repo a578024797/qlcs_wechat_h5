@@ -1,0 +1,446 @@
+@charset "utf-8";
+html {
+}
+.bgImg {
+	background: url(../images/choujiang/h.png) no-repeat;
+	background-size: 100% 100%;
+	width: 100%;
+	height:100vh;
+	
+}
+.header {
+	height:6rem;
+}
+.header div {
+	background: url(../images/choujiang/t.png) no-repeat;
+	background-size: 100% 100%;
+	height: 100%;
+}
+/*抽盒子*/
+.chouBox {
+	height: 14rem;
+	background: url(../images/choujiang/deng.png) no-repeat;
+	background-size: 100% 100%;
+	padding: 1.2rem;
+}
+.mui-bar {
+	background-color: #fff;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.06);
+}
+.header-drs {
+	margin-top: 44px;
+}
+.header-drs li .imgtou {
+	border-radius: 50%;
+	width: 80px;
+}
+#button {
+	/*position: absolute;*/
+	left: 50%;
+	padding: 10px 42px;
+	margin-left: -71px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	outline: none;
+	border: 0;
+	background-color: #e9392f;
+}
+.mui-media-body span img {
+	width: 16px;
+	vertical-align: sub;
+	margin-right: 5px;
+}
+.mui-table-view:after {
+	background-color: #fff;
+}
+.mui-table-view-cell {
+	padding: 15px 20px;
+}
+.mui-input-group:before {
+	background-color: #fff!important;
+}
+.mui-segmented-control {
+	border: #fff;
+	border-left: none;
+}
+.mui-segmented-control .mui-control-item {
+	border-left: none;
+}
+.img01 {
+	color: #272636!important;
+	background: url(/tpl/Wap/default/static/images/icon2_1.png) no-repeat 40% center!important;
+	padding-left: 15%;
+}
+.img01.mui-active {
+	color: #ff6633!important;
+	background: url(/tpl/Wap/default/static/images/icon2.png) no-repeat 40% center!important;
+	padding-left: 15%;
+	background-color: #f1f1f1!important;
+}
+.img02 {
+	color: #272636!important;
+	background: url(/tpl/Wap/default/static/images/icon3.png) no-repeat 40% center!important;
+	padding-left: 15%;
+}
+.img02.mui-active {
+	color: #ff6633!important;
+	background: url(/tpl/Wap/default/static/images/icon3_1.png) no-repeat 40% center!important;
+	padding-left: 15%;
+	background-color: #f1f1f1!important;
+}
+.mui-table-view .mui-media-object {
+	max-width: 66px;
+	height: 66px;
+}
+.mui-media-body {
+	margin-top: 9px;
+}
+.mui-ellipsis {
+	line-height: 25px;
+	;
+}
+.pj-content {
+	width: 100%;
+}
+.pj-content li {
+	float: left;
+	width: 50%;
+	;
+}
+.mui-checkbox {
+	width: 90%;
+	margin: 0 auto;
+	border: 1px solid #f1f1f1;
+	margin-top: 10px;
+	border-radius: 5px;
+}
+.mui-input-group .mui-input-row:after {
+	height: 0;
+}
+/*input样式*/
+  
+.mui-checkbox input[type=checkbox]:before {
+	color: #fff;
+	content: none;
+}
+.mui-checkbox input[type=checkbox]:checked:before {
+	color: #ff6633;
+	content: none;
+}
+.label-chos {
+	width: 100px;
+	position: absolute;
+	left: 60%;
+	margin-left: -50px;
+	top: 50%;
+	margin-top: -9px;
+	padding-left: 0!important;
+	padding-right: 0!important;
+	padding: 0!important;
+}
+.mui-input-clear {
+	height: 120px;
+	width: 95%;
+	margin: 0 auto!important;
+	border: 1px solid #f1f1f1!important;
+	border-radius: 5px!important;
+	margin-top: 10px!important;
+	margin-left: 2.5%!important;
+	margin-bottom: 10px!important;
+}
+textarea {
+	color: #737373;
+}
+ textarea[placeholder], [placeholder], *[placeholder] {
+ padding: 10px;
+ font-size: 14px;
+ color: #c2c2c2;
+}
+.itemon {
+	background-color: #fff!important;
+	color: 737373!important;
+}
+/*图片上传*/
+  
+.container {
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	clear: both;
+	/*margin-top: 8px;*/
+	
+	margin: 0 auto;
+}
+.z_photo {
+	width: 100%;
+	height: 3rem;
+	padding: 0.2rem;
+	overflow: auto;
+	clear: both;
+	margin: 0 auto;
+	border-bottom: 5px solid #eee;
+	border-left: none;
+	border-right: none;
+	background: #fff;
+}
+.z_photo img {
+	width: 1rem;
+	height: 1rem;
+}
+.z_addImg {
+	float: left;
+	margin-right: 0.2rem;
+	margin-bottom: 0.1rem;
+}
+.z_file {
+	width: 1rem;
+	height: 1rem;
+	background: url(/tpl/Wap/default/static/images/z_add.png) no-repeat;
+	background-size: 100% 100%;
+	float: left;
+	margin-right: 0.2rem;
+}
+ .z_file input::-webkit-file-upload-button {
+ cursor: pointer;
+ width: 1rem;
+ height: 1rem;
+ border: none;
+ position: absolute;
+ outline: 0;
+ opacity: 0;
+}
+.z_file input#file {
+	display: block;
+	width: auto;
+	border: 0;
+}
+/*清除浮动代码*/
+  
+.clearfloat:after {
+	display: block;
+	clear: both;
+	content: "";
+	visibility: hidden;
+	height: 0
+}
+.clearfloat {
+	zoom: 1
+}
+/*遮罩层*/
+  
+.z_mask {
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, .5);
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 999;
+	display: none;
+}
+.z_alert {
+	width: 3rem;
+	height: 2rem;
+ border-radius: .2rem;
+	background: #fff;
+ font-size: .24rem;
+	text-align: center;
+	position: fixed;
+	zoom: 1;
+	left: 50%;
+	top: 50%;
+	margin-left: -1.5rem;
+	margin-top: -1rem;
+	z-index: 999999999999999999;
+}
+.z_alert p:nth-child(1) {
+	line-height: 1.5rem;
+}
+.z_alert p:nth-child(2) span {
+	width: 49%;
+ height: .5rem;
+ line-height: .5rem;
+	float: left;
+	border-top: 1px solid #ddd;
+}
+.z_cancel {
+	border-right: 1px solid #ddd;
+}
+h1 img {
+	width: 100%;
+	height: auto;
+}
+.rollimg {
+	float: left;
+	margin: 0.2rem 0 0 0.2rem;
+	width: 31%;
+	height: 31%;
+}
+.lottery {
+	width: 100%;
+	margin: 0 auto;
+	overflow: hidden;
+	height: 100%;
+}
+#lottery img {
+	width: 100%;
+	height: 100%;
+	z-index: -99999;
+}
+.pli04 img {
+	width: 100%;
+	height: 3rem;
+}
+.active {
+	
+	-webkit-box-shadow: 0px 0px 10px #FFF100;
+	-moz-box-shadow: 0px 0px 10px #FFF100;
+	box-shadow: 0px 0px 10px #FFF100;
+	filter: drop-shadow(1px 1px 10px #FFF100);
+}
+/*弹出背景*/
+.popup {
+	width: 100%;
+	height:100vh;
+	display: block;
+	position: absolute;
+	margin-top: 0;
+	top: 0;
+	background-color: rgba(0,0,0,0.5);
+}
+.popupU {
+	width: 88%;
+	margin: 4rem auto 0 auto;
+	height: 8rem;
+	background: url(../images/choujiang/ppU.png) no-repeat;
+	background-size: 100% 100%;
+}
+.popupB {
+	width: 88%;
+	margin: 0 auto;
+	height: 8.5rem;
+	background: url(../images/choujiang/ppB.png) no-repeat;
+	background-size: 100% 100%;
+}
+.ppU_title {
+	color: #e9433a;
+	text-align: center;
+ font-size:.7rem;
+ letter-spacing:.15rem;
+	padding-top: 1.1rem;
+}
+.ppU_title div::before {
+	content: '';                 /*CSS伪类用法*/
+	position: absolute;         /*定位背景横线的位置*/
+	background: #e9433a;       /*宽和高做出来的背景横线*/
+	width: 2.5rem;
+	height: 2px;
+ margin-top:.5rem;
+	margin-left: -3rem;
+}
+.ppU_title div::after {
+	content: '';                 /*CSS伪类用法*/
+	position: absolute;         /*定位背景横线的位置*/
+	background: #e9433a;       /*宽和高做出来的背景横线*/
+	width: 2.5rem;
+	height: 2px;
+ margin-top:.5rem;
+ margin-left:.4rem;
+}
+.ppU_value {
+	height: 4.5rem;
+	line-height: 4.5rem;
+	font-size: 1.4rem;
+	color: #e9433a;
+	text-align: center;
+ letter-spacing:.2rem;
+}
+.ppu_ce {
+	width: 100%;
+	margin-top:1.6rem;
+		display: flex;
+	display: -webkit-flex;
+	justify-content: center;
+	
+	align-items: center
+}
+.ppu_ce a {
+	background: url(../images/choujiang/chou.png) no-repeat;
+	background-size: 100% 100%;
+	display: inline-block;
+	width: 4.8rem;
+	height: 1.5rem;
+}
+.ppB_title {
+	color: #fdd113;
+	text-align: center;
+ font-size:.7rem;
+ letter-spacing:.15rem;
+	padding-top: 1.1rem;
+}
+.ppB_title div::before {
+	content: '';                 /*CSS伪类用法*/
+	position: absolute;         /*定位背景横线的位置*/
+	background: #fdd113;       /*宽和高做出来的背景横线*/
+	width: 3.8rem;
+	height: 2px;
+ margin-top:.5rem;
+	margin-left: -4.3rem;
+}
+.ppB_title div::after {
+	content: '';                 /*CSS伪类用法*/
+	position: absolute;         /*定位背景横线的位置*/
+	background: #fdd113;       /*宽和高做出来的背景横线*/
+	width: 3.8rem;
+	height: 2px;
+ margin-top:.5rem;
+ margin-left:.4rem;
+}
+
+.popupB p{font-size:.65rem;color:#fdd113;padding:.3rem 0 0 .9rem;}
+
+
+
+
+
+.extnotice {
+	position: absolute;
+	top: 0;
+	color: #fff;
+	left: 0.5rem
+}
+.closenotice {
+	color: #fff;
+}
+.pli01 a {
+	color: #fb0214;
+}
+.change {
+	margin: 1.2rem 0 0 0;
+	align-items: center;
+	display: flex;
+	display: -webkit-flex;
+	
+}
+.begin {
+	width: 5rem;
+	height: 1.5rem;
+	background: url(../images/choujiang/begin.png);
+	background-size: 100% 100%;
+ border-radius: .1rem;
+	display: inline-block;
+}
+.cut {
+	float: left;
+	width: 40%;
+	text-align: center;
+	line-height: 3rem;
+	background: #3acc5f;
+	border-radius: 7px
+}
+.begin a {
+	color: #fff;
+}
+.cut a {
+	color: #fff;
+}

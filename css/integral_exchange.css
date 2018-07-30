@@ -1,0 +1,106 @@
+.ilee_main_title {
+    padding: 24.2% 0 .95rem 0;
+    width: 100%;
+    line-height: 1;
+    font-size: .96rem;
+    color: #00aeff;
+    font-weight: bold;
+    text-align: center;
+}
+
+.ilee_main_imgBox {
+    margin: 0 auto;
+    width: 62%;
+    font-size: 0;
+}
+
+.ilee_main_imgBox img {
+    width: 100%;
+}
+
+.ilee_main_message {
+    margin: 1.05rem auto 0;
+    width: 54%;
+    font-size: .7rem;
+    line-height: 1.1rem;
+    color: #3c4768;
+    text-align: center;
+}
+
+.ilee_main_confrim {
+    padding: 0 .9rem;
+    margin: 1.6rem auto 0;
+    width: 34%;
+    height: 2rem;
+    line-height: 2rem;
+    font-size: .75rem;
+    color: #fff;
+    
+}
+
+.ilee_main_cancel {
+    padding: 0 .9rem;
+    margin: .6rem auto 0;
+    width: 34%;
+    height: 2rem;
+    line-height: 2rem;
+    font-size: .75rem;
+    color: #fff;
+}
+
+/* 弹出层 */
+.ilee_alertMsg_box {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    display: none;
+    width: 100%;
+    background: rgba(0, 0, 0, .5);
+}
+.ilee_alert_Msg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 70%;
+    background: #ffffff;
+    border-radius: .2rem;
+}
+.ilee_alertMsg_header{
+    padding: 1.5rem 0 0 0;
+    margin: 0 auto;
+    width: 74%;
+}
+.ilee_alertMsg_header img{
+    width: 100%;
+}
+.ilee_alertMsg_word{
+    margin: .3rem 0 0 0;
+    text-align: center;
+    color: #3c4768;
+    font-size: .75rem;
+    line-height: 1rem;
+    font-weight: bold;
+    letter-spacing: .03rem;
+    text-indent: .03rem;
+}
+.ilee_alertMsg_word:nth-child(3){
+    margin: .05rem 0 0 0;
+}
+.ilee_alertMsg_button{
+    display: block;
+    margin: .5rem auto;
+    padding: 0 1.5rem;
+    width: 44%;
+    height: 1.8rem;
+    line-height: 1.8rem;
+    font-size: .75rem;
+    color: #fff;
+    cursor: pointer;
+}
+.ilee_alertMsg_sTitle{
+    margin: .5rem 0 0 0;
+    color: #3c4768;
+    font-size: .6rem;
+    text-align: center;
+}

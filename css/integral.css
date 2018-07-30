@@ -1,0 +1,210 @@
+@charset "utf-8";
+.header {
+padding:.8rem 0 0 0;
+	overflow: hidden;
+}
+.tfun {
+	overflow: hidden;
+}
+.fun {
+	width: 1.1rem;
+	height: 1.1rem;
+	display: inline-block;
+}
+.setImg1 {
+	background: url(../images/storevalue/sanjiao.png) no-repeat;
+	background-size: 100% 100%;
+}
+.setImg2 {
+	background: url(../images/storevalue/set.png) no-repeat;
+	background-size: 100%;
+}
+.tfun a {
+font-size:.65rem;
+	line-height: 1.1rem
+}
+.shopA {
+	margin: 0 0 0 10px
+}
+.setA {
+	margin: 0 10px 0 0;
+}
+.memberHead {
+	overflow: hidden;
+}
+.integral {
+	display: flex;
+	align-content: center;
+	display: -webkit-flex;
+	justify-content: space-between;
+ padding:.5rem 0 0 0;
+}
+.integral_content {
+	width: 2.3rem;
+	text-align: center;
+}
+.integral_number {
+font-size:.9rem;
+	line-height: 1.1rem;
+}
+.integral_word {
+	color: #7e7d7d;
+font-size:.7rem;
+}
+.barCode {
+ padding:.15rem 0 0 0;
+	position: relative;
+}
+.marketPic {
+	background: url(../images/index/market.png) no-repeat;
+	background-size: 100% 100%;
+	width: 100%;
+	height: 7.6rem;
+}
+.marketPic_zhan {
+	width: 100%;
+	height: 2.9rem;
+}
+.marketPic_wei {
+	width: 100%;
+	height: 4.2rem;
+	display: flex;
+	align-items: center;
+	display: -webkit-flex;
+	justify-content: center;
+}
+.pogressLever {
+	overflow: hidden;
+font-size:.55rem;
+	color: #e67f12
+}
+.memberKong {
+	background: #0081cc;
+	width: 4rem;
+	line-height: 1.1rem;
+	height: 1.1rem;
+border-radius: .5rem 0 0 .5rem;
+}
+.memberKong2 {
+	background: #fff;
+	width: 4rem;
+	line-height: 1.1rem;
+	height: 1.1rem;
+}
+.memberKong_img {
+	background: url(../images/storevalue/zuanshitouming.png) no-repeat center;
+width:.8rem;
+	height: 1.1rem;
+	float: left;
+	background-size: 100%;
+margin:0 .2rem;
+}
+.memberKong_text {
+	color: #fff;
+font-size:.6rem;
+	float: left
+}
+.reserveBalanceTitle {
+font-size:.9rem;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	display: -webkit-flex;
+	justify-content: space-between;
+	background: #0081cc;
+	height: 1.9rem;
+}
+.reserveBalanceTitle div {
+margin:0 .5rem;
+}
+.reserveBalanceTime {
+ font-size:.6rem;
+	color: #666464;
+	display: flex;
+	align-items: center;
+	display: -webkit-flex;
+	justify-content: space-between;
+	height: 1.4rem;
+}
+.reserveBalanceTime div {
+	margin: 0 .9rem;
+}
+.reserveBalanceTime_img {
+width:.8rem;
+height:.8rem;
+	background: url(../images/storevalue/jisuanqi.png) no-repeat;
+	background-size: 100% 100%;
+}
+.reserveBalanceDetial{border:1px solid #e3e3e3}
+.reserveBalanceDetial_row{
+	 font-size:.6rem;
+	color: #666464;
+	display: flex;
+	align-items: center;
+	display: -webkit-flex;
+	justify-content: space-between;
+	height: 3rem;
+	
+}
+.reserveBalanceDetial_img{
+	width:1.8rem;
+	height:1.8rem;
+	
+	background-size:100% 100%;
+	float:left;
+	margin: 0 .4rem 0 .7rem;
+	
+	}
+.detial_kind1{
+	background:url(../images/integral/rili.png) no-repeat;
+	background-size:100% 100%;
+	}
+.detial_kind2{
+	background:url(../images/integral/dong.png) no-repeat;
+	background-size:100% 100%;
+	}
+.detial_kind3{
+	background:url(../images/storevalue/chaoshi.png) no-repeat;
+	background-size:100% 100%;
+	}
+.detial_kind4{
+	background:url(../images/storevalue/chaoshi.png) no-repeat;
+	background-size:100% 100%;
+	}
+.reserveBalanceDetial_text{
+	float:left;
+	}
+.reserveBalanceDetial_text  div{
+	color:#2f2724;
+	font-size:.7rem;
+	}
+.reserveBalanceDetial_text  span{
+	
+	font-size:.5rem;
+}
+.reserveBalanceDetial_moneyUp{color:#f0685c;font-size:.9rem;margin:0 .8rem 0 0;}
+.reserveBalanceDetial_moneyDown{color:#3c4767;font-size:.9rem;margin:0 .8rem 0 0;}
+.detial_b{border-bottom:1px solid #e3e3e3}
+
+
+
+
+.borderBox2 {
+	display: flex;
+	align-content: center;
+	display: -webkit-flex;
+	justify-content: space-between;
+	 align-items: center;
+}
+.borderBox2 img {
+	-webkit-border-radius: 4.2rem;
+	border-radius: 4.2rem;
+	border: 3px solid #107baf;
+	width: 4.2rem;
+	height: 4.2rem;
+	-webkit-border-radius: 4.2rem;
+	-moz-border-radius: 4.2rem;
+	-ms-border-radius: 4.2rem;
+	-o-border-radius: 4.2rem;
+}
+

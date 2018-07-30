@@ -1,0 +1,382 @@
+.mf_html {
+    height: 100%;
+}
+
+.mf_body {
+    height: 100%;
+}
+
+.mf_background {
+    height: 100%;
+    background: url("../images//magpieFestival/3.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.mf_container {
+    margin: 0 auto;
+    /* 解决塌陷 */
+    padding: .001rem 0 0 0;
+    border: 0;
+    width: 77%;
+    height: 100%;
+}
+
+.mf_mainImg {
+    margin: .5rem 0 0 0;
+    width: 100%;
+}
+
+.mf_mainImg img {
+    width: 100%;
+}
+
+.mf_productInfo {
+    margin: .25rem 0 0 0;
+    width: 100%;
+    font-size: .65rem;
+    color: #878787;
+}
+
+.mf_productInfo p {
+    line-height: 1.15;
+}
+
+.mf_address {
+    margin: .5rem 0 0 0;
+    position: relative;
+}
+
+.mf_label {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    line-height: 2.1rem;
+    height: 2.2rem;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.mf_select {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 2.2rem;
+}
+
+.mf_btnBg {
+    background: url("../images/magpieFestival/2.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.mf_triangle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-90%, 50%);
+    width: 1.2rem;
+    height: 1.1rem;
+    background: url("../images/magpieFestival/8.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.mf_bespeak {
+    margin: .6rem 0 0 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.mf_bespeak div {
+    width: 48%;
+    height: 2rem;
+    line-height: 2rem;
+    font-size: .73rem;
+    color: #fff;
+    text-align: center;
+}
+
+.mf_order {
+    margin: .6rem auto 0;
+    width: 32%;
+    height: 1.5rem;
+}
+
+.mf_order a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 1.5rem;
+    color: #ffffff;
+    font-size: .6rem;
+    text-align: center;
+}
+
+.mf_statement {
+    margin: .5rem 0 0 0;
+    width: 100%;
+    font-size: .5rem;
+    color: #000000;
+    text-align: center;
+}
+
+.mf_alert {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, .5);
+}
+
+.mf_alert_inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 77%;
+    height: 10.9rem;
+    background: #ffffff;
+    border-radius: .8rem;
+}
+.mf_ai_imgBox{
+    margin: 2rem auto 0;
+    width: 60%;
+}
+.mf_ai_imgBox img{
+    width: 100%;
+}
+.mf_ai_word{
+    margin: .5rem 0 0 0;
+    color: #3c4768;
+    text-align: center;
+    font-size: .7rem;
+    font-weight: bold;
+    line-height: 1;
+}
+.mf_ai_searchList{
+    margin: .7rem auto 0;
+    width: 53%;
+    height: 1.9rem;
+}
+.mf_ai_searchList a{
+    display: block;
+
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: #fff;
+    line-height: 2rem;
+
+}
+.mf_detial_iB_padding{
+    padding: 2.1rem 0 .4rem;
+}
+.mf_detialM_tips_color{
+    color: #e4007d;
+}
+.mf_detialM_code_margin{
+    margin-top: .9rem;
+}
+/* mfe 抽奖页面 */
+.mfe_background{
+    /* height: 100%; */
+    background: #354494;
+}
+.mfe_header_img{
+    position: relative;
+    padding: .65rem 0 0 0;
+    margin: 0 auto;
+    width: 53.2%;
+    z-index: 2;
+}
+.mfe_header_img img{
+    width: 100%;
+}
+.mfe_extract_box{
+    position: relative;
+    top: -1.2rem;
+    height: 12.7rem;
+    z-index:1;
+    -webkit-tap-highlight-color:transparent;
+}
+.mfe_extract_position_box{
+    position: relative;
+    z-index: 3;
+}
+div[class ^= "mfe_extract_position"]>img{
+    width: 100%;
+}
+.mfe_extract_position1{
+    position: absolute;
+    top: -2.2rem;
+    left: 0;
+    width: 47.6%;
+}
+.mfe_extract_position2{
+    position: absolute;
+    top: 2.4rem;
+    left: 1rem;
+    width: 41%;
+}
+.mfe_extract_position3{
+    position: relative;
+    top: -.5rem;
+    left: 5rem;
+    /* float: right; */
+    width: 80%;
+    /* height: 5rem; */
+    text-align: center;
+    color: #ffffff;
+    font-size: .9rem;
+    /* background: #000000; */
+}
+.mfe_extract_confrim{
+    display: block;
+    margin: .4rem auto 0;
+    width: 40%;
+    height: 1.5rem;
+    line-height: 1.4rem;
+    letter-spacing: .05rem;
+    text-indent: .05rem;
+    font-size: .8rem;
+    color: #ffffff;
+}
+.mfe_extract_position4{
+    position: relative;
+    /* top: 4.3rem; */
+    left: 4.8rem;
+    width: 58.2%;
+}
+/* 根据以后出得再把这个弹窗挪到moudle里 */
+.mfe_extract_alert{
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, .6);
+    z-index: 999;
+}
+.mfe_extract_alert_main{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 87%;
+    /* height: 9.7rem; */
+    background: #fff;
+    border-radius: 1.5rem;
+}
+.mfe_eam_header{
+    width: 100%;
+}
+div[class ^= "mfe_eamh_img"]>img{
+    width: 100%;
+}
+.mfe_eamh_img1{
+    position: relative;
+    width: 75%;
+    left: -.9rem;
+    top: -.8rem;
+}
+.mfe_eamh_img2{
+    position: absolute;
+    width: 41%;
+    right: .3rem;
+    top: 1.4rem;
+}
+.mfe_eam_main{
+    margin-top:-.55rem; 
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.mfe_eamm_info{
+    width: 100%;
+    /* padding: 0 0 0 1.2rem; */
+    text-align: center;
+}
+.mfe_eamm_info>p:first-child{
+    font-size: 1rem;
+    /* text-align: center; */
+    letter-spacing: .05rem;
+    text-indent: .05rem;
+    /* font-weight: bold; */
+
+}
+.mfe_eamm_info>p:nth-child(2){
+    margin: .2rem 0 0 0;
+    font-size: .6rem;
+    letter-spacing: .03rem;
+    text-indent: .03rem;
+    white-space: nowrap;
+}
+.mfe_eamm_info>p:last-child{
+    margin: .5rem 0 0 0;
+    padding: 0 0 .5rem 0;
+}
+.mfe_eamm_return{
+    margin: 0 auto;
+    display: block;
+    width: 4.15rem;
+    height: 1.3rem;
+    text-align: center;
+    font-size: .65rem;
+    color: #fff;
+    letter-spacing: .5rem;
+    text-indent: .5rem;
+    line-height: 1.2rem;
+}
+.mfe_eamm_detial{
+    width: 45%;
+}
+.mfe_eamm_integral{
+    /* padding: 0 0 0 .5rem; */
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 1.5;
+}
+.mfe_eamm_code{
+    margin: .6rem auto 0;
+    display: flex;
+    justify-content: center;
+}
+.mfe_eamm_codeInfo{
+    font-size: 1.1rem;
+}
+
+/* 转盘抽奖详细页 */
+.mfed_headerImg{
+    width: 45%;
+    padding: .5rem 0 0 0;
+    font-size: 0;
+}
+.mfed_detialM{
+    margin-top: .3rem;
+    box-shadow: none;
+}
+.mfed_detialM_code_margin{
+    margin: .6rem;
+   
+}
+.mfed_detialM_tips_color{
+    color: #344492;
+}
+/* 列表页 */
+.mfel_info_title{
+    margin: .8rem 0 0 0;
+    color: #3c4668;
+}
+.mfel_info_time{
+    margin: .5rem 0 0 0;
+    color: #3c4668;
+}
+.mfel_info_click{
+    margin:.8rem 0 0 0;
+}

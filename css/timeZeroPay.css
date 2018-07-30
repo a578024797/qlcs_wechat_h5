@@ -1,0 +1,206 @@
+@charset "utf-8";
+.header {
+	background: #0081cc;
+	height: 1.9rem;
+}
+/*返回按钮*/
+.return {
+ width: .5rem;
+ height: .9rem;
+	float: left;
+margin:.4rem 0 0 0;
+	background: url(../images/timeZeroPay/sanjiao.png) no-repeat;
+	background-size: 100% 100%;
+ margin:.7rem .7rem .3rem .7rem;
+ visibility:hidden;
+}
+/*大标题*/
+.tContent {
+	height: 1.5rem;
+	float: left;
+ margin:.4rem 0 0 0;
+	display: flex;
+	align-items: center;
+	display: -webkit-flex;
+	justify-content: space-between;
+}
+.tContent a {
+	text-align: center;
+	width: 45%;
+font-size:.7rem;
+	height: 1.5rem;
+	align-items: center;
+	display: flex;
+	display: -webkit-flex;
+	justify-content: center;
+letter-spacing:.1rem;
+	color: #fff;
+}
+/*当前大标题被选择时的样式*/
+.tContent .selected {
+	color: #0081cc;
+	background: #FFF;
+ -webkit-border-radius: .6rem .6rem 0 0;
+	-moz-border-radius: 1rem 1rem 0 0;
+	-ms-border-radius: 1rem 1rem 0 0;
+	-o-border-radius: 1rem 1rem 0 0;
+ border-radius: .6rem .6rem 0 0;
+}
+/*产品大盒子*/
+.level_content {
+	height: 5.2rem;
+	padding: 1.2rem 0 0 1.3rem;
+	;
+}
+/*产品边框*/
+.level_bor {
+	border-bottom: #999 1px solid;
+	padding-bottom: 1.2rem;
+	height: 6.4rem;
+}
+.main_content {
+	height: 100%;
+}
+/*产品图片*/
+.content_pic img {
+	width: 6.2rem;
+	height: 4rem;
+	 border-radius: .6rem .6rem .6rem .6rem;
+}
+.content_text {
+}
+/*产品名*/
+.title {
+font-size:.8rem;
+	font-weight: 600;
+	height: 1.3rem;
+	line-height: 1.3rem;
+	color: #484645
+}
+/*截止时间*/
+.time {
+font-size:.45rem;
+	color: #5a5554
+}
+/*颜色*/
+.c0081cc {
+	color: #0081cc
+}
+/*价格字体*/
+.price {
+font-size:.55rem
+}
+/*价格字体2*/
+.price2 {
+font-size:.5rem;
+}
+/*最后一行字体*/
+.lowPrice {
+	overflow: hidden;
+font-size:.8rem;
+}
+.lowPrice a {
+	display: inline-block;
+	width: 3.2rem;
+height:.8rem;
+	margin: 0 0 0 0;
+}
+.lowDiv {
+	height: 1.365rem;
+padding-top:.18rem;
+}
+.mlowte {
+margin:.15rem 0 0 0;
+}
+/*lv2的标题*/
+.levelTitle {
+	height: 1.3rem;
+	background: #0081cc;
+	line-height: 1.3rem;
+ font-size:.6rem;
+	text-align: center;
+	color: #fff;
+ letter-spacing:.05rem;
+ margin-top:.8rem;
+}
+/*不同的图片*/
+.kindimg1 {
+	background: url(../images/timeZeroPay/lev1.png) no-repeat;
+	background-size: 100% 100%;
+	
+}
+.lowPrice .kindimg2 {
+	background: url(../images/timeZeroPay/lev2.png) no-repeat;
+	background-size: 100% 100%;
+	width: 3.5rem;
+	
+}
+.opback{ background-color: rgba(60,61,61,0.4);width:6.2rem;height:4rem;color:#fff;font-size:.6rem;
+	align-items: center;
+	display: flex;
+	display: -webkit-flex;
+	justify-content: center;
+	 border-radius: .6rem .6rem .6rem .6rem;
+}
+.kindimg3 {
+	background: url(../images/timeZeroPay/shiyong.png) no-repeat;
+	background-size: 100% 100%;
+}
+.lowPrice .kindimgshiyong {
+	background: url(../images/timeZeroPay/yishiyong.png) no-repeat;
+	background-size: 100% 100%;
+}
+.lowPrice .kindimgguoqi {
+	background: url(../images/timeZeroPay/yiguoqi.png) no-repeat;
+	background-size: 100% 100%;
+}
+.lowPrice .kindimg3 {
+	background: url(../images/timeZeroPay/shiyong.png) no-repeat;
+	background-size: 100% 100%;
+}
+/*我的优惠劵属性*/
+.menu {
+	overflow: hidden;
+}
+.nav {
+	height: 3rem;
+	padding: 1.2rem 0 0 0;
+	
+	display: flex;
+	display: -webkit-flex;
+	justify-content: space-between;
+}
+.nav li {
+	height: 1.2rem;
+}
+.tabs {
+	
+	overflow:hidden;
+}
+#current {
+}
+.tabimg {
+	
+	width: 1.5rem;
+	height: 1.6rem;
+	display: inline-block;
+}
+.chang1{background: url(../images/timeZeroPay/nn.png) no-repeat;
+	background-size: 100% 100%;}
+.chang2{background: url(../images/timeZeroPay/dn.png) no-repeat;
+	background-size: 100% 100%;}
+.chang3{background: url(../images/timeZeroPay/xn.png) no-repeat;
+	background-size: 100% 100%;}
+#current .chang1{background: url(../images/timeZeroPay/n.png) no-repeat;
+	background-size: 100% 100%;}
+#current .chang2{background: url(../images/timeZeroPay/d.png) no-repeat;
+	background-size: 100% 100%;}
+#current .chang3{background: url(../images/timeZeroPay/x.png) no-repeat;
+	background-size: 100% 100%;}
+	
+	
+	
+/*最底部跳转*/
+.bengBox{position:fixed;bottom:1rem;right:1rem;width:4rem;font-size:.6rem;}
+.bengtext{text-align:right;width:4rem;float:right;}
+.bengBox .bengbeng{float:right;display:inline-block;width:2rem;height:2rem;background:url(../images/timeZeroPay/beng.png);background-size:100% 100%; clear:both;}

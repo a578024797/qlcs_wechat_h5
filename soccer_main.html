@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>足球竞猜</title>
+    <link href="css/commmon.css" rel="stylesheet" type="text/css">
+    <link href="css/soccer.css" rel="stylesheet" type="text/css">
+    <script src="./js/wordauto.js"></script>
+    <script src="JS/jquery1.11.3.js"></script>
+</head>
+
+<body>
+    <div class="wx_container soccer_bgImg">
+        <header class="wx_header">
+            <div class="soccer_headImgBox clear_space ">
+                <img src="./images/soccer/header.png" alt="images" class="soccer_headImg">
+            </div>
+        </header>
+        <div class="wx_main">
+                <div class="soccer_timer">
+                        <span>距离本轮竞猜结束</span>
+                        <span class="soccer_timer_time" id="soccerTime">00:00:00</span>
+                    </div>
+            <div class="soccer_nav">
+                
+                <div class="soccer_nav_box">
+                    <div class="soccer_nav_content clear_space">
+                        <img src="./images/soccer/jiangbei.png" alt="jiangbei" class="soccer_nav_img">
+                        <span class="soccer_nav_word">我的积分</span>
+                        <span class="soccer_nav_integral">50000</span>
+                    </div>
+                </div>
+                <div class="soccer_nav_box">
+                    <div class="soccer_nav_content clear_space">
+                        <img src="./images/soccer/qiuyi.png" alt="qiuyi" class="soccer_nav_img">
+                        <span class="soccer_nav_word">我的订单</span>
+                    </div>
+                    <div class="soccer_nav_content clear_space">
+                        <img src="./images/soccer/zuqiu.png" alt="zuqiu" class="soccer_nav_img">
+                        <span class="soccer_nav_word">规 则</span>
+                    </div>
+                </div>
+            </div>
+            <!-- 1 -->
+            <div class="soccer_main_box">
+                <!-- 时间 -->
+                <div class="soccer_game_message">
+                    <span>1/8决赛 06.30 22:00 开赛</span>
+                    <span>参与截至: 06.30 22.05</span>
+                </div>
+                <!-- 比赛国家 -->
+                <h2 class="soccer_game_country">
+                    <span class="soccer_span_country">巴西</span>
+                    <span class="soccer_span_VS">VS</span>
+                    <span class="soccer_span_country">俄罗斯</span>
+                </h2>
+                <!-- 倍率 -->
+                <div class="soccer_game_integral">
+                    <div class="soccer_integral_box" id="country3_Integral">
+                        1.5倍
+                        <div class="soccer_integral_integral">猜</div>
+                    </div>
+                    <div class="soccer_integral_box" id="country4_Integral">
+                        1.5倍
+                        <div class="soccer_integral_integral">猜</div>
+                    </div>
+                </div>
+                <!-- 倍率 提醒 -->
+                <div class="soccer_integral_message soccer_normal_font">
+                    赛果玩法 参加上线1000积分 只能选择一方
+                </div>
+                <!-- 国家国旗 -->
+                <div class="soccer_country_flag">
+                    <div class="soccer_flag_box">
+                        <div class="soccer_flag_img_box soccer_flag_left " id="country3">
+                            <img src="./images/soccer/flag/11.png" alt="11">
+                            <!-- class="soccer_win" -->
+                            <div ></div>
+                        </div>
+                    </div>
+                    <div class="soccer_flag_box soccer_flag_right">
+                        <div class="soccer_flag_img_box" id="country4">
+                            <img src="./images/soccer/flag/12.png" alt="12">
+                            <div ></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 2 -->
+            <div class="soccer_main_box">
+                <!-- 时间 -->
+                <div class="soccer_game_message">
+                    <span>1/8决赛 06.30 22:00 开赛</span>
+                    <span>参与截至: 06.30 22.05</span>
+                </div>
+                <!-- 比赛国家 -->
+                <h2 class="soccer_game_country">
+                    葡萄牙
+                    <span>VS</span>俄罗斯
+                </h2>
+                <!-- 倍率 -->
+                <div class="soccer_game_integral">
+                    <div class="soccer_integral_box" id="country1_Integral">
+                        1.5倍
+                        <div class="soccer_integral_integral">猜</div>
+                    </div>
+                    <div class="soccer_integral_box" id="country2_Integral">
+                        1.5倍
+                        <div class="soccer_integral_integral">猜</div>
+                    </div>
+                </div>
+                <!-- 倍率 提醒 -->
+                <div class="soccer_integral_message soccer_normal_font">
+                    赛果玩法 参加上线1000积分 只能选择一方
+                </div>
+                <!-- 国家国旗 -->
+                <div class="soccer_country_flag">
+                    <div class="soccer_flag_box">
+                        <div class="soccer_flag_img_box soccer_flag_left" id="country1">
+                            <img src="./images/soccer/flag/11.png" alt="11" class="soccer_unclick">
+                            <div ></div>
+                        </div>
+                    </div>
+                    <div class="soccer_flag_box">
+                        <div class="soccer_flag_img_box soccer_flag_right" id="country2">
+                            <img src="./images/soccer/flag/12.png" alt="12" class="soccer_unclick">
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="wx_footer soccer_bottom">
+
+                <div class="soccer_bottom_message">
+                    投
+                    <span>100</span>积分,猜中可得
+                    <span>500</span>积分
+                </div>
+                <div class="soccer_bottom_content_box">
+                    <div class="soccer_bottom_content" id="clearAll">清空投注</div>
+                    <div class="soccer_bottom_content">确认投注</div>
+                </div>
+            </footer>
+            <div class="soccer_space"></div>
+        </div>
+    </div>
+    <!-- 足球js -->
+    <script src="./js/soccer.js"></script>
+    <script>
+        /* 没时间 封装 先这样 */
+        // 1
+        $("#country1").click(function () {
+            let $country = $("#country1_Integral");
+            let $integral = $("#country1_Integral").find("div");
+            let $borther = $("#country1_Integral").siblings();
+            let $bortherIntegral = $borther.find("div");
+            if ($borther.hasClass("soccer_integral_boxC")) {
+                $borther.removeClass("soccer_integral_boxC");
+                $bortherIntegral.attr("class", "soccer_integral_integral");
+                $bortherIntegral.text("猜");
+            }
+            $country.addClass("soccer_integral_boxC");
+            $integral.attr("class", "soccer_integral_integralC");
+            let intestalNum = $integral.text();
+            if ($integral.text() != "猜") {
+                $integral.text(parseInt(intestalNum) + 50);
+                console.log(intestalNum);
+                if (parseInt(intestalNum) + 50 > 1000) {
+                    $integral.text(1000);
+                }
+            } else {
+                $integral.text(100);
+            }
+        })
+        // 2
+        $("#country2").click(function () {
+            let $country = $("#country2_Integral");
+            let $integral = $("#country2_Integral").find("div");
+            let $borther = $("#country2_Integral").siblings();
+            let $bortherIntegral = $borther.find("div");
+            if ($borther.hasClass("soccer_integral_boxC")) {
+                $borther.removeClass("soccer_integral_boxC");
+                $borther.removeClass("soccer_integral_boxC");
+                $bortherIntegral.attr("class", "soccer_integral_integral");
+                $bortherIntegral.text("猜");
+            }
+            $country.addClass("soccer_integral_boxC");
+            $integral.attr("class", "soccer_integral_integralC");
+            let intestalNum = $integral.text();
+            if ($integral.text() != "猜") {
+                $integral.text(parseInt(intestalNum) + 50);
+                console.log(intestalNum);
+                if (parseInt(intestalNum) + 50 > 1000) {
+                    $integral.text(1000);
+                }
+            } else {
+                $integral.text(100);
+            }
+        })
+        //3
+
+        $("#country3").click(function () {
+            let $country = $("#country3_Integral");
+            let $integral = $("#country3_Integral").find("div");
+            let $borther = $("#country3_Integral").siblings();
+            let $bortherIntegral = $borther.find("div");
+            if ($borther.hasClass("soccer_integral_boxC")) {
+                $borther.removeClass("soccer_integral_boxC");
+                $borther.removeClass("soccer_integral_boxC");
+                $bortherIntegral.attr("class", "soccer_integral_integral");
+                $bortherIntegral.text("猜");
+            }
+            $country.addClass("soccer_integral_boxC");
+            $integral.attr("class", "soccer_integral_integralC");
+            let intestalNum = $integral.text();
+            if ($integral.text() != "猜") {
+                $integral.text(parseInt(intestalNum) + 50);
+                console.log(intestalNum);
+                if (parseInt(intestalNum) + 50 > 1000) {
+                    $integral.text(1000);
+                }
+            } else {
+                $integral.text(100);
+            }
+        })
+        //4
+
+        $("#country4").click(function () {
+            let $win = $(this).find("div");
+            let $brotherWin = $(this).parent().siblings().find(".soccer_win");
+            let $country = $("#country4_Integral");
+            let $integral = $("#country4_Integral").find("div");
+            let $borther = $("#country4_Integral").siblings();
+            let $bortherIntegral = $borther.find("div");
+            if ($borther.hasClass("soccer_integral_boxC")) {
+                $borther.removeClass("soccer_integral_boxC");
+                $borther.removeClass("soccer_integral_boxC");
+                $bortherIntegral.attr("class", "soccer_integral_integral");
+                $bortherIntegral.text("猜");
+                $brotherWin.removeClass("soccer_win");
+            }
+            $country.addClass("soccer_integral_boxC");
+            $win.addClass("soccer_win");
+            $integral.attr("class", "soccer_integral_integralC");
+            let intestalNum = $integral.text();
+            if ($integral.text() != "猜") {
+                $integral.text(parseInt(intestalNum) + 50);
+                console.log(intestalNum);
+                if (parseInt(intestalNum) + 50 > 1000) {
+                    $integral.text(1000);
+                }
+            } else {
+                $integral.text(100);
+            }
+        })
+        //213
+        function football(id) {
+            let $win = $(this).find("div");
+            let $country = $("#" + id);
+            let $integral = $("#" + id).find("div");
+            let $borther = $("#" + id).siblings();
+            let $bortherIntegral = $borther.find("div");
+            if ($borther.hasClass("soccer_integral_boxC")) {
+                $borther.removeClass("soccer_integral_boxC");
+                $borther.removeClass("soccer_integral_boxC");
+                $bortherIntegral.attr("class", "soccer_integral_integral");
+                $bortherIntegral.text("猜");
+                $bortherIntegral.css("font-size", "");
+                $win.removeClass("soccer_win");
+            }
+            $country.addClass("soccer_integral_boxC");
+            $win.addClass("soccer_win");
+            $integral.attr("class", "soccer_integral_integralC");
+            let intestalNum = $integral.text();
+            if ($integral.text() != "猜") {
+                $integral.text(parseInt(intestalNum) + 50);
+                console.log(intestalNum);
+
+                if (parseInt(intestalNum) + 50 >= 1000) {
+                    $integral.text(1000);
+                    $integral.css("font-size", ".6rem");
+                }
+            } else {
+                $integral.text(100);
+            }
+        }
+    </script>
+    <script>
+        $("#clearAll").click(function () {
+            let $integralBox = $(".soccer_integral_boxC");
+            let $win = $(".soccer_win");
+            let $integral = $(".soccer_integral_integralC");
+            if ($integralBox.length != 0) {
+                $integralBox.removeClass("soccer_integral_boxC");
+                $integral.text("猜");
+                $integral.attr("class", "soccer_integral_integral");
+                $win.removeClass("soccer_win");
+            }
+        });
+    </script>
+    <script>
+        invokingTime("soccerTime","2018-06-30 00:00:00");
+        /*要求 计算两个时间戳相减 然后拥有倒计时效果 只需要24小时内得计算
+                                    1. 模拟数据 随便用前一天得时间 与当前时间对比
+                                    2.  两个时间相减 当前时间-前一天时间 /1000 得到秒
+                                    3.  得到秒 之后 setinterval 让time--  然后在函数中输出效果
+                                    4.  当秒杀数小于0  就显示已超时
+                计算方式 second = 时间戳(默认秒) - 小时 - 分钟  所有单位都换成秒 
+         */
+function invokingTime(id, time_out) {
+
+    let time_out_time = new Date(time_out).getTime();
+    let nowTime = new Date().getTime();
+    let total = (time_out_time - nowTime) / 1000;
+
+    function showTime(times) {
+        let p = setInterval(function () {
+            /* ---------------------------- 天 : 小时 : 分钟 :秒 */
+            let day = Math.floor(times / (60 * 60 * 24)); //天
+            let hour = Math.floor(times / (60 * 60)) - (day * 24); //小时
+            let minute = Math.floor(times / 60) - (day * 24 * 60) - (hour * 60); //秒
+            let second = Math.floor(times) - (day * 24 * 60 * 60) - (hour * 60 * 60) - (minute * 60); //秒
+            /* ---------------------------- 小时:分钟:秒 */
+            let newHour = Math.floor(times/(60 * 60))
+            let newMinute = Math.floor(times/60)-(newHour * 60);
+            let newSecond = Math.floor(times) - (newHour * 60 * 60) - (newMinute * 60);;
+            if (hour <= 9) hour = '0' + hour;
+            if (minute <= 9) minute = '0' + minute;
+            if (second <= 9) second = '0' + second;
+            if (newHour <= 9) hour = '0' + hour;
+            if (newMinute <= 9) minute = '0' + minute;
+            if (newSecond <= 9) second = '0' + second;
+            // $(`#${id}`).html(`${day}:${hour}:${minute}:${second}`);
+            $(`#${id}`).html(`${newHour}:${newMinute}:${newSecond}`);
+            times--;
+            if (times < 0) {
+                $(`#${id}`).html(`00:00:00`);
+                // $('#sta_' + id).html('已超时');
+                // $('#op_' + id).html("< a href= "{pigcms{:U('trader_issue_detail')}&id=" + id + "\">详情</ a>");
+                clearInterval(p);
+
+            }
+        },);
+        // timer[id] = p;
+    }
+
+    showTime(total);
+    }
+    </script>
+</body>
+
+</html>

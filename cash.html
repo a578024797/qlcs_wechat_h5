@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<title>cash</title>
+<link href="css/commmon.css" rel="stylesheet" type="text/css">
+<link href="css/storeValue.css" rel="stylesheet" type="text/css">
+<script src="js/jquery1.11.3.js"></script>
+</head>
+<body>
+<header class="header w100"> 
+  <!--设置按钮-->
+  <div class="tfun w90 mauto">
+    <div class="fleft"> <a href="###" class="fun setImg1 fleft"></a> </div>
+    <div class="fright"> <a href="###" class="fun setImg2 fleft "></a> </div>
+  </div>
+  <!--会员头像-->
+  <div class="memberHead w100 mauto">
+    <div class="borderBox2 mauto">
+      <div class="memberKong2"></div>
+      <img src="images/index/dog.jpg" alt="image">
+      <div class="memberKong2">
+   <!--     <a href="###">
+        <div class="memberKong_img"> </div>
+        <div class="memberKong_text"> 线上储值 </div>
+        </a>-->
+      </div>
+    </div>
+    <div class="memberLevel">
+      <div class="memberLeverContent">一级会员</div>
+    </div>
+  </div>
+</header>
+<!--会员进度条-->
+<div class="barCode w90 mauto">
+  <div class="progressBar  " >
+    <div class="pogressLever mauto w100">
+      <div class="fleft pogressContent "> 青铜 </div>
+      <div class="fright pogressContent"> 白银 </div>
+    </div>
+    <div class="mauto w100"id="progressBar"> </div>
+  </div>
+</div>
+<!--储值余额-->
+<div class="reserveBalance mauto w90">
+  <!--标题-->
+  <div class="reserveBalanceTitle w100 mauto">
+    <div>积分余额</div>
+     <div>408</div>
+  </div>
+  <div class="zzsc2 w100 mauto">
+    <a href='###' class="thisclass"><div class="largeVaule2">1000积分</div><div class="lowVaule">兑换10元</div></a>
+   <a href='###' class=""><div class="largeVaule2">2000积分</div><div class="lowVaule">兑换20元</div></a>
+   <a href='###' class=""><div class="largeVaule2">3000积分</div><div class="lowVaule">兑换30元</div></a>
+   <a href='###' class=""><div class="largeVaule2">4000积分</div><div class="lowVaule">兑换40元</div></a>
+   <a href='###' class=""><div class="largeVaule2">5000积分</div><div class="lowVaule">兑换50元</div></a>
+   <a href='###' class=""><div class="largeVaule2">10000积分</div><div class="lowVaule">兑换100元</div></a>
+</div>
+<div class="submit_box"><a href="###" class="submit_content">
+    确认兑换
+  </a></div>
+  
+</div>
+<!--立即支付-->
+<!--<div class="rightNowPay w100">
+  <a href="###"></a>
+</div>-->
+<script src="js/jquery.lineProgressbar.js"></script> 
+<script type="text/javascript"  src="js/date.js" ></script>
+<script type="text/javascript" src="js/iscroll.js" ></script>
+<script>       
+        (function (doc, win) {   
+            var docEl = doc.documentElement,   
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',   
+            recalc = function () {   
+            var clientWidth = docEl.clientWidth;   
+            if (!clientWidth) return;   
+            docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';   
+        };   
+        if (!doc.addEventListener) return;   
+        win.addEventListener(resizeEvt, recalc, false);   
+        doc.addEventListener('DOMContentLoaded', recalc, false);   
+        })(document, window);   
+</script> 
+<script type="text/javascript">
+$(function(){ 
+	$('#progressBar').LineProgressbar({
+		percentage: 50,
+		fillBackgroundColor: '#E67F12'
+	});
+	$('#beginTime').date();
+	$('#endTime').date({theme:"datetime"});
+})
+</script>
+<!--鼠标点击-->
+<script>
+$(function(){
+	var zzsc = $(".zzsc2 a");
+	zzsc.click(function(){
+		$(this).addClass("thisclass").siblings().removeClass("thisclass");
+	});
+});
+</script>
+</body>
+</html>

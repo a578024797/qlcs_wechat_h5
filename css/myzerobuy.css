@@ -1,0 +1,104 @@
+@charset "utf-8";
+/*title*/
+.header {
+	background: #0081cc;
+	height: 1.9rem;
+	align-items: center;
+	display: flex;
+	display: -webkit-flex;
+}
+.header_title {
+	text-align: center;
+font-size:.75rem;
+	color: #fff;
+	height: 1.9rem;
+	line-height: 1.9rem;
+	top: 0;
+letter-spacing:.2rem;
+	z-index: 0;
+}
+.renturnBox {
+	position: absolute;
+	width: 8%;
+	height: 1.9rem;
+	align-items: center;
+	display: flex;
+	display: -webkit-flex;
+	justify-content: flex-end;
+}
+.return {
+	display: inline-block;
+ width:.45rem;
+ height:.9rem;
+	background: url(../images/cardDetial/sanjiao.png) no-repeat;
+	background-size: 100% 100%;
+	z-index: 1;
+}
+
+/*产品大盒子*/
+.level_content {
+	height: 5.2rem;
+	padding: 1.2rem 0 0 1.3rem;
+	;
+}
+/*产品边框*/
+.level_bor {
+	border-bottom: #999 1px solid;
+	padding-bottom: 1.2rem;
+	height: 6.4rem;
+}
+.main_content {
+	height: 100%;
+}
+/*产品图片*/
+.content_pic img {
+	width: 6.2rem;
+	height: 4rem;
+	 border-radius: .6rem .6rem .6rem .6rem;
+}
+.content_text {
+}
+/*产品名*/
+.title {
+font-size:.8rem;
+	font-weight: 600;
+	height: 1.3rem;
+	line-height: 1.3rem;
+	color: #484645
+}
+/*截止时间*/
+.time {
+font-size:.45rem;
+	color: #5a5554
+}
+/*颜色*/
+.c0081cc {
+	color: #0081cc
+}
+/*价格字体*/
+.price {
+font-size:.55rem
+}
+/*价格字体2*/
+.price2 {
+font-size:.5rem;
+}
+/*最后一行字体*/
+.lowPrice {
+	overflow: hidden;
+font-size:.8rem;
+}
+.lowPrice a {
+	display: inline-block;
+	width: 3.2rem;
+height:.8rem;
+	margin:.1rem 0 0 0;
+}
+.lowDiv {
+	height: 1.365rem;
+padding-top:.18rem;
+}
+.mlowte {
+margin:.15rem 0 0 0;
+}
+.kindimg2{background:url(../images/myzerobuy/n2.png) no-repeat;background-size:100% 100%;}

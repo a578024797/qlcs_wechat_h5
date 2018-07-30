@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>首页</title>
+    <link rel="stylesheet" href="./css/skin_index.css">
+    <script src="./js/wordauto.js"></script>
+    <script src="./js/jquery1.11.3.js"></script>
+</head>
+
+<body>
+    <div class="skin_container">
+        <!-- 头 -->
+        <header class="skin_container">
+            <!-- 头部导航 -->
+            <div class="header_nav">
+                <!-- 左侧 -->
+                <div class="header_nav_box">
+                    <div class="header_nav_imgBox">
+                        <img src="./images/skin_footBall/1.png" alt="1">
+                    </div>
+                    <span class="header_nav_message">附近门店</span>
+                </div>
+                <!-- 右侧 -->
+                <div class="header_nav_box">
+                    <span class="header_nav_message">设置</span>
+                    <div class="header_nav_imgBox">
+                        <img src="./images/skin_footBall/2.png" alt="2">
+                    </div>
+                </div>
+            </div>
+            <!-- 用户图片 -->
+            <div class="skin_container header_main">
+                <div class="header_userImgBox">
+                    <img src="./images/skin_footBall/dog.jpg" alt="dog" id="userImg">
+                </div>
+                <div class="header_userLevel">
+                    青铜会员
+                </div>
+            </div>
+            <div class="skin_integralRule" id="skin_integral">
+                <div class="skin_integral_content">
+                    <div class="skin_integral_title">
+                        积分规则
+                    </div>
+                    <ul>
+                        <li>1. 青铜 到白银需要50000分阿斯达所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所</li>
+                        <li>2. 阿萨德哈时间快点哈时间肯定好看撒觉得好看教案上扣扣</li>
+                        <li>3. 阿萨德哈时间快点哈时间肯定好看撒觉得好看教案上扣扣</li>
+                        <li>4. 阿萨德哈时间快点哈时间肯定好看撒觉得好看教案上扣扣</li>
+                        <li>5. 阿萨德哈时间快点哈时间肯定好看撒觉得好看啥答案熬熬熬熬熬熬熬熬熬熬熬熬熬熬熬熬熬熬熬熬熬熬熬熬熬熬熬熬熬熬熬熬教案上扣扣</li>
+                    </ul>
+                </div>
+                <div class="skin_integral_close">
+                </div>
+            </div>
+            <!-- 用户积分导航条 -->
+            <div class="skin_container skin_progressLine">
+                <div class="progress_news">
+                    <span>青 铜</span>
+                    <span>白 银</span>
+                    <div class="progress_imgBox" id="progressImg">
+                        <img src="./images/skin_footBall/4.png" alt="4">
+                    </div>
+                </div>
+                <div class="progess_box">
+                    <div class="progressMain" id="progressLine"></div>
+                </div>
+            </div>
+        </header>
+        <!-- 主内容 -->
+        <div class="skin_container">
+            <!-- 主内容导航 -->
+            <div class="skin_main_nav">
+                <div class="skin_mv_content">
+                    <div class="skin_mv_imgBox">
+                        <img src="./images/skin_footBall/5.png" alt="5">
+                    </div>
+                    <span>积 分</span>
+                    <span>1250</span>
+                </div>
+                <div class="skin_mv_content">
+                    <div class="skin_mv_imgBox">
+                        <img src="./images/skin_footBall/5.png" alt="5">
+                    </div>
+                    <span>储 蓄</span>
+                    <span>150</span>
+                </div>
+                <div class="skin_mv_content">
+                    <div class="skin_mv_imgBox">
+                        <img src="./images/skin_footBall/5.png" alt="5">
+                    </div>
+                    <span>优惠券</span>
+                    <span>3</span>
+                </div>
+            </div>
+            <!-- 主内容主体 -->
+            <div class="skin_main_main">
+                <!-- 条形码 -->
+                <div class="skin_mm_barBox">
+                    <div class="skin_barTitle">
+                        <div class="skin_barImgBox">
+                            <img src="./images/skin_footBall/14.png" alt="14">
+                        </div>
+                        <div class="skin_barImgBox" id="showPay">
+                            付款密码
+                            <!-- <img src="./images/skin_footBall/6.png" alt="6"> -->
+                        </div>
+                    </div>
+                    <div class="skin_bar_content">
+                        <div class="skin_bar_showBox">
+                            <div class="skin_bar_show" id="bcTarget1"></div>
+                        </div>
+                        <div class="skin_bar_payCode" id="showPayBar" data-flag="0">
+                            <div class="skin_bar_show" id="bcTarget2"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 活动1 -->
+                <div class="skin_mm_activity">
+                    <a class="skin_mm_activityImg" href="###">
+                        <img src="./images/skin_footBall/7.png" alt="7">
+                    </a>
+                </div>
+                <!-- 4个方法 -->
+                <div class="skin_mm_func">
+                    <div class="skin_func_box">
+                        <a class="skin_func_content skin_func1">
+                            <img src="./images/skin_footBall/8.png" alt="8">
+                            <span>积分领取</span>
+                        </a>
+                        <a class="skin_func_content skin_func2">
+                            <img src="./images/skin_footBall/9.png" alt="8">
+                            <span>积分兑换</span>
+                        </a>
+                    </div>
+                    <div class="skin_func_box">
+                        <a class="skin_func_content skin_func3">
+                            <img src="./images/skin_footBall/10.png" alt="8">
+                            <span>零元限时购</span>
+                        </a>
+                        <a class="skin_func_content skin_func4">
+                            <img src="./images/skin_footBall/11.png" alt="8">
+                            <span>惊爆价团购</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="skin_mm_banner">
+                    <a class="skin_mm_bannerImg" href="###">
+                        <img src="./images/skin_footBall/12.png" alt="12">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- 脚 -->
+        <footer class="skin_container">
+            <div class="skin_footImgBox">
+                <img src="./images/skin_footBall/13.png" alt="13">
+            </div>
+        </footer>
+    </div>
+    <!-- 封装以后在写 -->
+    <script src="JS/jquery_code.js"></script>
+    <script src="JS/jquery_code1.js"></script>
+    <script>
+        $(function () {
+            //进度条 调用
+            progressLine({
+                progressId: "progressLine",
+                progressBgColor: "#2321ad",
+                progressFaBgColor: "#d30065",
+                progressImgId: "progressImg",
+                progressRate: "80"
+            });
+
+            //条形码
+            $("#bcTarget1").barcode("13756606900", "code128", {
+                barWidth: 2,
+                barHeight: 80,
+                moduleSize: 5,
+                showHRI: false,
+                addQuietZone: true,
+                marginHRI: 0,
+                bgColor: "",
+                color: "#000",
+                fontSize: 12,
+                output: "css",
+                posX: 0,
+                posY: 0
+            });
+            $("#bcTarget2").barcode("137506900", "code128", {
+                barWidth: 2,
+                barHeight: 80,
+                moduleSize: 5,
+                showHRI: false,
+                addQuietZone: true,
+                marginHRI: 0,
+                bgColor: "",
+                color: "#000",
+                fontSize: 12,
+                output: "css",
+                posX: 0,
+                posY: 0
+            });
+            //条形码 end
+
+            //付款密码 展示
+            $("#showPay").click(function () {
+                // $("#showPayBar").slideToggle(300);
+                let $bar = $("#showPayBar");
+                let $flag = $("#showPayBar").attr("data-flag");
+                if ($flag == 0) {
+                    $(this).text("点击关闭");
+                    $bar.slideDown(300, function () {})
+                    $("#showPayBar").attr("data-flag", "1");
+                } else {
+                    $bar.slideUp(300);
+                    $(this).text("付款密码");
+                    $("#showPayBar").attr("data-flag", "0");
+                }
+            });
+            //end
+
+            //积分规则
+            $("#userImg").click(function () {
+                $("#skin_integral").fadeToggle(300);
+            });
+            $("#skin_integral").click(function () {
+                $(this).fadeOut(300);
+            });
+            // end 积分规则
+
+        })
+        //进度条
+        function progressLine(options) {
+            let defaultObj = {
+                progressId: "progressLine", //进度条得id
+                progressBgColor: "#2321ad", //进度条背景颜色
+                progressFaBgColor: "#d30065", //没有进度得时候得背景颜色
+                progressImgId: "progressImg", //进度条图片
+                progressRate: "30" // 进度条进度 百分比
+            };
+            let finallObj = $.extend({}.defaultObj, options); //最后得对象
+            progresssStart();
+            // 更改默认属性
+            function progresssStart() {
+                let progress = $("#" + finallObj.progressId);
+                let progressFater = $("#" + finallObj.progressId).parent();
+                let progressImg = $("#" + finallObj.progressImgId)
+                // progress.css("width", finallObj.progressRate + "%");
+                progress.css("backgroundColor", finallObj.progressBgColor);
+                progress.animate({
+                    width: finallObj.progressRate + "%",
+                }, 1000);
+                progressFater.css("backgroundColor", finallObj.progressFaBgColor);
+                // progressImg.css("left", finallObj.progressRate + "%");
+                progressImg.animate({
+                    left: finallObj.progressRate + "%",
+                }, 1000)
+
+            }
+        }
+    </script>
+</body>
+
+</html>

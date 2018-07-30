@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" class="mf_html">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>七夕详细页</title>
+    <script src="./js/wordauto.js"></script>
+    <link rel="stylesheet" href="./css/new_common.css">
+    <link rel="stylesheet" href="./css/magpieFestival.css">
+    <link rel="stylesheet" href="./css/timePruchase.css">
+    <script src="js/jquery1.11.3.js"></script>
+</head>
+
+<body class="mf_body">
+    <div class="we_container mf_background">
+        <header class="we_container">
+            <div class="m_detial_header_imgBox mf_detial_iB_padding">
+                <img src="./images/magpieFestival/6.png" alt="6">
+            </div>
+        </header>
+        <div class="we_container">
+           
+            <div class="m_detial_imgBox">
+                <img src="./images/zeroPurchase/product.jpg" alt="pro">
+            </div>
+            <div class="m_detialM">
+                <div class="m_detialM_name">正大玉米蔬菜猪肉蒸饺1份</div>
+                <!-- <div class="m_detialM_word"></div> -->
+                <div class="m_detialM_code mf_detialM_code_margin" id="bcTarget1"></div>
+                <div class="m_detialM_tips mf_detialM_tips_color">
+                    <span>到门店出示</span>
+                    <span>使用优惠券</span>
+                </div>
+                <div class="m_detialM_word">取货时间2018年8月16日-17日</div>
+                <div class="m_detialM_time">抢券时间 : 2018年8月16日-17日</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="JS/jquery_code.js"></script>
+    <script src="JS/jquery_code1.js"></script>
+    <script>
+        //条形码
+        $("#bcTarget1").barcode("13756606900", "code128", {
+                barWidth: 2,
+                barHeight: 80,
+                moduleSize: 5,
+                showHRI: false,
+                addQuietZone: true,
+                marginHRI: 0,
+                bgColor: "",
+                color: "#000",
+                fontSize: 12,
+                output: "css",
+                posX: 0,
+                posY: 0
+            });
+    </script>
+</body>
+
+</html>
