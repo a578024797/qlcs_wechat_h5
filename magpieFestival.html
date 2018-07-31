@@ -18,32 +18,37 @@
     <div class="we_container mf_background">
         <div class="mf_container">
             <div class="mf_mainImg">
-                <img src="./images/magpieFestival/1.png" alt="1.png">
+                <!-- <img src="./images/magpieFestival/1.png" alt="1.png"> -->
+                <img src="./images/magpieFestival/1.png" class="mf_mainImg_headerImg">
+
+                <img src="./images/magpieFestival/1.png" class="mf_mainImg_changeImg">
             </div>
-            <div class="mf_productInfo">
-                <p>商品预订时间: 2018年8月01日-8月13日</p>
-                <p>商品预订时间: 2018年8月16日-8月17日</p>
-                <p>不可提前领取,超过领取期限视作放弃, 积分/现金不予返还</p>
-            </div>
-            <div class="mf_address">
-                <label for="address" id="addressWord" class="mf_label mf_btnBg"></label>
-                <div class="mf_triangle"></div>
-                <select name="shop" id="address" class="mf_select">
-                    <option value="1.2">都市邻里里里</option>
-                    <option value="1.3">都市邻里2</option>
-                    <option value="1.4">都市邻里3</option>
-                </select>
-            </div>
-            <div class="mf_bespeak">
-                <div class="mf_btnBg" onclick="bespeak(`0`)">500积分预约</div>
-                <div class="mf_btnBg" onclick="bespeak(`1`)">30元储值预约</div>
-            </div>
-            <div class="mf_order mf_btnBg">
-                <a href="###">我的订单</a>
-            </div>
-            <div class=" mf_statement">
-                <p>注意事项：储值预约需先进行会员储值，储值不可以</p>
-                <p> 兑现，最终解释权归全联超商所有.</p>
+            <div class="mf_main_CClayout">
+                <div class="mf_productInfo">
+                    <p>商品预订时间: 2018年8月01日-8月13日</p>
+                    <p>商品预订时间: 2018年8月16日-8月17日</p>
+                    <p>不可提前领取,超过领取期限视作放弃, 积分/现金不予返还</p>
+                </div>
+                <div class="mf_address">
+                    <label for="address" id="addressWord" class="mf_label mf_btnBg"></label>
+                    <div class="mf_triangle"></div>
+                    <select name="shop" id="address" class="mf_select">
+                        <option value="1.2">都市邻里里里</option>
+                        <option value="1.3">都市邻里2</option>
+                        <option value="1.4">都市邻里3</option>
+                    </select>
+                </div>
+                <div class="mf_bespeak">
+                    <div class="mf_btnBg" onclick="bespeak(`0`)">500积分预约</div>
+                    <div class="mf_btnBg" onclick="bespeak(`1`)">30元储值预约</div>
+                </div>
+                <div class="mf_order mf_btnBg">
+                    <a href="###">我的订单</a>
+                </div>
+                <div class=" mf_statement">
+                    <p>注意事项：储值预约需先进行会员储值，储值不可以</p>
+                    <p> 兑现，最终解释权归全联超商所有.</p>
+                </div>
             </div>
         </div>
     </div>
@@ -51,6 +56,7 @@
         <div class="mf_alert_inner">
             <div class="mf_ai_imgBox">
                 <img src="./images/magpieFestival/4.png" alt="4">
+
             </div>
             <div class="mf_ai_word">
                 您的积分不足
@@ -90,8 +96,8 @@
                         resultDo(data.error, data.msg);
                     }
                 },
-                error:function(e){
-                    resultDo(1,e.statusText);
+                error: function (e) {
+                    resultDo(1, e.statusText);
                 }
             });
         }

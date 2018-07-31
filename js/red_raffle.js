@@ -7,6 +7,7 @@ function initLucky(options) {
     function initOption(_option) {
         console.log(document.getElementById(`${_option.id}`));
         var optionA = {
+            father: document.getElementById(`${_option.id}`).parentNode, //canvas父级对象
             canvas: document.getElementById(`${_option.id}`), //对象
             canvasW: document.getElementById(`${_option.id}`).parentNode.offsetWidth, //宽 this指向的是windows !!! 怕严格模式下 有错误改了
             canvasH: document.getElementById(`${_option.id}`).parentNode.offsetHeight, //高
@@ -30,11 +31,14 @@ function initLucky(options) {
             domain: _option.domain, //点击执行接口得地址
             result: "1", //接口返回信息
             success: _option.success ? _option.success : "", //成功回调函数
+            shelter: _option.shelter ? _option.shelter : false, //是否开启遮罩层
+            ceng: "", //遮罩层
         }
         //设置canvas的宽高
         optionA.canvas.width = optionA.canvasW;
         optionA.canvas.height = optionA.canvasH;
         createCache(optionA);
+        createCeng(optionA);
         return optionA;
     } //end
 
@@ -263,8 +267,10 @@ function initLucky(options) {
                     e.offsetY <= position_maxH)) {
                 //判断当前旋转是否结束 
                 if (_option.onlyone === 0) {
+                    if (_option.ceng !== "") {
+                        _option.father.appendChild(_option.ceng);
+                    }
                     _option.onlyone = 1;
-
                     //执行接口 每次点击需要获取得数据 判断domain地址是否为空 为空(测试)给个假得
                     if (_option.domain !== undefined && _option !== "" && _option !== null) {
                         //同时执行error跟success什么鬼.
@@ -317,7 +323,7 @@ function initLucky(options) {
                     if (_option.flagTimes < _option.frequency && _option.result !== "error" && _option.result !== "") {
                         _option.flagTimes++;
                         _option.timer = setInterval(function () {
-                            
+
 
                             //变速改
                             if (turnSpeed(_option) === 0) {
@@ -336,12 +342,15 @@ function initLucky(options) {
                                             //     "score": "100",
                                             //     "hc_id": "00000007499328"
                                             // }
-                                            _option.success(_option.result);                                        
+                                            _option.success(_option.result);
                                         } else {
-                                            console.log("如果需要回调,清添加success");                                         
+                                            console.log("如果需要回调,清添加success");
                                         }
                                         _option.onlyone = 0;
-                                        
+                                        console.log(_option.ceng);
+                                        if (_option.ceng !== "") {
+                                             _option.father.removeChild(_option.ceng);
+                                        }
                                     }, 700);
                                 }).catch(function () {
                                     console.log("错误了")
@@ -375,8 +384,23 @@ function initLucky(options) {
         //((旋转弧度与 旋转圈数-90弧度-默认弧度得一半-产品位置)*10)向下去整 在用10-这个比 等于radian需要加得度数
         var pp = Math.floor(((_option.roateRadian * Math.PI / 180) / (Math.PI * 2 * 5 - Math.PI / 2 - _option.baseRadian / 2 -
             _option.baseRadian * _option.luckPosition)) * 10);
-            // console.log(pp);
-        return 10-pp;
+        // console.log(pp);
+        return 10 - pp;
     }
+    //创建遮罩层
+    function createCeng(_option) {
+        //默认父级元素 position releative 没有请自己加上
+        let ceng = "";
+        if (_option.shelter) {
+            ceng = document.createElement("div");
+            ceng.style.position = "absolute";
+            ceng.style.left = 0;
+            ceng.style.top = 0;
+            ceng.style.zIndex = 999;
+            ceng.style.width = _option.father.offsetWidth + "px";
+            ceng.style.height = _option.father.offsetHeight + "px";
+        }
+        _option.ceng = ceng;
+    } //end
 
 }
