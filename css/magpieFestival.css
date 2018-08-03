@@ -240,9 +240,9 @@ div[class ^= "mfe_extract_position"]>img{
 .mfe_extract_position3{
     position: relative;
     top: -.5rem;
-    left: 5rem;
+    left: 7rem;
     /* float: right; */
-    width: 80%;
+    width: 53%;
     /* height: 5rem; */
     text-align: center;
     color: #ffffff;
@@ -252,7 +252,7 @@ div[class ^= "mfe_extract_position"]>img{
 .mfe_extract_confrim{
     display: block;
     margin: .4rem auto 0;
-    width: 40%;
+    width: 55%;
     height: 1.5rem;
     line-height: 1.4rem;
     letter-spacing: .05rem;
@@ -266,7 +266,7 @@ div[class ^= "mfe_extract_position"]>img{
     left: 4.8rem;
     width: 58.2%;
 }
-/* 根据以后出得再把这个弹窗挪到moudle里 */
+/* 根据以后出得图再把这个弹窗挪到moudle里 由于策划内帮煞笔 弹窗竟然做成N种不一样的  搁浅 */
 .mfe_extract_alert{
     display: none;
     position: fixed;
@@ -376,7 +376,7 @@ div[class ^= "mfe_eamh_img"]>img{
     box-shadow: none;
 }
 .mfed_detialM_code_margin{
-    margin: .6rem;
+    margin: .6rem auto;
    
 }
 .mfed_detialM_tips_color{
@@ -393,4 +393,11 @@ div[class ^= "mfe_eamh_img"]>img{
 }
 .mfel_info_click{
     margin:.8rem 0 0 0;
+}
+.mfe_eamm_chocolate{
+    padding: .5rem 0;
+    font-size: 1rem;
+}
+.mfe_eamm_chocolate>font{
+    font-size: .8rem;
 }

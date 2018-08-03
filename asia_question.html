@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" class="we_height100">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>亚运会问答</title>
+    <script src="./js/wordauto.js"></script>
+    <link rel="stylesheet" href="./css/new_common.css">
+    <link rel="stylesheet" href="./css/asian_game.css">
+    <script src="js/jquery1.11.3.js"></script>
+</head>
+
+<body class="we_height100 asia_background4">
+    <div class="we_container">
+        <ul class="asia_qul">
+            <li class="asia_qli">
+                <!-- 如果你老丈人被砸死,要不就砍死他你选一个? -->
+                <p>老丈人&大闺女</p>
+                <div class="asia_qchoose">
+                    <a href="###" class="u_yellow_confrim asia_qclick" data-flag="1">
+                        <img src="./images/asia/yellowyes.png" alt="yy" class="asia_imgWord_height4">
+                    </a>
+                    <a href="###" class="u_yellow_confrim asia_qclick" data-flag="2">
+                        <img src="./images/asia/yellowno.png" alt="yy" class="asia_imgWord_height4">
+                    </a>
+                </div>
+            </li>
+            <li class="asia_qli">
+                <!-- 如果你老丈人被砸死,要不就砍死他你选一个? -->
+                <p>老丈人&大闺女</p>
+                <div class="asia_qchoose">
+                    <a href="###" class="u_yellow_confrim asia_qclick" data-flag="1">
+                        <img src="./images/asia/yellowyes.png" alt="yy" class="asia_imgWord_height4">
+                    </a>
+                    <a href="###" class="u_yellow_confrim asia_qclick" data-flag="2">
+                        <img src="./images/asia/yellowno.png" alt="yy" class="asia_imgWord_height4">
+                    </a>
+                </div>
+            </li>
+            <li class="asia_qli">
+                <!-- 如果你老丈人被砸死,要不就砍死他你选一个? -->
+                <p>老丈人&大闺女</p>
+                <div class="asia_qchoose">
+                    <a href="###" class="u_yellow_confrim asia_qclick" data-flag="1">
+                        <img src="./images/asia/yellowyes.png" alt="yy" class="asia_imgWord_height4">
+                    </a>
+                    <a href="###" class="u_yellow_confrim asia_qclick" data-flag="2">
+                        <img src="./images/asia/yellowno.png" alt="yy" class="asia_imgWord_height4">
+                    </a>
+                </div>
+            </li>
+        </ul>
+        <div class="asia_qsub">
+            <a href="###" class="u_yellow_confrim asia_qsub_click">
+                <img src="./images/asia/sub.png" alt="sub" class="asia_imgWord_height5">
+            </a>
+        </div>
+        <div class="asia_qawc">
+            <img src="./images/asia/longwhite.png" alt="longwhite">
+        </div>
+        <div class="asia_qsub">
+            <a href="###" class="u_yellow_confrim asia_qsub_click">
+                <img src="./images/asia/longlonglongword.png" alt="sub" class="asia_imgWord_height6">
+            </a>
+        </div>
+    </div>
+
+
+    <!-- js  -->
+    <script>
+        function initQuestionClick() {
+            //问题按钮
+            let choose_div = document.getElementsByClassName("asia_qchoose");
+            for (let tagA of choose_div) {
+                tagA.getElementsByTagName("a")[0].onclick = function () {
+                    if (!this.classList.contains("u_yellow_unConfrim")) {
+                        this.nextElementSibling.getElementsByTagName("img")[0].src = "./images/asia/yellowno.png";
+                        this.nextElementSibling.classList.remove("u_yellow_unConfrim");
+                        this.nextElementSibling.classList.add("u_yellow_confrim");
+                        this.getElementsByTagName("img")[0].src = "./images/asia/grayyes.png";
+                        this.classList.remove("u_yellow_confrim");
+                        this.classList.add("u_yellow_unConfrim");
+                    }
+
+                }
+                tagA.getElementsByTagName("a")[1].onclick = function () {
+                    if (!this.classList.contains("u_yellow_unConfrim")) {
+                        this.previousElementSibling.getElementsByTagName("img")[0].src =
+                            "./images/asia/yellowyes.png";
+                        this.previousElementSibling.classList.remove("u_yellow_unConfrim");
+                        this.previousElementSibling.classList.add("u_yellow_confrim");
+                        this.getElementsByTagName("img")[0].src = "./images/asia/grayno.png";
+                        this.classList.remove("u_yellow_confrim");
+                        this.classList.add("u_yellow_unConfrim");
+                    }
+
+                }
+            }
+            //提交按钮
+            let sub_click = document.getElementsByClassName("asia_qsub_click")[0];
+            sub_click.onclick = function () {
+                let unclist = document.getElementsByClassName("u_yellow_unConfrim");
+                let qli = document.getElementsByTagName("li");
+                if (unclist.length !== qli.length) {
+                    alert("请回答所有问题!!!");
+                } else {
+                    var data_flag = "";
+                    for (let iterator of unclist) {
+                        data_flag += iterator.getAttribute("data-flag");
+                    }
+                    $.ajax({
+                        type: "post",
+                        url: "http://vip.quanlianchaoshang.com/qlcs/wap.php?g=Wap&c=Activemodle&a=asiangames_ajaxsubmit",
+                        dataType: "json",
+                        data: {},
+                        success: function (result) {
+                            if (result.error === "0") {
+                                window.location.href = "";
+                            } else {
+                                alert(result.msg);
+                            }
+                        },
+                        error: function () {
+                            alert("未知错误,请手动刷新页面");
+                        }
+
+                    })
+                }
+
+            }
+
+        }
+        window.onload = function () {
+            //设置背景
+            if (document.getElementsByTagName("li").length > 3) {
+                document.getElementsByClassName("we_container")[0].classList.add('asia_background4');
+            };
+            initQuestionClick();
+        }
+    </script>
+</body>
+
+</html>

@@ -55,6 +55,10 @@
                     <div class="mfe_eamm_info">
                         <p>全联会员积分</p>
                         <p>积分已存入您的会员帐号</p>
+                        <div class="mfe_eamm_chocolate">
+                            请注意来电<br>
+                           <font>三日后与您联系</font> 
+                        </div>
                         <div class="mfe_eamm_code" id="mfe_code"></div>
                         <div class="mfe_eamm_codeInfo">666666666666</div>
                         <div class="mfe_eamm_integral">200</div>
@@ -77,6 +81,29 @@
     <script src="./js/red_raffle.js"></script>
     <script>
         window.onload = function () {
+
+            // pushHistory();
+            // var bool = false;
+            // setTimeout(function () {
+            //     bool = true;
+            // }, 1500);
+            // window.addEventListener("popstate", function (e) {
+            //     if (bool) {
+            //         //alert("我监听到了浏览器的返回按钮事件啦");
+            //         window.location.href = '{pigcms{:U("Activemodle/turntable")}'; //根据自己的需求实现自己的功能  
+            //     }
+            //     pushHistory();
+
+            // }, false);
+
+            // function pushHistory() {
+            //     var state = {
+            //         title: "title",
+            //         url: "{pigcms{:U('Activemodle/turntable')}"
+            //     };
+            //     window.history.pushState(state, "title", "{pigcms{:U('Activemodle/turntable')}");
+            // }
+
             //成功弹出信息 由于页面没写先这样
             function success(result) {
                 console.log("成功函数");
@@ -87,28 +114,19 @@
                 var mfe_eamm_codeInfo = document.getElementsByClassName("mfe_eamm_codeInfo")[0];
                 var mfe_eamm_integral = document.getElementsByClassName("mfe_eamm_integral")[0]
                 var mfe_eamm_return = document.getElementsByClassName("mfe_eamm_return")[0];
+                let mfe_eamm_chocolate = document.getElementsByClassName("mfe_eamm_chocolate")[0];
                 //获取免费次数 积分得div 然后获取分 每次点击成功后 减去
                 var mfe_freeDive = document.getElementsByClassName("mfe_extract_position3")[0].getElementsByTagName(
                     "p")[0];
                 var mfe_totalIntegral = document.getElementsByClassName("mfe_extract_position3")[0].getElementsByTagName(
                     "p")[1];
-                var mfe_freeDivNumber = parseInt(mfe_freeDive.innerText.replace(/[^0-9]/g, ""));
-                var mfe_totalIntegralNumber = parseInt(mfe_totalIntegral.innerText.replace(/[^0-9]/g, ""));
-                mfe_freeDivNumber -= 1;
-                if (result.score) {
-                    mfe_totalIntegralNumber += result.score;
-                    mfe_totalIntegral.innerText = `现有积分 : ${mfe_totalIntegralNumber}分`;
-                }
-                if (mfe_freeDivNumber < 0) {
-                    mfe_freeDivNumber = 0;
-                    mfe_totalIntegralNumber -= 20;
-                    if (mfe_totalIntegralNumber < 0) {
-                        mfe_totalIntegralNumber = 0;
-                    }
-                    mfe_totalIntegral.innerText = `现有积分 : ${mfe_totalIntegralNumber}分`;
-                }
-                mfe_freeDive.innerText = `剩余次数 : ${mfe_freeDivNumber}次`;
 
+                if (result.freetime == "0") {
+                    mfe_freeDive.innerText = "使用20积分抽奖";
+                }else{
+                    mfe_freeDive.innerText = `剩余次数 : ${result.freetime}次`;
+                }
+                mfe_totalIntegral.innerText = `现有积分 : ${result.usersocre}分`;
 
                 //没用三等 让它自己转换
                 //{"error":0,"msg":null,"type":"1","name":"5元优惠券","score":"0","hc_id":"00000007499328"}
@@ -116,12 +134,18 @@
                     //2是积分
                     mfe_eamm_code.style.display = "none";
                     mfe_eamm_codeInfo.style.display = "none";
+                    mfe_eamm_chocolate.style.display = "none";
                     mfe_eamm_integral.style.display = "block";
-                    p_list[0] = "全联会员积分";
-                    p_list[1] = "积分已存入您的会员帐号";
+                    p_list[0].innerText= "全联会员积分";
+                    p_list[1].innerText = "积分已存入您的会员帐号";
                     mfe_eamm_integral.innerText = result.score;
-
-
+                }else if(result.type == "3"){
+                    mfe_eamm_code.style.display = "none";
+                    mfe_eamm_codeInfo.style.display = "none";
+                    mfe_eamm_integral.style.display = "none";
+                    mfe_eamm_chocolate.style.display = "block";
+                    p_list[0].innerText = result.name;
+                    p_list[1].innerText = "";
                 } else {
                     p_list[0].innerText = result.name;
                     p_list[1].innerText = "数量:1";
@@ -143,6 +167,7 @@
                     mfe_eamm_codeInfo.innerText = result.hc_id;
                     mfe_eamm_code.style.display = "block";
                     mfe_eamm_codeInfo.style.display = "block";
+                    mfe_eamm_chocolate.style.display = "none";
 
                 }
                 mfe_extract_alert.style.display = "block";
@@ -163,13 +188,13 @@
                 alternateColor2: "#e83e95",
                 stratRadian: Math.PI / 180 * 0,
                 wordSub: 4,
-                frequency: 5,
                 // domain: `http://vip.quanlianchaoshang.com/qlcs/wap.php?g=wap&c=activemodle&a=luck_draw`,
                 success: success,
                 shelter: true,
             }
             initLucky(option);
         }
+
         //调用
     </script>
 

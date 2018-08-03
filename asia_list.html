@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" class="we_height100">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>亚运会抽奖列表页</title>
+    <script src="./js/wordauto.js"></script>
+    <link rel="stylesheet" href="./css/new_common.css">
+    <!-- <link rel="stylesheet" href="./css/magpieFestival.css"> -->
+    <link rel="stylesheet" href="./css/asian_game.css">
+    <script src="js/jquery1.11.3.js"></script>
+</head>
+
+<body class="we_height100 asia_background2">
+    <div class="we_container asia_background3">
+        <header class="we_container">
+            <div class="m_detial_header_imgBox asia_d_headerImg">
+                <img src="./images/asia/goldguesslong.png" alt="goldguesslong">
+            </div>
+        </header>
+        <div class="we_container">
+            <ul class="m_list_ul">
+                <li class="m_list_li">
+                    <div class="m_list_imgBox">
+                        <img src="./images/magpieFestival/products.png" alt="products">
+                    </div>
+                    <div class="m_list_info">
+                        <div class="m_list_info_title asia_info_title">康师傅涵养泉550ml</div>
+                        <div class="m_list_info_time asia_info_time">领取时间 : 8月1日-8月31日</div>
+                        <div class="m_list_info_click asia_info_click">
+                            <a href="###" class="u_yellow_unConfrim">
+                                <img src="./images/asia/unuse.png" alt="unuse" class="asia_imgWord_height3">
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li class="m_list_li">
+                    <div class="m_list_imgBox">
+                        <img src="./images/magpieFestival/products.png" alt="products">
+                    </div>
+                    <div class="m_list_info">
+                        <div class="m_list_info_title asia_info_title">康师傅涵养泉550ml</div>
+                        <div class="m_list_info_time asia_info_time">领取时间 : 8月1日-8月31日</div>
+                        <div class="m_list_info_click asia_info_click">
+                            <a href="###" class="u_yellow_confrim">
+                                <img src="./images/asia/use.png" alt="use" class="asia_imgWord_height3">
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li class="m_list_li">
+                    <div class="m_list_imgBox">
+                        <img src="./images/magpieFestival/products.png" alt="products">
+                    </div>
+                    <div class="m_list_info">
+                        <div class="m_list_onlynumber asia_list_onlynumber">200积分</div>
+                        <div class="m_list_info_click asia_info_click">
+                            <a href="###" class="u_yellow_unConfrim">
+                                <img src="./images/asia/unuse.png" alt="unuse" class="asia_imgWord_height3">
+                            </a>
+                        </div>
+                    </div>
+                </li>
+              
+            </ul>
+        </div>
+    </div>
+    <script>
+        var unc = document.getElementsByClassName("u_yellow_unConfrim");
+        if (unc.length >= 0) {
+            for (let uuu of unc) {
+                uuu.onclick = function () {
+                   return false;
+                  }
+            }
+        }
+    </script>
+</body>
+
+</html>

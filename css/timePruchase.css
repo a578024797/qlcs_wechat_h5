@@ -123,13 +123,18 @@ select {
 
 .zero_cdMain_number {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     margin: 0 auto;
     width: 80%;
     font-size: 0;
 }
-
+.zero_cdMain_number>div{
+    margin-left:.6rem; 
+}
+.zero_cdMain_number>div:last-child{
+    margin-right:.6rem; 
+}
 .zero_cdMain_Cbox {
     position: relative;
     display: inline-block;
@@ -156,13 +161,18 @@ select {
 
 .zero_cdMain_word {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     margin: 0 auto;
     width: 80%;
     font-size: 0;
 }
-
+.zero_cdMain_word>div{
+    margin-left:.6rem; 
+}
+.zero_cdMain_word>div:last-child{
+    margin-right:.6rem; 
+}
 .zero_cdMain_Wbox {
     position: relative;
     display: inline-block;

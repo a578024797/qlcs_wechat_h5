@@ -1,4 +1,5 @@
 /* 
+    made in red
     结构 4个div 或者 3个div
     判断 是3个还是4个 
     然后在div内填充值

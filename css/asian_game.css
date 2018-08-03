@@ -1,0 +1,397 @@
+.asia_background {
+    background: url("../images/asia/background.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.asia_background2 {
+    background: url("../images/asia/background2.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.asia_background3 {
+    background: url("../images/asia/background2.png") no-repeat fixed;
+    background-size: 100% 100%;
+}
+
+.asia_background4 {
+    background: url("../images/asia/background3.png") no-repeat fixed;
+    background-size: 100% 100%;
+}
+
+.asia_header_img {
+    position: relative;
+    padding: .65rem 0 0 0;
+    margin: 0 auto;
+    width: 60.7%;
+    z-index: 1;
+}
+
+.asia_header_img img {
+    width: 100%;
+}
+
+.asia_extract_box {
+    position: relative;
+    top: -.9rem;
+    height: 11.3rem;
+    z-index: 2;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.asia_extract_position_box {
+    position: relative;
+    z-index: 3;
+}
+
+.asia_tandi {
+    display: flex;
+    justify-content: space-between;
+    align-content: top;
+    margin-top: -1rem;
+    width: 100%;
+    padding: 0 1.15rem;
+    font-size: .71rem;
+    color: #ffffff;
+}
+
+.asia_tandi>span {
+    letter-spacing: .05rem;
+    text-indent: .05rem;
+    white-space: nowrap;
+    line-height: 1.4rem;
+}
+
+.asia_tandi>span>font {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 1.4rem;
+}
+
+.asia_action_box {
+    margin: .3rem 0 0 0;
+    width: 100%;
+}
+
+.asia_action_box>p {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0 0 .4rem 0;
+}
+
+.asia_action_box>p:nth-child(1)>.asia_action {
+    font-size: .6rem;
+    letter-spacing: 0;
+    text-indent: 0;
+}
+
+.asia_action {
+    width: 57%;
+    height: 1.6rem;
+    line-height: 1.6rem;
+    text-align: center;
+    color: #a75329;
+    /* font-weight: bold; */
+    font-weight: 900;
+    font-size: .68rem;
+    letter-spacing: .1rem;
+    text-indent: .1rem;
+}
+
+.asia_action img {
+    display: inline-block;
+    /* vertical-align: middle; */
+}
+
+.asia_imgWord_height1 {
+    height: .55rem;
+}
+
+.asia_imgWord_height2 {
+    height: .65rem;
+}
+
+.asia_tips {
+    padding: .14rem 0 0 0;
+    width: 100%;
+    text-align: center;
+    font-size: .5rem;
+    color: #ffffff;
+}
+
+/* 弹出 */
+
+.asia_extract_alert {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, .6);
+    z-index: 999;
+}
+
+.asia_extract_alert_main {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 77.6%;
+    /* height: 9.7rem; */
+    /* background: #fff; */
+    /* border-radius: 1.5rem; */
+}
+
+/* code的弹出 */
+
+.asia_ea_header {
+    width: 100%;
+}
+
+.asia_lucky_img {
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.asia_detialM {
+    width: 100%;
+    box-shadow: none;
+}
+
+.asia_detialM_tips_color {
+    color: #00aeff;
+}
+
+.asia_detialM_code_margin {
+    margin-top: .75rem;
+}
+
+.asia_detialM_word_padding {
+    padding: .5rem 0 .8rem 0;
+}
+
+/* 积分弹出 */
+
+.asia_eam_main {
+    margin-top: -.55rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background: #ffffff;
+    border-radius: 1rem;
+}
+
+.asia_eamm_info {
+    padding: 2rem 0 0 0;
+    width: 100%;
+    /* padding: 0 0 0 1.2rem; */
+    text-align: center;
+}
+
+.asia_eamm_info>p:first-child {
+    font-size: 1.2rem;
+    /* text-align: center; */
+    letter-spacing: .05rem;
+    text-indent: .05rem;
+    /* font-weight: bold; */
+}
+
+.asia_eamm_info>p:nth-child(2) {
+    margin: .2rem 0 0 0;
+    font-size: .8rem;
+    letter-spacing: .03rem;
+    text-indent: .03rem;
+    white-space: nowrap;
+}
+
+.asia_eamm_info>p:last-child {
+    margin: .5rem 0 0 0;
+    padding: 0 0 .5rem 0;
+}
+
+.asia_eamm_return {
+    margin: 0 auto;
+    display: block;
+    width: 4.6rem;
+    height: 1.5rem;
+    text-align: center;
+    font-size: .65rem;
+    color: #6a3906;
+    letter-spacing: .5rem;
+    text-indent: .5rem;
+    line-height: 1.4rem;
+}
+
+.asia_eamm_detial {
+    width: 45%;
+}
+
+.asia_eamm_integral {
+    /* padding: 0 0 0 .5rem; */
+    font-size: 2.7rem;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+/* asia 详细页 */
+
+.asia_d_headerImg {
+    width: 76%;
+    padding: 1rem 0 .1rem 0;
+    font-size: 0;
+}
+
+.asia_d_detialM {
+    width: 76%;
+    box-shadow: none;
+}
+
+.asia_imgWord_height3 {
+    height: .65rem;
+    vertical-align: middle;
+}
+
+.asia_info_title {
+    margin: .8rem 0 0 0;
+    color: #3c4668;
+}
+
+.asia_info_time {
+    margin: .5rem 0 0 0;
+    color: #3c4668;
+}
+
+.asia_info_click {
+    margin: .8rem 0 0 0;
+}
+
+.asia_list_onlynumber {
+    padding: 1rem 0 0 0;
+}
+
+/* 倒计时 */
+
+.asia_cd_main {
+    margin-top: .7rem;
+    box-shadow: none;
+}
+
+.asia_cdMain_Cbox {
+    background: linear-gradient(#f3da3a 0%, #ef812b 100%);
+}
+
+.asia_cdMain_Cbox::after {
+    color: #ef812b;
+}
+
+/* end */
+
+/* 问答页 */
+
+.asia_qul {
+    margin: 0 auto;
+    padding: 1.2rem 0 0 0;
+    width: 78%;
+}
+
+.asia_qli {
+    width: 100%;
+}
+
+.asia_qli>p {
+    width: 100%;
+    padding: .28rem .2rem .28rem .45rem;
+    line-height: 1.4;
+    background: #ffffff;
+    border-radius: .3rem;
+    font-size: .78rem;
+    font-weight: bold;
+    letter-spacing: .1rem;
+    /* text-indent: .1rem; */
+}
+
+.asia_choose {
+    width: 100%;
+}
+
+.asia_imgWord_height4 {
+    height: .7rem;
+}
+
+.asia_qchoose {
+    display: flex;
+    justify-content: space-around;
+}
+
+.asia_qclick {
+    margin: .5rem 0;
+    width: 45%;
+    height: 1.95rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.asia_qsub {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.asia_qsub:last-child{
+    padding-bottom: 1rem;
+}
+
+.asia_qsub_click {
+    width: 65%;
+    height: 1.95rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.asia_imgWord_height5 {
+    height: 1rem;
+}
+
+.asia_qawc {
+    margin: 1.8rem auto;
+    width: 90%;
+}
+
+.asia_qawc>img {
+    width: 100%;
+}
+.asia_imgWord_height6{
+    height: .75rem;
+}
+/* end */
+/* 亚运会 回答页 */
+.asia_aul:first-child{
+    padding-top: 2rem;
+}
+.asia_aul:last-child{
+    border: 0;
+}
+.asia_aul{
+    padding:.5rem 1.5rem;
+    width: 100%;
+    margin: 0 auto;
+    border-bottom: .05rem solid #000000;
+}
+.asia_aul li{
+    line-height: 1.7;
+}
+.asia_aul li p{
+    width: 100%;
+}
+.asia_ali_small{
+    font-size: .5rem;
+}
+.asia_ali{
+    font-size: .6rem;
+   
+}
+.aiia_question_error{
+    color: red;
+}

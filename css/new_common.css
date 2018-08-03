@@ -74,9 +74,15 @@ select {
 /* end reset */
 
 /* layout */
-
+.we_background_white{
+    background: #fff;
+}
 .we_container {
     width: 100%;
+}
+
+.we_height100 {
+    height: 100%;
 }
 
 /* moudle */
@@ -444,6 +450,7 @@ select {
 
 .m_list_ul {
     width: 100%;
+    padding: 0 0 .5rem 0;
 }
 
 .m_list_li {
@@ -454,6 +461,10 @@ select {
     padding: .6rem .6rem;
     background: #fff;
     border-radius: .5rem;
+}
+
+.m_list_li:last-child {
+    margin: 0 auto;
 }
 
 .m_list_imgBox {
@@ -478,14 +489,22 @@ select {
     white-space: nowrap;
 }
 
+.m_list_onlynumber {
+    font-size: 1.5rem;
+    line-height: 1;
+    text-align: center;
+}
+
 .m_list_info_time {
     font-size: .5rem;
     text-align: center;
 }
-.m_list_info_click{
+
+.m_list_info_click {
     width: 100%;
 }
-.m_list_info_click a{
+
+.m_list_info_click a {
     margin: 0 auto;
     display: block;
     width: 77%;
@@ -498,11 +517,132 @@ select {
     letter-spacing: .05rem;
     text-indent: .05rem;
 }
+
+/* 倒计时页面 */
+
+.m_cd_header {
+    margin: 0 auto;
+    padding: 3.8rem 0 0 0;
+    width: 65%;
+}
+
+.m_cd_header img {
+    width: 100%;
+}
+
+.m_cd_main {
+    margin: 1.1rem auto 6.9rem;
+    width: 78%;
+    height: 7.2rem;
+    box-shadow: 0 0 .5rem #e0dfdf;
+    border-radius: .5rem;
+}
+
+.m_cdMain_title {
+    width: 100%;
+    height: 2.7rem;
+    line-height: 2.7rem;
+    letter-spacing: .05rem;
+    text-align: center;
+    color: #3c4768;
+    font-size: .55rem;
+    font-weight: bold;
+}
+
+.m_cdMain_content {
+    width: 100%;
+}
+
+.m_cdMain_number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 80%;
+    font-size: 0;
+}
+
+.m_cdMain_number>div {
+    margin-left: .6rem;
+}
+
+.m_cdMain_number>div:last-child {
+    margin-right: .6rem;
+}
+
+.m_cdMain_Cbox {
+    position: relative;
+    display: inline-block;
+    width: 2.05rem;
+    height: 2.05rem;
+    background: #00aeff;
+    line-height: 2.05rem;
+    color: #fff;
+    font-size: 1.15rem;
+    font-weight: bold;
+    border-radius: .2rem;
+    text-align: center;
+}
+
+.m_cdMain_Cbox::after {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(150%, -55%);
+    content: ":";
+    color: #00aeff;
+    font-size: 1rem;
+}
+
+.m_cdMain_word {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 80%;
+    font-size: 0;
+}
+
+.m_cdMain_word>div {
+    margin-left: .6rem;
+}
+
+.m_cdMain_word>div:last-child {
+    margin-right: .6rem;
+}
+
+.m_cdMain_Wbox {
+    position: relative;
+    display: inline-block;
+    margin: .05rem 0;
+    width: 2.05rem;
+    height: .7rem;
+    background: #898989;
+    line-height: .7rem;
+    color: #fff;
+    font-size: .5rem;
+    font-weight: bold;
+    border-radius: .1rem;
+    text-align: center;
+}
+
+.m_cdMain_Cbox:last-child::after {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(150%, -55%);
+    content: "";
+    color: #00aeff;
+    font-size: 1rem;
+}
+
 /* end */
 
 /* 
     各种按钮图片 unit
 */
+
+/* 七夕按钮 */
 
 .u_orange_confrim {
     background: url("../images/magpieFestival/confrim.png") no-repeat;
@@ -511,6 +651,18 @@ select {
 
 .u_orange_unConfrim {
     background: url("../images/magpieFestival/false.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+/* 亚运会 */
+
+.u_yellow_confrim {
+    background: url("../images/asia/yellow.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.u_yellow_unConfrim {
+    background: url("../images/asia/gray.png") no-repeat;
     background-size: 100% 100%;
 }
 

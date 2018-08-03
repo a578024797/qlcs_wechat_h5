@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en" class="we_height100">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>亚运会抽奖</title>
+    <script src="./js/wordauto.js"></script>
+    <link rel="stylesheet" href="./css/new_common.css">
+    <!-- <link rel="stylesheet" href="./css/magpieFestival.css"> -->
+    <link rel="stylesheet" href="./css/asian_game.css">
+    <script src="./js/jquery1.11.3.js"></script>
+</head>
+
+<body class="we_height100 asia_background">
+    <div class="we_container ">
+        <header class="asia_header_img">
+            <img src="./images/asia/goldguessdoubleline.png" alt="header1">
+        </header>
+        <div class="asia_extract_box">
+            <canvas id="asia_extract"></canvas>
+        </div>
+        <div class="asia_tandi">
+            <span>您还有
+                <font>9</font>次免费机会</span>
+            <span>现有积分:10010</span>
+        </div>
+        <div class="asia_action_box">
+            <p>
+                <a href="###" class="u_yellow_confrim asia_action">
+                    <img src="./images/asia/word.png" alt="word3" class="asia_imgWord_height1">
+                </a>
+            </p>
+            <p>
+                <a href="###" class="u_yellow_confrim asia_action">
+                    <img src="./images/asia/word3.png" alt="word3" class="asia_imgWord_height2">
+                </a>
+            </p>
+            <p>
+                <a href="###" class="u_yellow_confrim asia_action">
+                    <img src="./images/asia/word1.png" alt="word1" class="asia_imgWord_height2">
+                </a>
+            </p>
+        </div>
+        <div class="asia_tips">
+            注意事项：每个会员凭20积分参与大转盘活动，无次数限制。
+        </div>
+
+        <!-- 弹窗 -->
+        <div class="asia_extract_alert">
+            <div class="asia_extract_alert_main">
+                <header class="asia_ea_header">
+                    <img src="./images/asia/products.png" alt="products" class="asia_lucky_img">
+                </header>
+                <div class="m_detialM asia_detialM">
+                    <div class="m_detialM_name">正大玉米蔬菜猪肉蒸饺1份</div>
+                    <div class="m_detialM_code asia_detialM_code_margin" id="bcTarget1"></div>
+                    <div class="m_detialM_tips asia_detialM_tips_color">
+                        <span>到门店出示</span>
+                        <span>使用优惠券</span>
+                    </div>
+                    <div class="m_detialM_word asia_detialM_word_padding">领取时间2018年8月16日-17日</div>
+                </div>
+                <div class="asia_eam_main">
+                    <div class="asia_eamm_info">
+                        <p>全联会员积分</p>
+                        <p>积分已存入您的会员帐号</p>
+                        <div class="asia_eamm_integral">200</div>
+                        <p>
+                            <a href="###" class="asia_eamm_return u_yellow_confrim">返回</a>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- canvas转盘抽奖开始 -->
+    <!-- ./{pigcms{$static_path} -->
+    <script src="./js/jquery1.11.3.js"></script>
+    <script src="./js/jquery_code.js"></script>
+    <script src="./js/jquery_code1.js"></script>
+    <script src="./js/red_raffle.js"></script>
+    <script>
+        window.onload = function () {
+
+
+            //成功弹出信息 由于页面没写先这样
+            function success(result) {
+                console.log("成功函数");
+                let asia_EA = document.getElementsByClassName("asia_extract_alert")[0];
+                let asia_eah = document.getElementsByClassName("asia_ea_header")[0];
+                let asia_dm = document.getElementsByClassName("asia_detialM")[0];
+                let asia_em = document.getElementsByClassName("asia_eam_main")[0];
+                let img = asia_eah.getElementsByTagName("img")[0];
+                let freetimes = document.getElementsByClassName("asia_tandi")[0].getElementsByTagName("span")[0].getElementsByTagName("font")[0];
+                let integral =  document.getElementsByClassName("asia_tandi")[0].getElementsByTagName("span")[1];
+                freetimes.innerText = result.freetime; 
+                integral.innerText = "现有积分:" + result.usersocre;
+                if (result.type === "1") {
+                    asia_dm.getElementsByTagName("div")[0].innerText = result.name ? result.name : "正大玉米邦邦达";
+                    img.src = result.src ? result.imgsrc : "adad出错就对了"; //
+                    $("#bcTarget1").barcode(result.hc_id, "code128", {
+                        barWidth: 2,
+                        barHeight: 70,
+                        moduleSize: 5,
+                        showHRI: false,
+                        addQuietZone: true,
+                        marginHRI: 0,
+                        bgColor: "",
+                        color: "#000",
+                        fontSize: 12,
+                        output: "css",
+                        posX: 0,
+                        posY: 0
+                    });
+                    asia_em.style.display = "none";
+                    asia_eah.style.display = "block";
+                    asia_dm.style.display = "block";
+                } else {
+                    document.getElementsByClassName("asia_eamm_integral")[0].innerText = result.score ? result.score :
+                        100;
+                    asia_em.style.display = "block";
+                    asia_eah.style.display = "none";
+                    asia_dm.style.display = "none";
+                }
+
+                document.getElementsByClassName("asia_eamm_return")[0].onclick = function () {
+                    asia_EA.style.display = "none";
+                  }
+                  asia_EA.onclick = function(){
+                      this.style.display = "none";
+                  }
+                asia_EA.style.display = "block";
+            } //end
+
+            //'{pigcms{$turntable_list}';
+            var list = ["会员积分会会", "会员660ml", "会员积分会", "会员积分会", "优惠券5元", "会员660ml", "会员660ml", "会员积分会", "会员积分会",
+                "优惠券5元"
+            ]
+            // var turntable_list = list.split(',');
+
+            var option = {
+                id: "asia_extract",
+                textlist: list, //turntable_list,
+                backgroundImg: "./images/asia/background.jpg",
+                clickImg: "./images/asia/turn.png",
+                alternateColor: "#5f59ff",
+                alternateColor2: "#7575ff",
+                stratRadian: Math.PI / 180 * 0,
+                wordSub: 2,
+                frequency: 5,
+                // domain: `http://vip.quanlianchaoshang.com/qlcs/wap.php?g=wap&c=activemodle&a=luck_draw&actid=2`,
+                success: success,
+                shelter: true,
+            }
+            //调用
+            initLucky(option);
+
+
+        }
+        //监听微信返回
+        /* $(function () {
+            pushHistory();
+            var bool = false;
+            setTimeout(function () {
+                bool = true;
+            }, 1500);
+            window.addEventListener("popstate", function (e) {
+                if (bool) {
+                    //alert("我监听到了浏览器的返回按钮事件啦");
+                    window.location.href = '{pigcms{:U("Activemodle/turntable")}'; //根据自己的需求实现自己的功能  
+                }
+                pushHistory();
+
+            }, false);
+
+            function pushHistory() {
+                var state = {
+                    title: "title",
+                    url: "{pigcms{:U('Activemodle/turntable')}"
+                };
+                window.history.pushState(state, "title", "{pigcms{:U('Activemodle/turntable')}");
+            }
+        }); */
+    </script>
+
+</body>
+
+</html>

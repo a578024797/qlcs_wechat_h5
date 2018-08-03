@@ -25,8 +25,6 @@ function initLucky(options) {
             roateRadian: 0, // 默认转得时候的角度
             luckPosition: 0, //默认中奖位置
             cacheImg: "", //canvas缓存
-            frequency: _option.frequency, //次数 限制几次抽奖
-            flagTimes: 0, //设置权限只能点击一次
             onlyone: 0, //单击设置
             domain: _option.domain, //点击执行接口得地址
             result: "1", //接口返回信息
@@ -300,7 +298,6 @@ function initLucky(options) {
                                         let position = _option.productsList.indexOf(lucy);
                                         _option.luckPosition = position; //获奖位置
                                         _option.result = result; //保存result结果
-                                        _option.frequency = result.frequency //更新总抽奖次数
                                     }
                                 }
                             },
@@ -319,9 +316,9 @@ function initLucky(options) {
                     }
                     console.log("转盘position =========== " + _option.luckPosition);
 
-                    //判断总次数 如果大于抽奖次数则不旋转(抽奖总次数每次掉ajax都会更新)      
-                    if (_option.flagTimes < _option.frequency && _option.result !== "error" && _option.result !== "") {
-                        _option.flagTimes++;
+                    //判断总次数 如果大于抽奖次数则不旋转(抽奖总次数每次掉ajax都会更新)  
+                    if ( _option.result !== "error" && _option.result !== "") {
+                       
                         _option.timer = setInterval(function () {
 
 
@@ -334,14 +331,16 @@ function initLucky(options) {
                                     setTimeout(() => {
                                         console.log(result);
                                         if (_option.success) {
-                                            // _option.result = {
-                                            //     "error": 0,
-                                            //     "msg": null,
-                                            //     "type": "2",
-                                            //     "name": "5元优惠券",
-                                            //     "score": "100",
-                                            //     "hc_id": "00000007499328"
-                                            // }
+                                            _option.result = {
+                                                "error": 0,
+                                                "msg": null,
+                                                "type": "3",
+                                                "name": "5元优惠券",
+                                                "score": "100",
+                                                "hc_id": "00000007499328",
+                                                "freetime": "0",
+                                                "usersocre": "230",
+                                            }
                                             _option.success(_option.result);
                                         } else {
                                             console.log("如果需要回调,清添加success");
@@ -349,7 +348,7 @@ function initLucky(options) {
                                         _option.onlyone = 0;
                                         console.log(_option.ceng);
                                         if (_option.ceng !== "") {
-                                             _option.father.removeChild(_option.ceng);
+                                            _option.father.removeChild(_option.ceng);
                                         }
                                     }, 700);
                                 }).catch(function () {
